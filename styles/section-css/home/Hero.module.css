@@ -1,0 +1,65 @@
+.Hero {
+  min-height: 1120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.Hero h1 span:after {
+  content: ".";
+}
+.Hero h1 {
+  color: var(--main-blue);
+}
+.Hero h1 span:not(.Hero h1 span:first-of-type) {
+  margin-left: -30px;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.inlineText {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+.inlineText p {
+  max-width: 680px;
+  margin-right: 80px;
+}
+.background1 {
+  position: absolute;
+  top: -30%;
+  right: 15%;
+  z-index: 0;
+  animation: rotation 1.5s forwards;
+  transform: rotate(116deg);
+}
+.background2 {
+  position: absolute;
+  bottom: 0;
+  right: -7%;
+  opacity: 0;
+  animation: fadeIn 1.5s 1s forwards;
+}
+
+@keyframes rotation {
+  from {
+    top: -60%;
+    transform: rotate(116deg);
+  }
+  to {
+    transform: rotate(0);
+    top: -30%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

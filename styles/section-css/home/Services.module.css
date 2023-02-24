@@ -1,0 +1,63 @@
+.Services {
+  margin-top: 80px;
+}
+.row {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 80px;
+}
+.reverse .col {
+  justify-content: flex-start;
+}
+.reverse .textBox {
+  margin-right: 0;
+  margin-left: 120px;
+}
+.col {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+.textBox {
+  margin-right: 120px;
+  max-width: 860px;
+  padding: 64px 0;
+}
+.imageWrap {
+  position: relative;
+  width: 40%;
+}
+.imageWrap img {
+  object-fit: cover;
+}
+.Services h2 {
+  color: var(--main-blue);
+  margin-bottom: 80px;
+}
+
+.readMore {
+  display: flex;
+}
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.readMore h2 {
+  color: var(--main-green);
+  display: inline-block;
+  margin-top: -30px;
+  margin-bottom: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.7s ease-in-out;
+  margin-right: 0;
+  padding-right: 0;
+}
+.readMore:hover h2 {
+  width: 100%;
+  margin-right: 20px;
+  padding-right: 15px;
+}
