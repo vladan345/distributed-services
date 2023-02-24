@@ -2,8 +2,6 @@ import styles from "../../styles/section-css/home/Marquee.module.css";
 import { Parallax } from "react-scroll-parallax";
 import localFont from "@next/font/local";
 
-const flexa = localFont({ src: "../../pages/fonts/GT-Flexa-Var.ttf" });
-
 function Marquee() {
   return (
     <section className={styles.Marquee}>
@@ -23,8 +21,8 @@ function Marquee() {
       </div>
       <div className={styles.slider}>
         <Parallax translateX={[0, -20]}>
-          <span className={flexa.className}>SERVICES/SERVICES/</span>
-          <span className={flexa.className}>SERVICES/SERVICES/</span>
+          <span>SERVICES/SERVICES/</span>
+          <span>SERVICES/SERVICES/</span>
         </Parallax>
       </div>
     </section>

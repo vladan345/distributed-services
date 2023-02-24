@@ -1,3 +1,8 @@
+@font-face {
+  src: url("/fonts/GT-Flexa-Var.ttf");
+  font-family: "Flexa";
+}
+
 :root {
   --max-width: 1640px;
   --border-radius: 8px;
@@ -62,6 +67,12 @@ a {
 }
 a:hover {
   color: var(--main-green);
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Flexa";
 }
 
 .button {
