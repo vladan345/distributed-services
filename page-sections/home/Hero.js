@@ -11,13 +11,15 @@ function Hero() {
         alt="Part of distributed logo"
         className={styles.background1}
       />
-      <Image
-        src="/images/home/hero-element2.png"
-        width={753}
-        height={936}
-        alt="Part of distributed logo"
-        className={styles.background2}
-      />
+      <div className={styles.video}>
+        <video
+          src="/images/distributed_services_hero.mp4"
+          autoPlay
+          loop
+          muted
+        ></video>
+      </div>
+
       <div className={styles.content + " container"}>
         <h1>
           <span>Design</span>

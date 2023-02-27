@@ -18,6 +18,19 @@
   display: flex;
   justify-content: flex-end;
 }
+.boxedRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.boxedRow .textBox {
+  margin-left: 120px;
+  margin-right: 0;
+}
+.boxedRow:last-of-type .textBox {
+  margin-left: 0;
+  margin-right: 120px;
+}
 .textBox {
   margin-right: 120px;
   max-width: 860px;
@@ -35,9 +48,6 @@
   margin-bottom: 80px;
 }
 
-.readMore {
-  display: flex;
-}
 .readMore {
   display: inline-flex;
   align-items: center;

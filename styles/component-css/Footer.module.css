@@ -1,0 +1,105 @@
+.footer {
+  background: var(--main-green);
+  padding: 85px 0;
+}
+.rowForm {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--foreground);
+  margin-bottom: 40px;
+}
+
+.rowForm p {
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 25%;
+}
+.form {
+  width: 50%;
+}
+.form form {
+  display: flex;
+}
+.email {
+  background: var(--background);
+  padding: 8px 20px;
+  border-radius: var(--border-radius);
+  width: calc(60% - 20px);
+  margin-right: 20px;
+}
+.email label {
+  color: var(--main-blue);
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+}
+.email input {
+  display: block;
+  width: 100%;
+  border: 0;
+  font-size: 28px;
+  outline: none;
+  font-weight: 500;
+}
+.form button {
+  background: var(--main-blue);
+  border: 0;
+  color: var(--background);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 20px 5px;
+  width: calc(40% - 20px);
+  margin-left: 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.form button:hover {
+  color: var(--main-green);
+}
+
+.rowNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.logo p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.socials p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.socials a img {
+  transition: 0.3s;
+}
+.socials a {
+  margin-right: 30px;
+}
+.socials a:last-of-type {
+  margin-right: 0;
+}
+.socials a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.nav {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60px;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  display: inline-block;
+  margin: 0 30px;
+}

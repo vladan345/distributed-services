@@ -66,7 +66,7 @@ a {
   transition: 0.3s;
 }
 a:hover {
-  color: var(--main-green);
+  color: var(--main-blue);
 }
 
 h1,

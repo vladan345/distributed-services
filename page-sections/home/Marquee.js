@@ -1,6 +1,5 @@
 import styles from "../../styles/section-css/home/Marquee.module.css";
 import { Parallax } from "react-scroll-parallax";
-import localFont from "@next/font/local";
 
 function Marquee() {
   return (

@@ -31,35 +31,55 @@
 }
 .background1 {
   position: absolute;
-  top: -30%;
-  right: 15%;
+  right: 280px;
   z-index: 0;
   animation: rotation 1.5s forwards;
   transform: rotate(116deg);
 }
-.background2 {
+
+.video {
   position: absolute;
-  bottom: 0;
-  right: -7%;
-  opacity: 0;
-  animation: fadeIn 1.5s 1s forwards;
+  bottom: 70px;
+  right: -120px;
+  transform: rotate(-26deg);
+  width: 557px;
+  border-radius: 0 557px 557px 0;
+  height: 1035px;
+  overflow: hidden;
+}
+.video video {
+  object-fit: cover;
+  object-position: -700px 0;
+  width: 100%;
+  height: 100%;
+}
+.video:after {
+  width: 100%;
+  display: block;
+  height: 100%;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  animation: fadeIn 1.5s 1.2s forwards;
 }
 
 @keyframes rotation {
   from {
-    top: -60%;
+    top: -100%;
     transform: rotate(116deg);
   }
   to {
     transform: rotate(0);
-    top: -30%;
+    top: -410px;
   }
 }
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    width: 100%;
   }
   to {
-    opacity: 1;
+    width: 0;
   }
 }
