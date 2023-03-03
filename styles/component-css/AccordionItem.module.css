@@ -27,6 +27,7 @@
 .services {
   display: flex;
   gap: 30px;
+  margin-left: 30px;
 }
 .services p {
   font-weight: 400;

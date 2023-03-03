@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectHero from "@/components/ProjectHero";
+import Restaurants from "@/page-sections/rikas/Restaurants";
 
 function Rikas() {
   const projectInfo = {
@@ -17,6 +18,7 @@ function Rikas() {
   return (
     <div>
       <ProjectHero content={projectInfo} />
+      <Restaurants />
     </div>
   );
 }

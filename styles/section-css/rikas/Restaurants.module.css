@@ -1,0 +1,96 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+.row .desc {
+  font-size: 22px;
+  display: inline-block;
+}
+.row h4 {
+  margin-bottom: 40px;
+  color: var(--main-blue);
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.cta p {
+  color: var(--main-blue);
+  font-weight: 400;
+}
+.cta .arrow {
+  margin-left: 20px;
+}
+.textBoxL,
+.textBoxR {
+  max-width: 720px;
+}
+.lacantine {
+  display: flex;
+  gap: 160px;
+}
+
+.lacantine .col {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.twiggy,
+.lanalusa {
+  justify-content: space-between;
+  gap: 160px;
+  margin: 120px 0;
+}
+
+.banner {
+  background-color: var(--main-blue);
+  padding: 215px 0;
+  margin: 160px 0;
+}
+.banner h4 {
+  color: var(--background);
+  text-align: center;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.marcelGohan {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 160px;
+}
+.tagomagoWam {
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 160px;
+}
+.sandBackground {
+  background: url("/images/home/sand_bgr.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 120px 0;
+}
+.sandBackground h4,
+.sandBackground p {
+  color: var(--background);
+}
+.col {
+  width: 50%;
+}
+.marcelGohan .col > img {
+  margin-bottom: 80px;
+}
+.tagomagoWam .col > img {
+  margin-bottom: 80px;
+}
+.ninive {
+  margin-top: 160px;
+
+  gap: 160px;
+}
+
+.lacantine .col {
+  display: flex;
+  justify-content: flex-end;
+}
