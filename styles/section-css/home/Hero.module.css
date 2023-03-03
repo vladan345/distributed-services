@@ -2,7 +2,7 @@
   min-height: 1120px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100vw;
   overflow: hidden;
   position: relative;
@@ -12,22 +12,19 @@
 }
 .Hero h1 {
   color: var(--main-blue);
+  margin-bottom: 80px;
 }
 .Hero h1 span:not(.Hero h1 span:first-of-type) {
   margin-left: -30px;
 }
 .content {
+  margin-top: 300px;
   position: relative;
   z-index: 1;
 }
-.inlineText {
-  display: flex;
-  align-items: center;
-  margin-top: 80px;
-}
-.inlineText p {
+
+.content p {
   max-width: 680px;
-  margin-right: 80px;
 }
 .background1 {
   position: absolute;
@@ -39,7 +36,7 @@
 
 .video {
   position: absolute;
-  bottom: 70px;
+  top: 15px;
   right: -120px;
   transform: rotate(-26deg);
   width: 557px;
@@ -63,6 +60,19 @@
   right: 0;
   content: "";
   animation: fadeIn 1.5s 1.2s forwards;
+}
+
+.centered {
+  margin-top: 230px;
+}
+.textWrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.textWrap h4 {
+  color: var(--main-blue);
+  margin-bottom: 80px;
 }
 
 @keyframes rotation {

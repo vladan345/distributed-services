@@ -1,0 +1,72 @@
+.Accordion {
+  margin-top: -20px;
+  max-width: 830px;
+  margin-left: 120px;
+}
+.accordionItem {
+  max-height: 140px;
+  overflow: hidden;
+  transition: 0.7s ease-in-out;
+}
+
+.title {
+  padding: 20px 0;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.title span {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: normal;
+  vertical-align: top;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+.services {
+  display: flex;
+  gap: 30px;
+}
+.services p {
+  font-weight: 400;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.services p:hover {
+  color: var(--main-blue);
+}
+.text {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.readMore h4 {
+  color: var(--main-blue);
+  display: inline-block;
+  margin-top: -10px;
+  margin-bottom: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.7s ease-in-out;
+  margin-right: 0;
+  padding-right: 0;
+}
+.readMore:hover h4 {
+  width: 100%;
+  margin-right: 20px;
+  padding-right: 15px;
+}
+.selected {
+  max-height: 1000px;
+}
+.selected .title {
+  color: var(--main-blue);
+}

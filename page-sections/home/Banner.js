@@ -25,7 +25,7 @@ function Banner() {
           <Link href="#" className={styles.readMore}>
             <h2>Read more</h2>
             <Image
-              src="/images/home/green-arrow-right.svg"
+              src="/images/home/white-arrow-right.svg"
               alt="read more"
               width={170}
               height={140}

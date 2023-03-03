@@ -1,0 +1,43 @@
+.banner {
+  height: 800px;
+  position: relative;
+}
+.banner img {
+  object-fit: cover;
+}
+.colWrap {
+  display: flex;
+  gap: 120px;
+  margin: 120px 0 40px;
+}
+.col {
+  width: 50%;
+}
+.col a p {
+  margin-right: 20px;
+}
+.cta {
+  display: flex;
+  align-items: center;
+}
+.description {
+  font-size: 22px;
+  font-weight: 500;
+}
+.col > p {
+  margin-bottom: 40px;
+}
+.serviceList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+.service {
+  width: 50%;
+  margin-bottom: 30px;
+  color: var(--main-blue);
+}
+.service:hover {
+  color: var(--main-green);
+}

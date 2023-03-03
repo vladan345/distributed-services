@@ -1,19 +1,10 @@
-.slider {
-  margin-top: 80px;
-  width: 100vw;
-  overflow: hidden;
-  text-align: right;
-}
-.slider span {
-  font-size: 300px;
-  line-height: 0.95;
-  letter-spacing: -15px;
-  color: var(--main-green);
-  font-weight: 300;
-  font-family: "Flexa";
+.Projects h3 {
+  text-align: center;
+  color: var(--main-blue);
+  margin-top: 200px;
 }
 .featured {
-  margin-top: 80px;
+  margin-top: 120px;
   position: relative;
   overflow: hidden;
   padding-bottom: 160px;
@@ -68,7 +59,7 @@
   max-width: 600px;
 }
 .cta {
-  margin-top: -120px;
+  margin-top: 40px;
   position: relative;
   height: 160px;
 }
@@ -79,11 +70,10 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
 }
 
 .readMore h2 {
-  color: var(--main-green);
+  color: var(--background);
   display: inline-block;
   margin-top: -30px;
   margin-bottom: 0;
