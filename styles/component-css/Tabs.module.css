@@ -1,0 +1,52 @@
+.Tabs {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.title {
+  position: relative;
+  margin-bottom: 40px;
+}
+.titles h2 {
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 40px;
+}
+.titles span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: normal;
+  vertical-align: top;
+  display: inline-block;
+  line-height: 1;
+  padding-top: 14px;
+
+  color: var(--foreground);
+}
+.content {
+  width: 45%;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+  max-width: 480px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.services p {
+  cursor: pointer;
+  transition: 0.3s;
+  color: var(--main-blue);
+}
+
+.description {
+  font-size: 22px;
+}
+
+.selected {
+  color: var(--main-blue);
+}

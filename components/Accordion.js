@@ -18,20 +18,18 @@ function Accordion({ content }) {
                 styles.accordionItem
               }`}
             >
-              <h2
-                className={styles.title}
-                onClick={() => setSelectedItem(index)}
-              >
+              <div className={styles.title}>
                 <span>0{index + 1}</span>
-                {item.title}
-              </h2>
+                <h2 onClick={() => setSelectedItem(index)}>{item.title}</h2>
+              </div>
+
               <div className={styles.services}>
                 {item.services &&
                   item.services.map((service) => (
                     <p key={service}>{service}</p>
                   ))}
               </div>
-              <p className={styles.text}>{item.text}</p>
+              <p className={styles.text}>{item.description}</p>
               <Link href={item.link} className={styles.readMore}>
                 <h4>Learn more</h4>
                 <Image

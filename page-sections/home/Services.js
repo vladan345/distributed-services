@@ -4,7 +4,7 @@ import styles from "../../styles/section-css/home/Services.module.css";
 
 import Accordion from "@/components/Accordion";
 
-import { services } from "@/lib/homeServices";
+import { serviceList } from "@/lib/servicesServices";
 
 function Services() {
   return (
@@ -18,7 +18,7 @@ function Services() {
           height={817}
           layout="responsive"
         />
-        <Accordion content={services} />
+        <Accordion content={serviceList} />
       </div>
     </section>
   );

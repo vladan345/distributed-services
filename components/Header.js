@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/component-css/Header.module.css";
 
 function Header() {
+  const router = useRouter();
+
   return (
     <header className={styles.Header}>
       <Link href="/">
@@ -15,15 +18,40 @@ function Header() {
       </Link>
 
       <nav>
-        <Link href="/services">Services</Link>
+        <Link
+          className={router.pathname == "/services" ? "active" : ""}
+          href="/services"
+        >
+          Services
+        </Link>
         <span>/</span>
-        <Link href="/projects">Projects</Link>
+        <Link
+          className={router.pathname == "/projects" ? "active" : ""}
+          href="/projects"
+        >
+          Projects
+        </Link>
         <span>/</span>
-        <Link href="/partners">Partners</Link>
+        <Link
+          className={router.pathname == "/partners" ? "active" : ""}
+          href="/partners"
+        >
+          Partners
+        </Link>
         <span>/</span>
-        <Link href="/about">About</Link>
+        <Link
+          className={router.pathname == "/about" ? "active" : ""}
+          href="/about"
+        >
+          About
+        </Link>
         <span>/</span>
-        <Link href="/contact">Contact</Link>
+        <Link
+          className={router.pathname == "/contact" ? "active" : ""}
+          href="/contact"
+        >
+          Contact
+        </Link>
       </nav>
 
       <div className={styles.cta}>
