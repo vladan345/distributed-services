@@ -5,7 +5,7 @@ function Services() {
   return (
     <div className="container">
       <p style={{ marginBottom: "80px", marginTop: "200px" }}>SERVICES</p>
-      <Tabs content={serviceList} />
+      <Tabs type="service" content={serviceList} />
     </div>
   );
 }

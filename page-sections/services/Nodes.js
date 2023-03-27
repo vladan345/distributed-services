@@ -1,5 +1,18 @@
 import Image from "next/image";
+import Lottie from "lottie-react";
+import graph from "./graph.json";
 import styles from "../../styles/section-css/services/Nodes.module.css";
+
+const interactivity = {
+  mode: "scroll",
+  actions: [
+    {
+      visibility: [0.2, 1],
+      type: "play",
+      frames: [0],
+    },
+  ],
+};
 
 function Nodes() {
   return (
@@ -16,12 +29,18 @@ function Nodes() {
             Each newly assembled team is handpicked by us, and will address our
             client&apos;s needs.
           </p>
-          <Image
+          {/* <Image
             className={styles.graph}
             src="/images/services/graf-temp.svg"
             alt="Service graph"
             width={1339}
             height={941}
+          /> */}
+          <Lottie
+            animationData={graph}
+            loop={false}
+            interactivity={interactivity}
+            className={styles.graph}
           />
         </div>
         <div className={styles.bottom}>

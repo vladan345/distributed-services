@@ -19,9 +19,19 @@
   padding: 0;
   margin: 0;
 }
-
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+html.lenis {
+  height: auto;
+}
+html {
+  scroll-behavior: initial;
+}
 html,
 body {
+  min-height: 100%;
+  height: auto;
 }
 
 body {

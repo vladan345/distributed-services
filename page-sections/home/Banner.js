@@ -1,19 +1,38 @@
+import { useRef, useEffect } from "react";
 import styles from "../../styles/section-css/home/Banner.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { Parallax } from "react-scroll-parallax";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Banner() {
+  const main = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(".slider", {
+        scrollTrigger: {
+          trigger: ".slider",
+          scrub: true,
+        },
+        x: "-15%",
+      });
+    }, main.current);
+
+    return () => ctx.revert();
+  }, []);
   return (
-    <section className={styles.Banner}>
-      <Parallax translateX={[0, -15]} className={styles.parallax}>
+    <section className={styles.Banner} ref={main}>
+      <div className={`${styles.parallax} slider`}>
         <Image
           width={2600}
           height={1360}
           src="/images/home/Dubai.jpg"
           alt="Dubai background"
         />
-      </Parallax>
+      </div>
       <div className="container">
         <span>Now distributing in Dubai!</span>
         <div className={styles.textRow}>

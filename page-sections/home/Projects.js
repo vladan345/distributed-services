@@ -1,16 +1,81 @@
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Parallax } from "react-scroll-parallax";
 import styles from "../../styles/section-css/home/Projects.module.css";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function Projects() {
+  const main = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".background",
+        {
+          scrollTrigger: {
+            trigger: ".background",
+            scrub: true,
+          },
+          y: -200,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".background",
+            scrub: true,
+          },
+          y: 200,
+        }
+      );
+      gsap.to(".left-image", {
+        scrollTrigger: {
+          trigger: ".left-image",
+          scrub: true,
+          start: "top bottom",
+        },
+        y: "60%",
+      });
+      gsap.to(".left-image", {
+        scrollTrigger: {
+          trigger: ".left-image",
+          scrub: true,
+          start: "top bottom",
+          markers: true,
+        },
+        y: "60%",
+      });
+      gsap.fromTo(
+        ".right-image",
+        {
+          scrollTrigger: {
+            trigger: ".right-image",
+            scrub: true,
+          },
+          y: 100,
+        },
+        {
+          scrollTrigger: {
+            trigger: ".right-image",
+            scrub: true,
+          },
+          y: -200,
+        }
+      );
+    }, main.current);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section className={styles.Projects}>
       <h3>PROJECTS</h3>
-      <div className={styles.featured}>
-        <Parallax className={styles.bg} speed={-30}>
+      <div className={styles.featured} ref={main}>
+        <div className={`${styles.bg} background`}>
           <Image fill src="/images/home/sand_bgr.jpg" alt="sand background" />
-        </Parallax>
+        </div>
         <h4>Featured project</h4>
         <h1>
           Rikas
@@ -20,15 +85,14 @@ function Projects() {
 
         <div className={styles.row}>
           <div className={styles.col}>
-            <Parallax speed={-18}>
+            <div className="left-image">
               <Image
                 src="/images/home/home-rikas1.webp"
                 alt="Beach image rikas group"
                 width={640}
                 height={520}
-                layout="responsive"
               />
-            </Parallax>
+            </div>
           </div>
           <div className={styles.col}>
             <Image
@@ -36,8 +100,6 @@ function Projects() {
               alt="Beach image rikas group"
               width={400}
               height={520}
-              layout="responsive"
-              style={{ maxWidth: "500px" }}
             />
             <Image
               src="/images/home/rikas-logo.svg"
@@ -47,7 +109,7 @@ function Projects() {
             />
           </div>
           <div className={styles.col}>
-            <Parallax speed={20}>
+            <div className="right-image">
               <p>
                 Vestibulum sagittis porttitor proin eleifend vitae. Tincidunt
                 odio in dictum eu leo sapien.
@@ -57,9 +119,8 @@ function Projects() {
                 alt="Beach image rikas group"
                 width={600}
                 height={680}
-                layout="responsive"
               />
-            </Parallax>
+            </div>
           </div>
         </div>
         <div className={styles.cta}>

@@ -11,9 +11,15 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+.top {
+  width: 100%;
+}
 .graph {
-  align-self: end;
+  align-self: flex-end;
   margin: -100px 0;
+  height: 800px;
+
+  display: block;
 }
 .wrap h2,
 .wrap p,

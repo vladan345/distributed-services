@@ -1,7 +1,9 @@
 import { useState } from "react";
 import styles from "../styles/component-css/Tabs.module.css";
+import TabServices from "./TabServices";
+import TabPhases from "./TabPhases";
 
-function Tabs({ content }) {
+function Tabs({ content, type }) {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
@@ -22,22 +24,12 @@ function Tabs({ content }) {
             );
           })}
       </div>
-
-      <div className={styles.content}>
-        {selectedItem !== null ? (
-          <>
-            <div className={styles.services}>
-              {content[selectedItem].services &&
-                content[selectedItem].services.map((service) => (
-                  <p key={service}>{service}</p>
-                ))}
-            </div>
-            <p className={styles.description}>
-              {content[selectedItem].description}
-            </p>
-          </>
-        ) : null}
-      </div>
+      {type === "service" && (
+        <TabServices content={content} selectedItem={selectedItem} />
+      )}
+      {type === "phases" && (
+        <TabPhases content={content} selectedItem={selectedItem} />
+      )}
     </div>
   );
 }

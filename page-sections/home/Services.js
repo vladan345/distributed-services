@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+
 import styles from "../../styles/section-css/home/Services.module.css";
 
 import Accordion from "@/components/Accordion";
@@ -16,8 +16,8 @@ function Services() {
           alt="Service images"
           width={720}
           height={817}
-          layout="responsive"
         />
+
         <Accordion content={serviceList} />
       </div>
     </section>
