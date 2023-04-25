@@ -1,34 +1,37 @@
 import Image from "next/image";
 import styles from "../styles/component-css/Hero.module.css";
 
-function Hero({ title, description, video, centeredBold, centeredReg }) {
+function Hero() {
   return (
     <section className={styles.Hero}>
       <Image
         src="/images/home/hero-element1.svg"
-        width={988}
-        height={943}
+        width={747}
+        height={535}
         alt="Part of distributed logo"
         className={styles.background1}
       />
       <div className={styles.video}>
-        <video src={video} autoPlay loop muted></video>
+        <video
+          src="/images/distributed_services_hero.mp4"
+          autoPlay
+          loop
+          muted
+        ></video>
       </div>
 
       <div className={styles.content + " container"}>
-        <h1 dangerouslySetInnerHTML={{ __html: title }} />
-        <div>
-          <p>{description}</p>
-        </div>
-      </div>
-
-      <div className={styles.centered}>
-        <div className="container">
-          <div className={styles.textWrap}>
-            {centeredBold ? <h4>{centeredBold}</h4> : null}
-            {centeredReg ? <p>{centeredReg}</p> : null}
-          </div>
-        </div>
+        <span className={styles.tag}>Distributed services</span>
+        <h1>Where creativity meets results.</h1>
+        <a className="button button-outline-white">
+          Learn more{" "}
+          <Image
+            src="/arrow-white-down.svg"
+            width={29}
+            height={35}
+            alt="arrow down white"
+          />
+        </a>
       </div>
     </section>
   );

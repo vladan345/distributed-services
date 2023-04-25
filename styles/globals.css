@@ -4,7 +4,7 @@
 }
 
 :root {
-  --max-width: 1640px;
+  --max-width: 1400px;
   --border-radius: 8px;
 
   --foreground: #202020;
@@ -39,22 +39,22 @@ body {
   background: var(--background);
 }
 h1 {
-  font-size: 140px;
-  line-height: 1.1;
-  letter-spacing: -5.6px;
-  font-weight: 500;
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: -2.56px;
+  font-weight: bold;
   display: block;
 }
 h2 {
-  font-size: 90px;
-  line-height: 0.95;
-  letter-spacing: -5px;
-  font-weight: 500;
+  font-size: 92px;
+  line-height: 1;
+  letter-spacing: -1.84px;
+  font-weight: bold;
 }
 h3 {
-  font-size: 60px;
-  line-height: 1.1;
-  letter-spacing: -1.2px;
+  font-size: 82px;
+  line-height: 0.95;
+  letter-spacing: -4.1px;
   font-weight: 500;
 }
 h4 {
@@ -63,7 +63,7 @@ h4 {
   font-weight: 500;
 }
 p {
-  font-size: 28px;
+  font-size: 22px;
   line-height: 1.4;
   font-weight: 500;
 }
@@ -81,7 +81,7 @@ a:hover {
 
 h1,
 h2,
-h4 {
+h3 {
   font-family: "Flexa";
 }
 
@@ -90,13 +90,13 @@ h4 {
   line-height: 1.4;
   font-weight: 500;
   color: var(--background);
-  background-color: var(--main-blue);
   padding: 25px 100px;
   display: inline-block;
   border-radius: var(--border-radius);
   transition: 0.3s;
+  cursor: pointer;
 }
-.button-outline {
+.button-outline-blue {
   color: var(--main-blue);
   padding: 22px 30px;
   display: inline-block;
@@ -106,26 +106,37 @@ h4 {
   position: relative;
   z-index: 1;
 }
-.button-outline:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  background-color: var(--main-blue);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: 0.3s;
-  z-index: -1;
-}
-.button-outline:hover {
+.button-outline-blue:hover {
   color: var(--background);
 }
-.button-outline:hover:after {
-  height: 100%;
-  width: 100%;
-}
 
+.button-outline-white {
+  color: var(--background);
+  padding: 15px 30px;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--background);
+  transition: 0.3s;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+}
+.button-outline-white img {
+  margin-left: 10px;
+}
+.button-outline-white:hover {
+  color: var(--main-blue);
+  background: var(--background);
+}
+.tag-large {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.64px;
+  margin-bottom: 50px;
+  display: inline-block;
+  text-align: center;
+}
 .container {
   max-width: var(--max-width);
   margin: 0 auto;

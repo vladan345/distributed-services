@@ -8,56 +8,51 @@ function Header() {
 
   return (
     <header className={styles.Header}>
-      <Link href="/">
-        <Image
-          src="/logo.svg"
-          width={240}
-          height={72}
-          alt="distributed services logo"
-        />
-      </Link>
+      <div className="container">
+        <Link href="/" className={styles.logoLink}>
+          <Image
+            src="/logo.svg"
+            width={240}
+            height={72}
+            alt="distributed services logo"
+          />
+        </Link>
 
-      <nav>
-        <Link
-          className={router.pathname == "/services" ? "active" : ""}
-          href="/services"
-        >
-          Services
-        </Link>
-        <span>/</span>
-        <Link
-          className={router.pathname == "/projects" ? "active" : ""}
-          href="/projects"
-        >
-          Projects
-        </Link>
-        <span>/</span>
-        <Link
-          className={router.pathname == "/partners" ? "active" : ""}
-          href="/partners"
-        >
-          Partners
-        </Link>
-        <span>/</span>
-        <Link
-          className={router.pathname == "/about" ? "active" : ""}
-          href="/about"
-        >
-          About
-        </Link>
-        <span>/</span>
-        <Link
-          className={router.pathname == "/contact" ? "active" : ""}
-          href="/contact"
-        >
-          Contact
-        </Link>
-      </nav>
+        <nav>
+          <Link
+            className={router.pathname == "/services" ? "active" : ""}
+            href="/services"
+          >
+            Services
+          </Link>
 
-      <div className={styles.cta}>
-        <Link className="button-outline" href="#">
-          Book a meeting
-        </Link>
+          <Link
+            className={router.pathname == "/projects" ? "active" : ""}
+            href="/projects"
+          >
+            Projects
+          </Link>
+
+          <Link
+            className={router.pathname == "/about" ? "active" : ""}
+            href="/about"
+          >
+            About
+          </Link>
+
+          <Link
+            className={router.pathname == "/contact" ? "active" : ""}
+            href="/contact"
+          >
+            Contact
+          </Link>
+        </nav>
+
+        <div className={styles.cta}>
+          <Link className="button-outline-white" href="#">
+            Book a meeting
+          </Link>
+        </div>
       </div>
     </header>
   );

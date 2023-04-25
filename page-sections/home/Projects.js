@@ -43,7 +43,6 @@ function Projects() {
           trigger: ".left-image",
           scrub: true,
           start: "top bottom",
-          markers: true,
         },
         y: "60%",
       });

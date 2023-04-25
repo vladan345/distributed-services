@@ -1,34 +1,39 @@
 .Hero {
-  min-height: 1120px;
+  min-height: 1140px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100vw;
   overflow: hidden;
   position: relative;
+  background: linear-gradient(129deg, var(--main-blue) 8%, #15319d 88%);
+  color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.Hero h1 span:after {
-  content: ".";
+.Hero .tag {
+  font-size: 22px;
+  letter-spacing: 0.44px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
 }
 .Hero h1 {
-  color: var(--main-blue);
+  color: var(--background);
   margin-bottom: 80px;
 }
-.Hero h1 span:not(.Hero h1 span:first-of-type) {
-  margin-left: -30px;
-}
+
 .content {
-  margin-top: 300px;
   position: relative;
   z-index: 1;
+  margin-bottom: 150px;
 }
 
-.content p {
-  max-width: 680px;
-}
 .background1 {
   position: absolute;
-  right: 280px;
+  right: 530px;
   z-index: 0;
   animation: rotation 1.5s forwards;
   transform: rotate(116deg);
@@ -54,25 +59,12 @@
   width: 100%;
   display: block;
   height: 100%;
-  background: white;
+  background: linear-gradient(134deg, #01bf5d 23%, #00e56f 65%, #2dff93 95%);
   position: absolute;
   top: 0;
   right: 0;
   content: "";
   animation: fadeIn 1.5s 1.2s forwards;
-}
-
-.centered {
-  margin-top: 230px;
-}
-.textWrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.textWrap h4 {
-  color: var(--main-blue);
-  margin-bottom: 80px;
 }
 
 @keyframes rotation {
@@ -82,7 +74,7 @@
   }
   to {
     transform: rotate(0);
-    top: -410px;
+    top: 0;
   }
 }
 @keyframes fadeIn {

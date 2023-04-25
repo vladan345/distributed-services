@@ -2,12 +2,15 @@
   padding: 45px 20px;
   margin: 0 auto;
   width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  color: var(--background);
+}
+.Header > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 99999;
 }
 .Header nav {
   position: absolute;
@@ -15,7 +18,13 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.Header nav span {
-  margin: 0 20px;
-  pointer-events: none;
+.Header nav a {
+  margin: 0 25px;
+}
+.Header .cta {
+  display: inline-block;
+}
+
+.Header .logoLink {
+  display: inline-block;
 }

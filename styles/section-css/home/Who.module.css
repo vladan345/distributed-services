@@ -1,0 +1,34 @@
+.Who {
+  padding: 190px 0;
+  min-height: 100vh;
+}
+.Who > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tag {
+  color: var(--main-blue);
+}
+.tagline {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.description {
+  color: var(--main-blue);
+  max-width: 1184px;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 65px;
+}
+.explore {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.explore span {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
