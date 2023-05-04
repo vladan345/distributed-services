@@ -1,0 +1,38 @@
+.London {
+  overflow-x: hidden;
+  margin-top: 80px;
+}
+.trigger {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  width: 200vw;
+}
+.panel {
+  width: 100vw;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.panel h2 {
+  font-size: 220px;
+  color: var(--background);
+}
+.London img {
+  width: 200vw;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.gradient {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}

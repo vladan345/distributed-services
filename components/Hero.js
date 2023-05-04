@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../styles/component-css/Hero.module.css";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -23,7 +24,7 @@ function Hero() {
       <div className={styles.content + " container"}>
         <span className={styles.tag}>Distributed services</span>
         <h1>Where creativity meets results.</h1>
-        <a className="button button-outline-white">
+        <Link className="button button-outline-white" href="#">
           Learn more{" "}
           <Image
             src="/arrow-white-down.svg"
@@ -31,7 +32,7 @@ function Hero() {
             height={35}
             alt="arrow down white"
           />
-        </a>
+        </Link>
       </div>
     </section>
   );

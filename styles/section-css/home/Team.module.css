@@ -1,0 +1,63 @@
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+  transform: translateY(100px);
+}
+.first {
+  opacity: 1;
+  transform: translateY(0);
+}
+.textBox {
+  background: var(--background);
+  max-width: 627px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.textBox h3 {
+  margin-bottom: 80px;
+}
+.textBox p {
+  margin-bottom: 30px;
+}
+.textBox p:last-of-type {
+  margin-bottom: 0;
+}
+
+.imageWrap {
+  position: absolute;
+  right: 0;
+  width: 880px;
+  height: 100vh;
+  overflow: hidden;
+}
+.imageCircle {
+  background: var(--main-blue);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 125vh;
+  height: 150vh;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.imageSlide img {
+  position: absolute;
+  transform: translate(100px, -50%);
+  opacity: 0;
+  top: 50%;
+}
+.imageSlide.firstImage img {
+  opacity: 1;
+  transform: translate(0, -50%);
+}

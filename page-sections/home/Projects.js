@@ -1,6 +1,6 @@
-import { useRef, useEffect } from "react";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../../styles/section-css/home/Projects.module.css";
 
 import gsap from "gsap";
@@ -13,125 +13,115 @@ function Projects() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".background",
-        {
-          scrollTrigger: {
-            trigger: ".background",
-            scrub: true,
-          },
-          y: -200,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".background",
-            scrub: true,
-          },
-          y: 200,
-        }
-      );
-      gsap.to(".left-image", {
+      gsap.to(".left", {
         scrollTrigger: {
-          trigger: ".left-image",
-          scrub: true,
-          start: "top bottom",
+          trigger: ".projects",
+          scrub: 1,
         },
-        y: "60%",
+        y: -50,
       });
-      gsap.to(".left-image", {
+      gsap.from(".right", {
         scrollTrigger: {
-          trigger: ".left-image",
-          scrub: true,
-          start: "top bottom",
+          trigger: ".projects",
+          scrub: 1,
         },
-        y: "60%",
+        y: -50,
       });
-      gsap.fromTo(
-        ".right-image",
-        {
-          scrollTrigger: {
-            trigger: ".right-image",
-            scrub: true,
-          },
-          y: 100,
-        },
-        {
-          scrollTrigger: {
-            trigger: ".right-image",
-            scrub: true,
-          },
-          y: -200,
-        }
-      );
     }, main.current);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section className={styles.Projects}>
-      <h3>PROJECTS</h3>
-      <div className={styles.featured} ref={main}>
-        <div className={`${styles.bg} background`}>
-          <Image fill src="/images/home/sand_bgr.jpg" alt="sand background" />
-        </div>
-        <h4>Featured project</h4>
-        <h1>
-          Rikas
-          <br />
-          Hospitality Group
-        </h1>
-
-        <div className={styles.row}>
-          <div className={styles.col}>
-            <div className="left-image">
+    <section className={styles.Projects} ref={main}>
+      <div className="tag-large">Our work</div>
+      <h2>Projects</h2>
+      <div className={`${styles.projectWrap} projects`}>
+        <div className={styles.grid}>
+          <div className={`${styles.col} left`}>
+            <Link className={styles.card} href="#">
+              <div>
+                <h4>Project Name</h4>
+                <p>WEB DESIGN / WEB DEVELOPMENT</p>
+              </div>
+              <span className={styles.cardButton} href="#">
+                View Project
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </span>
               <Image
-                src="/images/home/home-rikas1.webp"
-                alt="Beach image rikas group"
-                width={640}
-                height={520}
+                src="/images/home/project1.webp"
+                alt="Project background"
+                fill
               />
-            </div>
-          </div>
-          <div className={styles.col}>
-            <Image
-              src="/images/home/home-rikas2.webp"
-              alt="Beach image rikas group"
-              width={400}
-              height={520}
-            />
-            <Image
-              src="/images/home/rikas-logo.svg"
-              alt="Beach image rikas group"
-              width={146}
-              height={220}
-            />
-          </div>
-          <div className={styles.col}>
-            <div className="right-image">
-              <p>
-                Vestibulum sagittis porttitor proin eleifend vitae. Tincidunt
-                odio in dictum eu leo sapien.
-              </p>
+            </Link>
+            <Link className={styles.card} href="#">
+              <div>
+                <h4>Project Name</h4>
+                <p>WEB DESIGN / WEB DEVELOPMENT</p>
+              </div>
+              <span className={styles.cardButton} href="#">
+                View Project
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </span>
               <Image
-                src="/images/home/home-rikas3.webp"
-                alt="Beach image rikas group"
-                width={600}
-                height={680}
+                src="/images/home/project2.webp"
+                alt="Project background"
+                fill
               />
-            </div>
+            </Link>
           </div>
-        </div>
-        <div className={styles.cta}>
-          <Link href="/projects/rikas" className={styles.readMore}>
-            <h2>Projects</h2>
-            <Image
-              src="/images/home/white-arrow-right.svg"
-              alt="read more"
-              width={170}
-              height={140}
-            />
-          </Link>
+          <div className={`${styles.col} right`}>
+            <Link className={styles.card} href="#">
+              <div>
+                <h4>Project Name</h4>
+                <p>WEB DESIGN / WEB DEVELOPMENT</p>
+              </div>
+              <span className={styles.cardButton} href="#">
+                View Project
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </span>
+              <Image
+                src="/images/home/project3.webp"
+                alt="Project background"
+                fill
+              />
+            </Link>
+            <Link className={styles.card} href="#">
+              <div>
+                <h4>Project Name</h4>
+                <p>WEB DESIGN / WEB DEVELOPMENT</p>
+              </div>
+              <span className={styles.cardButton} href="#">
+                View Project
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </span>
+              <Image
+                src="/images/home/project4.webp"
+                alt="Project background"
+                fill
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

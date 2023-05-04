@@ -1,0 +1,102 @@
+.Projects h3 {
+  text-align: center;
+  color: var(--main-blue);
+  margin-top: 200px;
+}
+.featured {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 160px;
+}
+.featured .bg {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+.featured .bg img {
+  object-fit: cover;
+}
+.featured .bg {
+  height: 120%;
+}
+
+.featured h4,
+.featured h1 {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.featured h4 {
+  padding: 120px 0 80px 0;
+}
+.row {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.col {
+  position: relative;
+  width: 33%;
+}
+.col:nth-of-type(1) {
+  padding-top: 160px;
+}
+.col:nth-of-type(2) {
+}
+.col:nth-of-type(2) img:nth-of-type(2) {
+  margin: 80px 0 80px;
+  height: 220px;
+}
+.col:nth-of-type(3) {
+  padding-right: 80px;
+  padding-top: 100px;
+}
+.col:nth-of-type(3) p {
+  color: white;
+  margin-bottom: 80px;
+  max-width: 400px;
+}
+.col:nth-of-type(3) img {
+  max-width: 600px;
+}
+.col:nth-of-type(2) img:first-of-type {
+  height: auto;
+}
+.col img {
+  width: 100%;
+  height: 100%;
+}
+
+.cta {
+  margin-top: 40px;
+  position: relative;
+  height: 160px;
+}
+.readMore {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.readMore h2 {
+  color: var(--background);
+  display: inline-block;
+  margin-top: -30px;
+  margin-bottom: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.7s ease-in-out;
+  margin-right: 0;
+  padding-right: 0;
+  line-height: 1.25;
+}
+.readMore:hover h2 {
+  width: 100%;
+  margin-right: 20px;
+  padding-right: 15px;
+}

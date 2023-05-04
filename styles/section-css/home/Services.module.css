@@ -20,24 +20,32 @@
 }
 .imageWrap {
   position: absolute;
-  left: 70%;
-  opacity: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: flex-end;
   z-index: 0;
   transform: translateX(-50%);
-  overflow-x: hidden;
-}
-.imageWrap.first {
   left: 50%;
-  opacity: 1;
+  overflow: hidden;
 }
-
-.imageWrap.first img {
+.imageSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.imageSlide img {
+  transform: translateX(100px);
+  opacity: 0;
   position: absolute;
   right: 0;
+  bottom: 0;
+}
+
+.imageSlide.first img {
+  transform: translateX(0);
+  opacity: 1;
 }
 .slide .number {
   font-size: 28px;
