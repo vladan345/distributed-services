@@ -194,14 +194,13 @@ function Services() {
                   alt="Web design desktop mockup"
                   width={952}
                   height={1066}
-                  style={{ bottom: "-20%", right: "-25%" }}
                 />
                 <Image
                   src="/images/home/services/point-1.webp"
                   alt="Web design desktop mockup"
                   width={1079}
                   height={706}
-                  style={{ bottom: "-70%" }}
+                  style={{ right: "-10%" }}
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
