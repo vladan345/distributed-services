@@ -200,7 +200,7 @@ function Services() {
                   alt="Web design desktop mockup"
                   width={1079}
                   height={706}
-                  style={{ right: "-10%" }}
+                  style={{ right: "10%" }}
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
