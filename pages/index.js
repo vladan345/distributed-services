@@ -29,7 +29,7 @@ export default function Home() {
           <Projects />
           <London />
           <Rikas />
-          <Banner />
+          {/* <Banner /> */}
         </main>
       </ReactLenis>
     </>

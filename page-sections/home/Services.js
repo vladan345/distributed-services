@@ -25,6 +25,7 @@ function Services() {
           duration: 5,
           onComplete: randomX,
           onCompleteParams: [el],
+          stagger: 0.5,
         });
       };
 
@@ -35,13 +36,13 @@ function Services() {
       currentSection = sections[0];
       currentImage = imageSections[0];
 
-      let initialImages = imageSections[0].querySelectorAll("img");
+      // let initialImages = imageSections[0].querySelectorAll("img");
       let interval = 1000;
-      initialImages.forEach((image, index) => {
-        setTimeout(function () {
-          randomX(image);
-        }, index * interval);
-      });
+      // initialImages.forEach((image, index) => {
+      //   setTimeout(function () {
+      //     randomX(image);
+      //   }, index * interval);
+      // });
 
       const sectionPos = main.current.getBoundingClientRect();
 
@@ -94,11 +95,11 @@ function Services() {
             tl.to(currentImageSet[i], { autoAlpha: 0, x: 100, duration: 0.5 });
           }
 
-          newImageSet.forEach((image, index) => {
-            setTimeout(function () {
-              randomX(image);
-            }, index * interval);
-          });
+          // newImageSet.forEach((image, index) => {
+          //   setTimeout(function () {
+          //     randomX(image);
+          //   }, index * interval);
+          // });
           newImageSet.forEach((image) => {
             tl.to(image, { autoAlpha: 1, x: 0, duration: 0.5 });
           });
@@ -107,6 +108,12 @@ function Services() {
           currentImage = newImages;
         }
       }
+      const floatImages = gsap.utils.toArray(".float");
+      floatImages.forEach((image, index) => {
+        setTimeout(function () {
+          randomX(image);
+        }, index * interval);
+      });
     }, main.current);
 
     return () => ctx.revert();
@@ -157,6 +164,7 @@ function Services() {
                   alt="Web design desktop mockup"
                   width={847}
                   height={782}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/service1-laptop.webp"
@@ -164,6 +172,7 @@ function Services() {
                   width={1027}
                   height={638}
                   style={{ bottom: 0 }}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/service1-phone.webp"
@@ -171,6 +180,7 @@ function Services() {
                   width={444}
                   height={478}
                   style={{ bottom: 0 }}
+                  className="float"
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
@@ -179,6 +189,7 @@ function Services() {
                   alt="Web design desktop mockup"
                   width={962}
                   height={1041}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/kafa-1.webp"
@@ -186,6 +197,7 @@ function Services() {
                   width={388}
                   height={374}
                   style={{ right: "35%" }}
+                  className="float"
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
@@ -194,6 +206,7 @@ function Services() {
                   alt="Web design desktop mockup"
                   width={952}
                   height={1066}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/point-1.webp"
@@ -201,6 +214,7 @@ function Services() {
                   width={1079}
                   height={706}
                   style={{ right: "10%" }}
+                  className="float"
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
@@ -210,6 +224,7 @@ function Services() {
                   width={506}
                   height={331}
                   style={{ bottom: "35%", right: "20%" }}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/can.webp"
@@ -217,6 +232,7 @@ function Services() {
                   width={624}
                   height={569}
                   style={{ bottom: "35%" }}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/brandbook-1.webp"
@@ -224,6 +240,7 @@ function Services() {
                   width={1102}
                   height={915}
                   style={{ bottom: "-10%", right: "-10%" }}
+                  className="float"
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
@@ -232,6 +249,7 @@ function Services() {
                   alt="Web design desktop mockup"
                   width={800}
                   height={750}
+                  className="float"
                 />
                 <Image
                   src="/images/home/services/moon-1.webp"
@@ -239,6 +257,7 @@ function Services() {
                   width={137}
                   height={145}
                   style={{ bottom: "75%", right: "5%" }}
+                  className="float"
                 />
               </div>
             </div>

@@ -1,4 +1,7 @@
-.Projects h3 {
+.Rikas {
+  position: relative;
+}
+.Rikas h3 {
   text-align: center;
   color: var(--main-blue);
   margin-top: 200px;
@@ -99,4 +102,13 @@
   width: 100%;
   margin-right: 20px;
   padding-right: 15px;
+}
+.Rikas canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.r .Rikas canvas:not(canvas:first-of-type) {
+  display: none;
 }
