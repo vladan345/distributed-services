@@ -70,6 +70,7 @@ function Services() {
       });
       sections.forEach((section, i) => {
         var tl = gsap.timeline({
+          overwrite: true,
           scrollTrigger: {
             start: () => (i - 0.5) * innerHeight * 2 + sectionPos.top,
             end: () => (i + 0.5) * innerHeight * 2 + sectionPos.top,
@@ -87,12 +88,27 @@ function Services() {
           let currentImageSet = currentImage.querySelectorAll("img");
 
           var tl = gsap.timeline();
-          tl.to(currentSection, { autoAlpha: 0, y: 100, duration: 0.5 });
-          tl.to(newSection, { autoAlpha: 1, y: 0, duration: 0.5 });
+          tl.to(currentSection, {
+            autoAlpha: 0,
+            y: 100,
+            duration: 0.5,
+            overwrite: true,
+          });
+          tl.to(newSection, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.5,
+            overwrite: true,
+          });
 
           var tl = gsap.timeline();
           for (let i = currentImageSet.length - 1; i >= 0; i--) {
-            tl.to(currentImageSet[i], { autoAlpha: 0, x: 100, duration: 0.5 });
+            tl.to(currentImageSet[i], {
+              autoAlpha: 0,
+              x: 100,
+              duration: 0.5,
+              overwrite: true,
+            });
           }
 
           // newImageSet.forEach((image, index) => {

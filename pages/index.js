@@ -4,11 +4,12 @@ import Who from "@/page-sections/home/Who";
 import Services from "@/page-sections/home/Services";
 import Approach from "@/page-sections/home/Approach";
 import Team from "@/page-sections/home/Team";
-import Rikas from "@/page-sections/home/Rikas";
-import Banner from "@/page-sections/home/Banner";
-import { ReactLenis } from "@studio-freight/react-lenis";
 import Projects from "@/page-sections/home/Projects";
+import Rikas from "@/page-sections/home/Rikas";
 import London from "@/page-sections/home/London";
+import GetInTouch from "@/components/GetInTouch";
+
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
           <Projects />
           <London />
           <Rikas />
-          {/* <Banner /> */}
+          <GetInTouch />
         </main>
       </ReactLenis>
     </>

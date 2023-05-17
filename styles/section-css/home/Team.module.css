@@ -61,3 +61,12 @@
   opacity: 1;
   transform: translate(0, -50%);
 }
+
+.progressbar {
+  width: 0;
+  height: 20px;
+  background-image: linear-gradient(to right, #3150e9 0%, #1c39b0 100%);
+  position: sticky;
+  top: calc(100% - 20px);
+  z-index: 10;
+}

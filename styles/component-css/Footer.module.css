@@ -1,78 +1,15 @@
 .footer {
-  background: var(--main-green);
+  background: var(--foreground);
   padding: 85px 0;
-}
-.rowForm {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--foreground);
-  margin-bottom: 40px;
-}
-
-.rowForm p {
-  font-size: 18px;
-  font-weight: 600;
-  max-width: 25%;
-}
-.form {
-  width: 50%;
-}
-.form form {
-  display: flex;
-}
-.email {
-  background: var(--background);
-  padding: 8px 20px;
-  border-radius: var(--border-radius);
-  width: calc(60% - 20px);
-  margin-right: 20px;
-}
-.email label {
-  color: var(--main-blue);
-  font-size: 18px;
-  font-weight: 600;
-  display: block;
-}
-.email input {
-  display: block;
-  width: 100%;
-  border: 0;
-  font-size: 28px;
-  outline: none;
-  font-weight: 500;
-}
-.form button {
-  background: var(--main-blue);
-  border: 0;
   color: var(--background);
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 1.4;
-  padding: 20px 5px;
-  width: calc(40% - 20px);
-  margin-left: 20px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: 0.3s;
 }
-.form button:hover {
-  color: var(--main-green);
-}
-
-.rowNav {
+.row {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  gap: 120px;
 }
-
-.logo p {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 40px;
+.col {
+  width: 25%;
 }
-
 .socials p {
   font-size: 18px;
   margin-bottom: 40px;
@@ -89,17 +26,19 @@
 .socials a:hover img {
   filter: brightness(0) invert(1);
 }
-
-.nav {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 60px;
+.footerHeading {
+  font-size: 28px;
+  color: var(--main-blue);
+  font-weight: 500;
+  margin-bottom: 40px;
 }
-.nav ul {
-  list-style: none;
+.info {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
-.nav ul li {
-  display: inline-block;
-  margin: 0 30px;
+.copy {
+  text-align: center;
+  color: #cdcdcd;
+  font-size: 18px;
+  margin-top: 70px;
 }

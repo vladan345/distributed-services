@@ -12,6 +12,16 @@ function Team() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
+      gsap.to(".progressbar", {
+        scrollTrigger: {
+          trigger: ".trigger",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          toggleActions: "restart none reverse none",
+        },
+        width: "100vw",
+      });
       let currentSection;
       let currentImage;
       let sections = gsap.utils.toArray("section");
@@ -41,15 +51,35 @@ function Team() {
           let currentImageSet = currentImage.querySelectorAll("img");
 
           var tl = gsap.timeline();
-          tl.to(currentSection, { autoAlpha: 0, y: 100, duration: 0.5 });
-          tl.to(newSection, { autoAlpha: 1, y: 0, duration: 0.5 });
+          tl.to(currentSection, {
+            autoAlpha: 0,
+            y: 100,
+            duration: 0.5,
+            overwrite: true,
+          });
+          tl.to(newSection, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.5,
+            overwrite: true,
+          });
 
           var tl = gsap.timeline();
           for (let i = currentImageSet.length - 1; i >= 0; i--) {
-            tl.to(currentImageSet[i], { autoAlpha: 0, x: 100, duration: 0.5 });
+            tl.to(currentImageSet[i], {
+              autoAlpha: 0,
+              x: 100,
+              duration: 0.5,
+              overwrite: true,
+            });
           }
           newImageSet.forEach((image) => {
-            tl.to(image, { autoAlpha: 1, x: 0, duration: 0.5 });
+            tl.to(image, {
+              autoAlpha: 1,
+              x: 0,
+              duration: 0.5,
+              overwrite: true,
+            });
           });
 
           currentSection = newSection;
@@ -63,6 +93,7 @@ function Team() {
 
   return (
     <section className={styles.Team} ref={main}>
+      <div className={`${styles.progressbar} progressbar`}></div>
       <div className="trigger">
         <div className={styles.sticky}>
           <section className={`${styles.slide} ${styles.first} slide`}>
