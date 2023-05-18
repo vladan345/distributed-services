@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Hero from "@/components/Hero";
+import Hero from "@/page-sections/home/Hero";
 import Services from "@/page-sections/services/Services";
 import Nodes from "@/page-sections/services/Nodes";
 import { ReactLenis } from "@studio-freight/react-lenis";

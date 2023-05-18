@@ -1,14 +1,14 @@
 import Image from "next/image";
-import styles from "../styles/component-css/Hero.module.css";
+import styles from "../../styles/section-css/home/Hero.module.css";
 import Link from "next/link";
 
 function Hero() {
   return (
     <section className={styles.Hero}>
       <Image
-        src="/images/home/hero-element1.svg"
+        src="/images/home/hero-element2.svg"
         width={747}
-        height={535}
+        height={943}
         alt="Part of distributed logo"
         className={styles.background1}
       />
@@ -27,7 +27,7 @@ function Hero() {
         <Link className="button button-outline-white" href="#">
           Learn more{" "}
           <Image
-            src="/arrow-white-down.svg"
+            src="/arrow-black-down.svg"
             width={29}
             height={35}
             alt="arrow down white"

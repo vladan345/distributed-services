@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,6 +6,10 @@ import styles from "../styles/component-css/Header.module.css";
 
 function Header() {
   const router = useRouter();
+  const [icon, setIcon] = useState(false);
+  const toggleIcon = () => {
+    setIcon(!icon);
+  };
 
   return (
     <header className={styles.Header}>
@@ -52,6 +57,13 @@ function Header() {
           <Link className="button-outline-white" href="#">
             Book a meeting
           </Link>
+        </div>
+        <div
+          className={`${styles.ham} ${icon ? styles.active : null}`}
+          onClick={toggleIcon}
+        >
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
         </div>
       </div>
     </header>

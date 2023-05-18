@@ -18,14 +18,19 @@
   align-items: flex-start;
   transform: translateY(100px);
 }
+.Services .container {
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
 .imageWrap {
   position: absolute;
-  left: 0;
+  right: 0;
+  top: 0;
   height: 100vh;
   width: 100vw;
   z-index: 0;
-  transform: translateX(-50%);
-  left: 50%;
   overflow: hidden;
 }
 .imageSlide {
@@ -34,6 +39,7 @@
   top: 0;
   width: 100%;
   height: 100%;
+  transform-origin: bottom right;
 }
 .imageSlide img {
   transform: translateX(100px);
@@ -78,6 +84,8 @@
 .headingWrap {
   border-top: 1px solid var(--main-blue);
   border-bottom: 1px solid var(--main-blue);
+  padding-left: 20px;
+  margin-top: -850px;
 }
 section.first {
   transform: translateY(0);
@@ -95,14 +103,84 @@ section.first {
   top: calc(100% - 20px);
   z-index: 10;
 }
-.circle {
+.circleWrap {
   width: 850px;
   height: 850px;
-  float: right;
-  background: url("/images/test-gradient.jpg") no-repeat right center;
-  background-size: cover;
   position: sticky;
   top: calc(100% - 850px);
   left: 100%;
-  border-radius: 100% 0 0 0;
+  transform-origin: bottom right;
+  overflow: hidden;
+}
+.circle {
+  background: url("/images/test-gradient.jpg") no-repeat right center;
+  background-size: cover;
+  border-radius: 50%;
+  width: 1700px;
+  height: 1700px;
+}
+
+@media (max-width: 1600px) {
+  .imageSlide {
+    transform: scale(0.8);
+    margin-bottom: -20px;
+  }
+}
+@media (max-width: 1240px) {
+  .Services {
+    margin-top: 0;
+  }
+  .imageSlide {
+    transform: scale(0.7);
+  }
+  .circle {
+    transform: scale(0.7);
+  }
+  .slide h3 {
+    margin-bottom: 30px;
+    min-height: 0;
+  }
+  .slide p {
+    margin-bottom: 30px;
+  }
+  .Services section {
+    padding-top: 170px;
+    width: calc(100% - 40px);
+    justify-content: flex-start;
+  }
+  .circleWrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    height: 450px;
+    top: calc(100% - 450px);
+    width: 100%;
+  }
+  .circle {
+    flex-shrink: 0;
+    width: 1200px;
+    height: 1200px;
+  }
+  .headingWrap {
+    margin-top: -450px;
+  }
+}
+@media (max-width: 800px) {
+  .Services section {
+    padding-top: 120px;
+  }
+  .imageSlide {
+    transform: scale(0.4);
+  }
+  .slide p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    min-height: 0;
+  }
+  .slide a {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
 }

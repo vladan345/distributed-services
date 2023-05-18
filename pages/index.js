@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Hero from "@/components/Hero";
+import Hero from "@/page-sections/home/Hero";
 import Who from "@/page-sections/home/Who";
 import Services from "@/page-sections/home/Services";
 import Approach from "@/page-sections/home/Approach";
@@ -27,10 +27,10 @@ export default function Home() {
           <Services />
           <Approach />
           <Team />
-          <Projects />
+          {/*  <Projects />
           <London />
           <Rikas />
-          <GetInTouch />
+          <GetInTouch /> */}
         </main>
       </ReactLenis>
     </>

@@ -128,8 +128,7 @@
   width: 29px;
   height: 35px;
   margin-left: 10px;
-  filter: invert(21%) sepia(90%) saturate(2913%) hue-rotate(230deg)
-    brightness(94%) contrast(93%);
+  filter: var(--arrow-filter);
 }
 .projectBtn:hover {
   background: transparent;

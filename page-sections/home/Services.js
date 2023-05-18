@@ -55,7 +55,8 @@ function Services() {
           scrub: 1,
           toggleActions: "restart none reverse none",
         },
-        width: "100vw",
+        width: "100%",
+        ease: "none",
       });
       gsap.to(".circle", {
         scrollTrigger: {
@@ -111,11 +112,6 @@ function Services() {
             });
           }
 
-          // newImageSet.forEach((image, index) => {
-          //   setTimeout(function () {
-          //     randomX(image);
-          //   }, index * interval);
-          // });
           newImageSet.forEach((image) => {
             tl.to(image, { autoAlpha: 1, x: 0, duration: 0.5 });
           });
@@ -137,15 +133,17 @@ function Services() {
 
   return (
     <section className={styles.Services} ref={main}>
-      <div className={`${styles.circle} circle`}></div>
+      <div className={`${styles.circleWrap} circleWrap`}>
+        <div className={`${styles.circle} circle`}></div>
+      </div>
       <div className={`${styles.progressbar} progressbar`}></div>
       <div className={styles.headingWrap}>
         <h2>Services</h2>
       </div>
 
-      <div className="container">
-        <div className="trigger">
-          <div className={styles.stickyWrap}>
+      <div className="trigger">
+        <div className={styles.stickyWrap}>
+          <div className={`${styles.container} container`}>
             {services &&
               services.map((service, index) => {
                 if (index === 0) {
@@ -171,111 +169,109 @@ function Services() {
                   );
                 }
               })}
-            <div className={styles.imageWrap}>
-              <div
-                className={`${styles.imageSlide} imageSlide ${styles.first}`}
-              >
-                <Image
-                  src="/images/home/services/service1-desktop.webp"
-                  alt="Web design desktop mockup"
-                  width={847}
-                  height={782}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/service1-laptop.webp"
-                  alt="Web design laptop mockup"
-                  width={1027}
-                  height={638}
-                  style={{ bottom: 0 }}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/service1-phone.webp"
-                  alt="Web design laptop mockup"
-                  width={444}
-                  height={478}
-                  style={{ bottom: 0 }}
-                  className="float"
-                />
-              </div>
-              <div className={`${styles.imageSlide} imageSlide`}>
-                <Image
-                  src="/images/home/services/dev-laptop-1.webp"
-                  alt="Web design desktop mockup"
-                  width={962}
-                  height={1041}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/kafa-1.webp"
-                  alt="Web design desktop mockup"
-                  width={388}
-                  height={374}
-                  style={{ right: "35%" }}
-                  className="float"
-                />
-              </div>
-              <div className={`${styles.imageSlide} imageSlide`}>
-                <Image
-                  src="/images/home/services/marketing-phone-1.webp"
-                  alt="Web design desktop mockup"
-                  width={952}
-                  height={1066}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/point-1.webp"
-                  alt="Web design desktop mockup"
-                  width={1079}
-                  height={706}
-                  style={{ right: "10%" }}
-                  className="float"
-                />
-              </div>
-              <div className={`${styles.imageSlide} imageSlide`}>
-                <Image
-                  src="/images/home/services/vizitke-1.webp"
-                  alt="Web design desktop mockup"
-                  width={506}
-                  height={331}
-                  style={{ bottom: "35%", right: "20%" }}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/can.webp"
-                  alt="Web design desktop mockup"
-                  width={624}
-                  height={569}
-                  style={{ bottom: "35%" }}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/brandbook-1.webp"
-                  alt="Web design desktop mockup"
-                  width={1102}
-                  height={915}
-                  style={{ bottom: "-10%", right: "-10%" }}
-                  className="float"
-                />
-              </div>
-              <div className={`${styles.imageSlide} imageSlide`}>
-                <Image
-                  src="/images/home/services/zemlja.webp"
-                  alt="Web design desktop mockup"
-                  width={800}
-                  height={750}
-                  className="float"
-                />
-                <Image
-                  src="/images/home/services/moon-1.webp"
-                  alt="Web design desktop mockup"
-                  width={137}
-                  height={145}
-                  style={{ bottom: "75%", right: "5%" }}
-                  className="float"
-                />
-              </div>
+          </div>
+          <div className={styles.imageWrap}>
+            <div className={`${styles.imageSlide} imageSlide ${styles.first}`}>
+              <Image
+                src="/images/home/services/service1-desktop.webp"
+                alt="Web design desktop mockup"
+                width={847}
+                height={782}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/service1-laptop.webp"
+                alt="Web design laptop mockup"
+                width={1027}
+                height={638}
+                style={{ bottom: 0 }}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/service1-phone.webp"
+                alt="Web design laptop mockup"
+                width={444}
+                height={478}
+                style={{ bottom: 0 }}
+                className="float"
+              />
+            </div>
+            <div className={`${styles.imageSlide} imageSlide`}>
+              <Image
+                src="/images/home/services/dev-laptop-1.webp"
+                alt="Web design desktop mockup"
+                width={962}
+                height={1041}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/kafa-1.webp"
+                alt="Web design desktop mockup"
+                width={388}
+                height={374}
+                style={{ right: "35%" }}
+                className="float"
+              />
+            </div>
+            <div className={`${styles.imageSlide} imageSlide`}>
+              <Image
+                src="/images/home/services/marketing-phone-1.webp"
+                alt="Web design desktop mockup"
+                width={952}
+                height={1066}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/point-1.webp"
+                alt="Web design desktop mockup"
+                width={1079}
+                height={706}
+                style={{ right: "10%" }}
+                className="float"
+              />
+            </div>
+            <div className={`${styles.imageSlide} imageSlide`}>
+              <Image
+                src="/images/home/services/vizitke-1.webp"
+                alt="Web design desktop mockup"
+                width={506}
+                height={331}
+                style={{ bottom: "35%", right: "20%" }}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/can.webp"
+                alt="Web design desktop mockup"
+                width={624}
+                height={569}
+                style={{ bottom: "35%" }}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/brandbook-1.webp"
+                alt="Web design desktop mockup"
+                width={1102}
+                height={915}
+                style={{ bottom: "-10%", right: "-10%" }}
+                className="float"
+              />
+            </div>
+            <div className={`${styles.imageSlide} imageSlide`}>
+              <Image
+                src="/images/home/services/zemlja.webp"
+                alt="Web design desktop mockup"
+                width={800}
+                height={750}
+                className="float"
+              />
+              <Image
+                src="/images/home/services/moon-1.webp"
+                alt="Web design desktop mockup"
+                width={137}
+                height={145}
+                style={{ bottom: "75%", right: "5%" }}
+                className="float"
+              />
             </div>
           </div>
         </div>

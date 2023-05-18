@@ -32,3 +32,35 @@
   font-size: 22px;
   font-weight: bold;
 }
+@media (max-width: 1240px) {
+  .Who {
+    min-height: 0;
+  }
+  .description {
+    font-size: 20px;
+    max-width: 700px;
+  }
+  .Who h2 {
+    max-width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .Who {
+    padding: 120px 0;
+  }
+  .description {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  .Who h2 {
+    max-width: none;
+    margin-bottom: 50px;
+  }
+  .explore span {
+    font-size: 14px;
+  }
+  .explore img {
+    width: 70px;
+    height: 70px;
+  }
+}

@@ -1,5 +1,5 @@
 .Header {
-  padding: 45px 20px;
+  padding: 45px 0;
   margin: 0 auto;
   width: 100vw;
   position: fixed;
@@ -27,4 +27,70 @@
 
 .Header .logoLink {
   display: inline-block;
+}
+
+.Header .logoLink img {
+  width: 100%;
+}
+.ham {
+  display: none;
+  width: 30px;
+  height: 13px;
+  position: relative;
+  transition: 0.3s;
+}
+.line {
+  background: var(--background);
+  width: 30px;
+  height: 3px;
+  display: block;
+  position: absolute;
+  transition: 0.3s;
+}
+.line:first-of-type {
+  transform-origin: top right;
+  top: 0;
+  right: 0;
+}
+.line:last-of-type {
+  bottom: 0;
+  width: 20px;
+  right: 0;
+  transform-origin: bottom right;
+}
+.active {
+  width: 22px;
+  height: 22px;
+}
+.active .line:first-of-type {
+  transform: rotate(-45deg);
+  width: 28px;
+}
+.active .line:last-of-type {
+  width: 28px;
+  transform: rotate(45deg);
+}
+.active .line {
+  background: var(--main-blue);
+}
+@media (max-width: 1240px) {
+  .ham {
+    display: block;
+  }
+  .Header nav,
+  .Header .cta {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .Header {
+    padding: 30px 0;
+  }
+  .Header .logoLink {
+    max-width: 130px;
+    height: 40px;
+  }
+  .Header .logoLink img {
+    height: 40px;
+  }
 }

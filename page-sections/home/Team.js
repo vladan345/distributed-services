@@ -20,7 +20,7 @@ function Team() {
           scrub: 1,
           toggleActions: "restart none reverse none",
         },
-        width: "100vw",
+        width: "100%",
       });
       let currentSection;
       let currentImage;
