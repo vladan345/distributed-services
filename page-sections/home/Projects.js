@@ -13,19 +13,22 @@ function Projects() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.to(".left", {
-        scrollTrigger: {
-          trigger: ".projects",
-          scrub: 1,
-        },
-        y: -50,
-      });
-      gsap.from(".right", {
-        scrollTrigger: {
-          trigger: ".projects",
-          scrub: 1,
-        },
-        y: -50,
+      let mm = gsap.matchMedia();
+      mm.add("(min-width: 801px)", () => {
+        gsap.to(".left", {
+          scrollTrigger: {
+            trigger: ".projects",
+            scrub: 1,
+          },
+          y: -50,
+        });
+        gsap.from(".right", {
+          scrollTrigger: {
+            trigger: ".projects",
+            scrub: 1,
+          },
+          y: -50,
+        });
       });
     }, main.current);
 

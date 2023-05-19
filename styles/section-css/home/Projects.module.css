@@ -1,6 +1,7 @@
 .Projects {
   text-align: center;
   margin-top: 150px;
+  padding: 0 20px;
 }
 .projectWrap {
   max-width: 1200px;
@@ -70,6 +71,7 @@
 .card > img {
   position: relative;
   z-index: -1;
+  object-fit: cover;
 }
 .card h4 {
   margin-bottom: 15px;
@@ -96,7 +98,6 @@
 .card:hover p {
   color: white;
 }
-
 .card:hover .cardButton {
   background: white;
   color: var(--main-blue);
@@ -112,4 +113,62 @@
 .card:hover:before {
   width: 560px;
   height: 560px;
+}
+
+@media (max-width: 1240px) {
+  .grid {
+    gap: 20px;
+  }
+  .col {
+    gap: 20px;
+  }
+  .card h4 {
+    font-size: 32px;
+  }
+  .card p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .grid {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+  }
+  .col:first-of-type {
+    margin-bottom: 50px;
+  }
+  .Projects {
+    margin-top: 60px;
+  }
+  .Projects h2 {
+    margin-bottom: 60px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .card {
+    height: 440px;
+    padding: 30px 20px;
+  }
+
+  .cardButton {
+    display: flex;
+    font-size: 16px;
+    width: 100%;
+    justify-content: center;
+  }
+  .cardButton img {
+    width: 23px;
+    height: 19px;
+  }
+  .card:hover:after {
+    width: 440px;
+    height: 440px;
+  }
+  .card:hover:before {
+    width: 260px;
+    height: 260px;
+  }
 }

@@ -88,7 +88,14 @@ function London() {
           alt="London and Dubai"
           width={3933}
           height={1080}
-          className="cities"
+          className={`${styles.cityDesktop} cities`}
+        />
+        <Image
+          src="/images/home/DS_Gradovi_m2.png"
+          alt="London and Dubai"
+          width={1600}
+          height={780}
+          className={`${styles.cityMobile} cities`}
         />
         <div className={`${styles.gradient} gradient`}></div>
       </div>

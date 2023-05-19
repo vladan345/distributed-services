@@ -6,6 +6,7 @@ import Approach from "@/page-sections/home/Approach";
 import Team from "@/page-sections/home/Team";
 import Projects from "@/page-sections/home/Projects";
 import Rikas from "@/page-sections/home/Rikas";
+import RikasM from "@/page-sections/home/RikasM";
 import London from "@/page-sections/home/London";
 import GetInTouch from "@/components/GetInTouch";
 
@@ -27,10 +28,11 @@ export default function Home() {
           <Services />
           <Approach />
           <Team />
-          {/*  <Projects />
+          <Projects />
           <London />
           <Rikas />
-          <GetInTouch /> */}
+          <RikasM />
+          <GetInTouch />
         </main>
       </ReactLenis>
     </>

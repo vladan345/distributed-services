@@ -70,3 +70,61 @@
   top: calc(100% - 20px);
   z-index: 10;
 }
+
+@media (max-width: 1640px) {
+  .imageWrap {
+    width: 650px;
+  }
+  .imageCircle {
+    transform: translateY(-50%) scale(0.8);
+  }
+}
+@media (max-width: 1240px) {
+  .imageCircle {
+    top: 0;
+    transform: translateY(0) scale(1) translateX(-50%);
+    left: 50%;
+    width: 1500px;
+    height: 1000px;
+  }
+  .imageWrap {
+    left: 0;
+    width: 100%;
+    height: 300px;
+    right: auto;
+    bottom: 0;
+  }
+  .imageSlide {
+    position: absolute;
+    top: -30%;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8);
+  }
+  .textBox {
+    padding-top: 170px;
+    justify-content: flex-start;
+  }
+  .textBox h3 {
+    margin-bottom: 30px;
+  }
+  .textBox p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .imageWrap {
+    height: 250px;
+  }
+  .imageSlide {
+    top: -35%;
+    transform: scale(0.5);
+  }
+  .textBox h3 {
+    margin-bottom: 30px;
+  }
+
+  .textBox {
+    padding-top: 120px;
+  }
+}

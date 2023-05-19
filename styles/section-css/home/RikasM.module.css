@@ -1,7 +1,8 @@
-.Rikas {
+.RikasM {
   position: relative;
+  display: none;
 }
-.Rikas h3 {
+.RikasM h3 {
   text-align: center;
   color: var(--main-blue);
   margin-top: 200px;
@@ -10,6 +11,14 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 160px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .featured .bg {
   width: 100%;
@@ -32,6 +41,10 @@
   font-size: 32px;
   letter-spacing: 0.64px;
 }
+.rikasLogo {
+  position: relative;
+  margin: 50px 0;
+}
 .row {
   margin-top: 90px;
   display: flex;
@@ -43,10 +56,6 @@
   width: 33%;
 }
 
-.col:nth-of-type(2) img:nth-of-type(2) {
-  margin: 100px 0 100px;
-  height: 174px;
-}
 .col:nth-of-type(2) {
   display: flex;
   flex-direction: column;
@@ -70,18 +79,24 @@
 }
 .radioSelect {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  flex-direction: row;
+  gap: 20px;
   margin-bottom: 100px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  overflow-x: scroll;
 }
 .radioSelect label {
-  font-size: 28px;
+  font-size: 16px;
   color: var(--background);
-  display: block;
   position: relative;
-  padding-left: 45px;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--background);
+  padding: 10px 25px;
+  flex-shrink: 0;
 }
 .radioSelect input {
   position: absolute;
@@ -90,28 +105,10 @@
   height: 0;
   width: 0;
 }
-.checkmark {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 2px solid var(--background);
-  transition: 0.3s;
-}
-.radioSelect input:checked ~ .checkmark {
-  background-color: var(--background);
-}
-.active .checkmark {
-  height: 30px;
-  width: 30px;
-}
-.active {
-  font-size: 30px;
-  font-weight: 800;
+
+label.active {
+  background: var(--background);
+  color: var(--main-blue);
 }
 .projectBtn {
   font-size: 22px;
@@ -123,6 +120,7 @@
   transition: 0.3s;
   color: var(--main-blue);
   background: var(--background);
+  position: relative;
 }
 .projectBtn img {
   width: 29px;
@@ -138,8 +136,60 @@
   filter: invert();
 }
 
+.embla {
+  overflow: hidden;
+  width: 440px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.embla__container {
+  display: flex;
+  flex-direction: row;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__prev {
+  top: 50%;
+}
+.embla__next {
+  top: 50%;
+  right: 0;
+}
+.embla__prev,
+.embla__next {
+  position: absolute;
+}
 @media (max-width: 1240px) {
-  .Rikas {
-    display: none;
+  .RikasM {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  .rikasLogo {
+    width: 86px;
+    height: 130px;
+  }
+  .radioSelect {
+    margin-bottom: 50px;
+  }
+  .embla {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .radioSelect {
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+  .embla {
+    width: 350px;
+    height: 350px;
+  }
+  .embla img {
+    object-position: center;
+    height: 100%;
+    width: 100%;
   }
 }

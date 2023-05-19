@@ -34,6 +34,9 @@
   left: 0;
   z-index: 0;
 }
+.cityMobile {
+  display: none;
+}
 .gradient {
   width: 100vw;
   height: 100vh;
@@ -41,4 +44,36 @@
   top: 0;
   left: 0;
   z-index: -2;
+}
+@media (max-width: 1240px) {
+  .panel h2 {
+    font-size: 120px;
+  }
+  .panel:first-of-type h2 {
+    max-width: 650px;
+  }
+  .panel h2 {
+    max-width: 850px;
+  }
+}
+@media (max-width: 800px) {
+  .cityMobile {
+    display: block;
+  }
+  .cityDesktop {
+    display: none;
+  }
+  .panel h2 {
+    font-size: 58px;
+  }
+  .panel:first-of-type h2 {
+    max-width: 300px;
+  }
+  .panel h2 {
+    max-width: 850px;
+  }
+  .container {
+    align-items: flex-start;
+    padding-top: 120px;
+  }
 }
