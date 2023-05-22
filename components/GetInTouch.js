@@ -34,6 +34,7 @@ function GetInTouch({ mode }) {
           <h2>Get in touch!</h2>
         </div>
         <div className={`${styles.arrowContainer} arrowContainer`}>
+          <h2>Get in touch!</h2>
           <Image
             src="/images/arrow-white-right-big.svg"
             alt="arrow icon"

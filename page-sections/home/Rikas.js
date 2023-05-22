@@ -9,6 +9,20 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Rikas() {
+  const textContent = {
+    lacantine: [
+      "LACANTINE ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
+      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+    ],
+    tagomago: [
+      "TAGOMAGO ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
+      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+    ],
+    twiggy: [
+      "TWIGGY ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
+      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+    ],
+  };
   const [restaurant, setRestaurant] = useState("lacantine");
   const main = useRef(null);
 
@@ -64,7 +78,15 @@ function Rikas() {
   }, []);
 
   const handleSelect = (e) => {
-    setRestaurant(e.target.value);
+    const images = main.current.querySelectorAll(".restaurantImage");
+    images.forEach((image) => {
+      image.style.opacity = 0;
+
+      setTimeout(() => {
+        image.style.opacity = 1;
+        setRestaurant(e.target.value);
+      }, 300);
+    });
   };
   return (
     <section className={styles.Rikas}>
@@ -74,6 +96,7 @@ function Rikas() {
             fill
             src="/images/home/sand_bgr.jpg"
             alt="sand background"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <h4>Trusted partner</h4>
@@ -132,6 +155,7 @@ function Rikas() {
                   alt="Beach image rikas group"
                   width={440}
                   height={560}
+                  className={`${styles.restaurantImage} restaurantImage`}
                 />
               </div>
             </div>
@@ -141,6 +165,7 @@ function Rikas() {
                 alt="Beach image rikas group"
                 width={440}
                 height={560}
+                className={`${styles.restaurantImage} restaurantImage`}
               />
               <NextImage
                 src="/images/home/rikas-logo.svg"
@@ -160,18 +185,15 @@ function Rikas() {
             </div>
             <div className={styles.col}>
               <div className="right-image">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Semper praesent
-                  scelerisque blandit sed morbi feugiat pellentesque.
-                  <br /> <br />
-                  Fames ac diam quis et adipiscing orci vitae. Aliquam elit
-                  pellentesque diam faucibus.
-                </p>
+                {textContent[restaurant].map((text, index) => {
+                  return <p key={index}>{text}</p>;
+                })}
                 <NextImage
                   src={`/images/home/${restaurant}3.webp`}
                   alt="Beach image rikas group"
                   width={440}
                   height={560}
+                  className={`${styles.restaurantImage} restaurantImage`}
                 />
               </div>
             </div>

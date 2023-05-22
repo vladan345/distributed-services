@@ -54,9 +54,13 @@
 }
 .col:nth-of-type(3) p {
   color: white;
-  margin-bottom: 70px;
-  max-width: 360px;
   margin-top: 70px;
+  margin-bottom: 20px;
+  max-width: 360px;
+}
+.col:nth-of-type(3) p:last-of-type {
+  margin-bottom: 70px;
+  margin-top: 0;
 }
 .col:nth-of-type(3) img {
   max-width: 600px;
@@ -81,6 +85,9 @@
   position: relative;
   padding-left: 45px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.restaurantImage {
   transition: 0.3s;
 }
 .radioSelect input {
@@ -108,6 +115,7 @@
 .active .checkmark {
   height: 30px;
   width: 30px;
+  background-color: var(--background);
 }
 .active {
   font-size: 30px;

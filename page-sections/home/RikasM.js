@@ -10,6 +10,20 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function RikasM() {
+  const textContent = {
+    lacantine: [
+      "LACANTINE ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
+      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+    ],
+    tagomago: [
+      "TAGOMAGO ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
+      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+    ],
+    twiggy: [
+      "TWIGGY ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
+      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+    ],
+  };
   const [restaurant, setRestaurant] = useState("lacantine");
   const main = useRef(null);
 
@@ -17,7 +31,6 @@ function RikasM() {
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
-    console.log(emblaApi);
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
@@ -55,7 +68,12 @@ function RikasM() {
     <section className={styles.RikasM}>
       <div className={styles.featured} ref={main}>
         <div className={`${styles.bg} background`}>
-          <Image fill src="/images/home/sand_bgr.jpg" alt="sand background" />
+          <Image
+            fill
+            src="/images/home/sand_bgr.jpg"
+            alt="sand background"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <div className={styles.container}>
           <h4>Trusted partner</h4>
@@ -103,7 +121,13 @@ function RikasM() {
               Twiggy
             </label>
           </div>
-
+          {textContent[restaurant].map((text, index) => {
+            return (
+              <p className={styles.description} key={index}>
+                {text}
+              </p>
+            );
+          })}
           <div className={styles.restaurantCOntent}>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
@@ -133,10 +157,20 @@ function RikasM() {
                 </div>
               </div>
               <button className={styles.embla__prev} onClick={scrollPrev}>
-                Prev
+                <Image
+                  src="/arrow-white-right-small.svg"
+                  width={23}
+                  height={19}
+                  alt="Previous slide icon"
+                />
               </button>
               <button className={styles.embla__next} onClick={scrollNext}>
-                Next
+                <Image
+                  src="/arrow-white-left-small.svg"
+                  width={23}
+                  height={19}
+                  alt="Next slide icon"
+                />
               </button>
             </div>
           </div>

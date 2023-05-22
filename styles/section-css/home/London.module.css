@@ -34,7 +34,8 @@
   left: 0;
   z-index: 0;
 }
-.cityMobile {
+.cityMobile,
+.cityMobileSmall {
   display: none;
 }
 .gradient {
@@ -75,5 +76,14 @@
   .container {
     align-items: flex-start;
     padding-top: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cityMobile {
+    display: none;
+  }
+  .cityMobileSmall {
+    display: block;
   }
 }

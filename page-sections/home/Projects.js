@@ -60,6 +60,7 @@ function Projects() {
                 src="/images/home/project1.webp"
                 alt="Project background"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </Link>
             <Link className={styles.card} href="#">
@@ -80,6 +81,7 @@ function Projects() {
                 src="/images/home/project2.webp"
                 alt="Project background"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </Link>
           </div>
@@ -102,6 +104,7 @@ function Projects() {
                 src="/images/home/project3.webp"
                 alt="Project background"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </Link>
             <Link className={styles.card} href="#">
@@ -122,6 +125,7 @@ function Projects() {
                 src="/images/home/project4.webp"
                 alt="Project background"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </Link>
           </div>

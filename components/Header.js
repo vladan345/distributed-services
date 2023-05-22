@@ -2,13 +2,16 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import MobileMenu from "./MobileMenu";
 import styles from "../styles/component-css/Header.module.css";
 
 function Header() {
   const router = useRouter();
   const [icon, setIcon] = useState(false);
+  const [isActive, setActive] = useState(false);
   const toggleIcon = () => {
     setIcon(!icon);
+    setActive(!isActive);
   };
 
   return (
@@ -20,6 +23,7 @@ function Header() {
             width={240}
             height={72}
             alt="distributed services logo"
+            priority
           />
         </Link>
 
@@ -66,6 +70,7 @@ function Header() {
           <span className={styles.line}></span>
         </div>
       </div>
+      <MobileMenu isActive={isActive} />
     </header>
   );
 }

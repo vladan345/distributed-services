@@ -19,7 +19,7 @@ function London() {
           trigger: ".trigger",
           pin: true,
           scrub: 1,
-          end: "+=3000",
+          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
         },
       });
       gsap.to(".cities", {
@@ -29,7 +29,7 @@ function London() {
           trigger: ".trigger",
           start: "top left",
           scrub: 1,
-          end: "+=3000",
+          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
         },
       });
       gsap.set(".gradient", {
@@ -44,7 +44,7 @@ function London() {
           trigger: ".trigger",
           start: "top left",
           scrub: 1,
-          end: "+=3000",
+          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
         },
       });
       sections.forEach((section) => {
@@ -91,11 +91,18 @@ function London() {
           className={`${styles.cityDesktop} cities`}
         />
         <Image
-          src="/images/home/DS_Gradovi_m2.png"
+          src="/images/home/DS_Gradovi_m.png"
           alt="London and Dubai"
           width={1600}
-          height={780}
+          height={567}
           className={`${styles.cityMobile} cities`}
+        />
+        <Image
+          src="/images/home/DS_Gradovi_ms.png"
+          alt="London and Dubai"
+          width={1000}
+          height={500}
+          className={`${styles.cityMobileSmall} cities`}
         />
         <div className={`${styles.gradient} gradient`}></div>
       </div>
