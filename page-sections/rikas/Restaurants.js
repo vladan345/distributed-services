@@ -1,366 +1,298 @@
+import { useRef, useEffect } from "react";
 import styles from "../../styles/section-css/rikas/Restaurants.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { restaurants1, restaurants2 } from "@/lib/rikasRestaurants";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Restaurants() {
+  const main = useRef(null);
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      let rows = gsap.utils.toArray(".trigger");
+      rows.forEach((row) => {
+        let image = row.querySelector(".restaurantImage");
+        var tl = gsap.timeline();
+        var tl2 = gsap.timeline();
+
+        gsap.set(image, {
+          y: -300,
+        });
+        gsap.to(image, {
+          y: 0,
+          scrollTrigger: {
+            trigger: row,
+            scrub: true,
+          },
+        });
+        gsap.to(row, {
+          duration: 1,
+          width: "calc(50% - 60px)",
+          ease: "power1.inOut",
+          scrollTrigger: {
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play reverse restart reverse",
+            trigger: row,
+          },
+        });
+      });
+
+      gsap.set(".dualImage", {
+        y: -300,
+      });
+      gsap.to(".dualImage", {
+        y: 0,
+        scrollTrigger: {
+          trigger: ".dualTrigger",
+          scrub: true,
+        },
+      });
+      gsap.to(".dualTrigger", {
+        duration: 1,
+        width: "100%",
+        ease: "power1.inOut",
+        scrollTrigger: {
+          start: "top center",
+          end: "bottom center",
+          once: true,
+          trigger: ".dualTrigger",
+        },
+      });
+
+      gsap.to(".circleImage", {
+        duration: 2,
+        rotate: 180,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          start: "top bottom",
+          once: true,
+          trigger: ".circleTrigger",
+        },
+      });
+    }, main.current);
+    return () => {
+      ctx.revert();
+    };
+  }, []);
+
   return (
-    <div className={styles.Restaurants}>
-      {/* Lacantine */}
-      <div className={`${styles.row} ${styles.lacantine}`}>
-        <div className={styles.col}>
-          <div className={styles.textBoxL}>
-            <h4>La Cantine du Faubourg</h4>
-            <p className={styles.desc}>
-              Ut erat scelerisque lacus massa. Ac diam in a cras at sagittis
-              orci. Mus fames suspendisse arcu iaculis id sed condimentum.
-              Condimentum nunc justo nunc ut tellus nisi. Integer velit diam
-              maecenas purus. Gravida risus id sed sit tempor. Amet volutpat
-              aenean nec quis cras bibendum. Amet nec porttitor semper augue
-              lectus orci scelerisque.
-            </p>
-            <Link href="#" className={styles.cta}>
-              <p>Go to website</p>
-              <Image
-                src="/images/single-project/green-arrow-right-sm.svg"
-                width={39}
-                height={32}
-                alt="arrow icon"
-                className={styles.arrow}
-              />
-            </Link>
-          </div>
-        </div>
-        <div className={styles.col}>
-          <Image
-            src="/images/single-project/rikas/rikas1.webp"
-            alt=""
-            width={800}
-            height={600}
-            layout="responsive"
-            style={{ maxWidth: "800px" }}
-          />
-        </div>
-      </div>
-
-      {/* Twiggy */}
-      <div className="container">
-        <div className={`${styles.row} ${styles.twiggy}`}>
-          <div className={styles.col}>
-            <Image
-              src="/images/single-project/rikas/rikas2.webp"
-              alt=""
-              width={640}
-              height={760}
-              layout="responsive"
-              style={{ maxWidth: "640px" }}
-            />
-          </div>
-          <div className={styles.col}>
-            <div className={styles.textBoxR}>
-              <h4>Twiggy</h4>
-              <p className={styles.desc}>
-                Volutpat dictumst risus nisl adipiscing non. Penatibus commodo
-                vel eget neque consectetur morbi odio facilisis. Congue rutrum
-                integer turpis vulputate integer at vitae in quis. Nisi gravida
-                cursus et mattis. Ac pulvinar sodales adipiscing nec elit nibh.
-                Purus bibendum facilisi sit rhoncus tellus egestas.
-              </p>
-              <Link href="#" className={styles.cta}>
-                <p>Go to website</p>
+    <div className={styles.Restaurants} ref={main}>
+      {restaurants1 &&
+        restaurants1.map((restaurant, index) => {
+          return (
+            <div
+              className={`${styles.row} ${
+                restaurant.imageOnLeft ? styles.right : styles.left
+              }`}
+              key={index}
+            >
+              <div className={`${styles.imageWrap} trigger`}>
                 <Image
-                  src="/images/single-project/green-arrow-right-sm.svg"
-                  width={39}
-                  height={32}
-                  alt="arrow icon"
-                  className={styles.arrow}
+                  src={restaurant.image}
+                  alt="La cantine restaurant"
+                  height={1060}
+                  width={900}
+                  className="restaurantImage"
                 />
-              </Link>
+              </div>
+              <div className="container">
+                <div className={styles.rowWrap}>
+                  <div className={styles.textBox}>
+                    <h2 className={styles.title}>{restaurant.title}</h2>
+                    <p className={styles.description}>
+                      {restaurant.description}
+                    </p>
+                    <Link className={styles.cta} href={restaurant.link}>
+                      Go to website
+                      <Image
+                        src="/arrow-black-right.svg"
+                        width={29}
+                        height={35}
+                        alt="arrow down white"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Lana Lusa */}
-        <div className={`${styles.row} ${styles.lanalusa}`}>
-          <div className={styles.col}>
-            <div className={styles.textBoxR}>
-              <h4>Lana Lusa</h4>
-              <p className={styles.desc}>
-                At velit velit urna elementum congue pharetra a. Urna nec
-                viverra aliquam cras dolor id pellentesque elit. Orci gravida in
-                est at et quam metus. Placerat volutpat tempus scelerisque orci
-                sapien tristique amet ultrices. Id quis metus dolor in. Vitae
-                pharetra eu aliquam orci. Et nulla elementum mauris amet massa.
-                Sed rhoncus enim scelerisque.
-              </p>
-              <Link href="#" className={styles.cta}>
-                <p>Go to website</p>
-                <Image
-                  src="/images/single-project/green-arrow-right-sm.svg"
-                  width={39}
-                  height={32}
-                  alt="arrow icon"
-                  className={styles.arrow}
-                />
-              </Link>
-            </div>
-          </div>
-          <div className={styles.col}>
-            <Image
-              src="/images/single-project/rikas/rikas3.webp"
-              alt=""
-              width={640}
-              height={760}
-              layout="responsive"
-              style={{ maxWidth: "640px" }}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.banner}>
-        <h4>
-          Feugiat euismod mattis gravida mi aliquet cursus. Vulputate lacinia
-          pharetra eu morbi risus. Sed sem fames leo est vel. Vitae mi nunc
-          ultricies auctor ac vel non hac eu.
-        </h4>
-      </div>
-
-      <div className="container">
-        {/* Madeleine & Gohan */}
-        <div className={`${styles.row} ${styles.marcelGohan}`}>
-          <div className={styles.col}>
-            <Image
-              src="/images/single-project/rikas/rikas4.webp"
-              alt=""
-              width={720}
-              height={600}
-              layout="responsive"
-              style={{ maxWidth: "720px" }}
-            />
-            <h4>Madeleine et Marcel</h4>
-            <p className={styles.desc}>
-              Volutpat dictumst risus nisl adipiscing non. Penatibus commodo vel
-              eget neque consectetur morbi odio facilisis. Congue rutrum integer
-              turpis vulputate integer at vitae in quis. Nisi gravida cursus et
-              mattis. Ac pulvinar sodales adipiscing nec elit nibh. Purus
-              bibendum facilisi sit rhoncus tellus egestas.
-            </p>
-            <Link href="#" className={styles.cta}>
-              <p>Go to website</p>
-              <Image
-                src="/images/single-project/green-arrow-right-sm.svg"
-                width={39}
-                height={32}
-                alt="arrow icon"
-                className={styles.arrow}
-              />
-            </Link>
-          </div>
-          <div className={styles.col}>
-            <Image
-              src="/images/single-project/rikas/rikas5.webp"
-              alt=""
-              width={720}
-              height={600}
-              layout="responsive"
-              style={{ maxWidth: "720px" }}
-            />
-            <h4>Gohan</h4>
-            <p className={styles.desc}>
-              Nibh elementum dui imperdiet mauris nunc ac non nibh cras.
-              Fermentum quis lacinia odio ipsum. Viverra maecenas vulputate sed
-              morbi risus. Vitae dapibus faucibus in et adipiscing ac odio nibh.
-              Massa pellentesque vitae dolor eu. Pulvinar tristique pretium
-              semper pellentesque a. Morbi sed suscipit egestas tortor ac duis
-              ut rhoncus.
-            </p>
-            <Link href="#" className={styles.cta}>
-              <p>Go to website</p>
-              <Image
-                src="/images/single-project/green-arrow-right-sm.svg"
-                width={39}
-                height={32}
-                alt="arrow icon"
-                className={styles.arrow}
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Ninive */}
-      <div className={`${styles.row} ${styles.ninive}`}>
-        <div className={styles.col}>
-          <Image
-            src="/images/single-project/rikas/rikas6.webp"
-            alt=""
-            width={800}
-            height={600}
-            layout="responsive"
-            style={{ maxWidth: "800px" }}
-          />
-        </div>
-        <div className={styles.col}>
-          <div className={styles.textBoxR}>
-            <h4>Niniveg</h4>
-            <p className={styles.desc}>
-              Ut erat scelerisque lacus massa. Ac diam in a cras at sagittis
-              orci. Mus fames suspendisse arcu iaculis id sed condimentum.
-              Condimentum nunc justo nunc ut tellus nisi. Integer velit diam
-              maecenas purus. Gravida risus id sed sit tempor. Amet volutpat
-              aenean nec quis cras bibendum. Amet nec porttitor semper augue
-              lectus orci scelerisque.
-            </p>
-            <Link href="#" className={styles.cta}>
-              <p>Go to website</p>
-              <Image
-                src="/images/single-project/green-arrow-right-sm.svg"
-                width={39}
-                height={32}
-                alt="arrow icon"
-                className={styles.arrow}
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="container">
-        {/* Mimi Kakushi */}
-        <div className={`${styles.row} ${styles.lanalusa}`}>
-          <div className={styles.col}>
-            <div className={styles.textBoxR}>
-              <h4>Mimi Kakushi</h4>
-              <p className={styles.desc}>
-                At velit velit urna elementum congue pharetra a. Urna nec
-                viverra aliquam cras dolor id pellentesque elit. Orci gravida in
-                est at et quam metus. Placerat volutpat tempus scelerisque orci
-                sapien tristique amet ultrices. Id quis metus dolor in. Vitae
-                pharetra eu aliquam orci. Et nulla elementum mauris amet massa.
-                Sed rhoncus enim scelerisque.
-              </p>
-              <Link href="#" className={styles.cta}>
-                <p>Go to website</p>
-                <Image
-                  src="/images/single-project/green-arrow-right-sm.svg"
-                  width={39}
-                  height={32}
-                  alt="arrow icon"
-                  className={styles.arrow}
-                />
-              </Link>
-            </div>
-          </div>
-          <div className={styles.col}>
-            <Image
-              src="/images/single-project/rikas/rikas7.webp"
-              alt=""
-              width={640}
-              height={760}
-              layout="responsive"
-              style={{ maxWidth: "640px" }}
-            />
-          </div>
-        </div>
-
-        {/* Kyma Beach */}
-        <div className={`${styles.row} ${styles.twiggy}`}>
-          <div className={styles.col}>
-            <Image
-              src="/images/single-project/rikas/rikas8.webp"
-              alt=""
-              width={640}
-              height={760}
-              layout="responsive"
-              style={{ maxWidth: "640px" }}
-            />
-          </div>
-          <div className={styles.col}>
-            <div className={styles.textBoxR}>
-              <h4>Kyma Beach</h4>
-              <p className={styles.desc}>
-                Volutpat dictumst risus nisl adipiscing non. Penatibus commodo
-                vel eget neque consectetur morbi odio facilisis. Congue rutrum
-                integer turpis vulputate integer at vitae in quis. Nisi gravida
-                cursus et mattis. Ac pulvinar sodales adipiscing nec elit nibh.
-                Purus bibendum facilisi sit rhoncus tellus egestas.
-              </p>
-              <Link href="#" className={styles.cta}>
-                <p>Go to website</p>
-                <Image
-                  src="/images/single-project/green-arrow-right-sm.svg"
-                  width={39}
-                  height={32}
-                  alt="arrow icon"
-                  className={styles.arrow}
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.sandBackground}>
+          );
+        })}
+      <div className={styles.intersection}>
         <div className="container">
-          {/* Tagomago & Chez Wam */}
-          <div className={`${styles.row} ${styles.tagomagoWam}`}>
-            <div className={styles.col}>
-              <Image
-                src="/images/single-project/rikas/rikas9.webp"
-                alt=""
-                width={720}
-                height={600}
-                layout="responsive"
-                style={{ maxWidth: "720px" }}
-              />
-              <h4>Tagomago</h4>
-              <p className={styles.desc}>
+          <h2>
+            Feugiat euismod mattis gravida mi aliquet cursus. Vulputate lacinia
+            pharetra eu morbi risus. Sed sem fames leo est vel. Vitae mi nunc
+            ultricies auctor ac vel non hac eu.
+          </h2>
+          <div className={`${styles.dualCircle} dualTrigger`}>
+            {/* <div className={`${styles.halfLeft}`}> */}
+            <Image
+              src="/images/single-project/rikas/marcel.webp"
+              alt="Marcel restaurant"
+              width={900}
+              height={1060}
+              className="dualImage"
+            />
+            {/* </div> */}
+            {/* <div className={`${styles.halfRight}`}> */}
+            <Image
+              src="/images/single-project/rikas/gohan.webp"
+              alt="Gohan restaurant"
+              width={900}
+              height={1060}
+              className="dualImage"
+            />
+            {/* </div> */}
+          </div>
+          <div className={styles.restaurantText}>
+            <div className={styles.dualText}>
+              <div>
+                <h2>Madeleine et Marcel</h2>
+                <p>
+                  Volutpat dictumst risus nisl adipiscing non. Penatibus commodo
+                  vel eget neque consectetur morbi odio facilisis. Congue rutrum
+                  integer turpis vulputate integer at vitae in quis. Nisi
+                  gravida cursus et mattis. Ac pulvinar sodales adipiscing nec
+                  elit nibh.
+                </p>
+              </div>
+              <Link className={`${styles.cta} ${styles.white}`} href="#">
+                Go to website
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </Link>
+            </div>
+            <div className={styles.dualText}>
+              <div>
+                <h2>Gohan</h2>
+                <p>
+                  Nibh elementum dui imperdiet mauris nunc ac non nibh cras.
+                  Fermentum quis lacinia odio ipsum. Viverra maecenas vulputate
+                  sed morbi risus. Vitae dapibus faucibus in et adipiscing ac
+                  odio nibh. Massa pellentesque vitae dolor eu. Pulvinar
+                  tristique pretium semper pellentesque a.
+                </p>
+              </div>
+              <Link className={`${styles.cta} ${styles.white}`} href="#">
+                Go to website
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {restaurants2 &&
+        restaurants2.map((restaurant, index) => {
+          return (
+            <div
+              className={`${styles.row} ${
+                restaurant.imageOnLeft ? styles.right : styles.left
+              }`}
+              key={index}
+            >
+              <div className={`${styles.imageWrap} trigger`}>
+                <Image
+                  src={restaurant.image}
+                  alt="La cantine restaurant"
+                  height={1060}
+                  width={900}
+                  className="restaurantImage"
+                />
+              </div>
+              <div className="container">
+                <div className={styles.rowWrap}>
+                  <div className={styles.textBox}>
+                    <h2 className={styles.title}>{restaurant.title}</h2>
+                    <p className={styles.description}>
+                      {restaurant.description}
+                    </p>
+                    <Link className={styles.cta} href={restaurant.link}>
+                      Go to website
+                      <Image
+                        src="/arrow-black-right.svg"
+                        width={29}
+                        height={35}
+                        alt="arrow down white"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+
+      <div className={styles.circle}>
+        <Image
+          src="/images/single-project/rikas/rikas-circle.png"
+          alt="tagomago and gohan restaurants"
+          width={1360}
+          height={1360}
+          className="circleImage"
+        />
+      </div>
+      <div className={`${styles.circleSection} circleTrigger`}>
+        <Image
+          src="/images/home/sand_bgr.jpg"
+          alt="Sand background"
+          fill
+          sizes="100vw"
+        />
+        <div className={styles.restaurantText}>
+          <div className={styles.dualText}>
+            <div>
+              <h2>Tagomago</h2>
+              <p>
                 Volutpat dictumst risus nisl adipiscing non. Penatibus commodo
                 vel eget neque consectetur morbi odio facilisis. Congue rutrum
                 integer turpis vulputate integer at vitae in quis. Nisi gravida
                 cursus et mattis. Ac pulvinar sodales adipiscing nec elit nibh.
-                Purus bibendum facilisi sit rhoncus tellus egestas.
               </p>
-              <Link href="#" className={styles.cta}>
-                <p>Go to website</p>
-                <Image
-                  src="/images/single-project/green-arrow-right-sm.svg"
-                  width={39}
-                  height={32}
-                  alt="arrow icon"
-                  className={styles.arrow}
-                />
-              </Link>
             </div>
-            <div className={styles.col}>
+            <Link className={`${styles.cta} ${styles.white}`} href="#">
+              Go to website
               <Image
-                src="/images/single-project/rikas/rikas10.webp"
-                alt=""
-                width={720}
-                height={600}
-                layout="responsive"
-                style={{ maxWidth: "720px" }}
+                src="/arrow-black-right.svg"
+                width={29}
+                height={35}
+                alt="arrow down white"
               />
-              <h4>Chez Wam</h4>
-              <p className={styles.desc}>
+            </Link>
+          </div>
+          <div className={styles.dualText}>
+            <div>
+              <h2>Gohan</h2>
+              <p>
                 Nibh elementum dui imperdiet mauris nunc ac non nibh cras.
                 Fermentum quis lacinia odio ipsum. Viverra maecenas vulputate
                 sed morbi risus. Vitae dapibus faucibus in et adipiscing ac odio
                 nibh. Massa pellentesque vitae dolor eu. Pulvinar tristique
-                pretium semper pellentesque a. Morbi sed suscipit egestas tortor
-                ac duis ut rhoncus.
+                pretium semper pellentesque a.
               </p>
-              <Link href="#" className={styles.cta}>
-                <p>Go to website</p>
-                <Image
-                  src="/images/single-project/green-arrow-right-sm.svg"
-                  width={39}
-                  height={32}
-                  alt="arrow icon"
-                  className={styles.arrow}
-                />
-              </Link>
             </div>
+            <Link className={`${styles.cta} ${styles.white}`} href="#">
+              Go to website
+              <Image
+                src="/arrow-black-right.svg"
+                width={29}
+                height={35}
+                alt="arrow down white"
+              />
+            </Link>
           </div>
         </div>
       </div>

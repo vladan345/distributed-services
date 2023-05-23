@@ -72,7 +72,7 @@ function RikasM() {
             fill
             src="/images/home/sand_bgr.jpg"
             alt="sand background"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="100vw"
           />
         </div>
         <div className={styles.container}>
@@ -175,7 +175,7 @@ function RikasM() {
             </div>
           </div>
 
-          <Link className={styles.projectBtn} href="#">
+          <Link className={styles.projectBtn} href="/projects/rikas">
             View Project
             <Image
               src="/arrow-black-right.svg"

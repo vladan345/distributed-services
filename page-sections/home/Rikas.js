@@ -96,7 +96,7 @@ function Rikas() {
             fill
             src="/images/home/sand_bgr.jpg"
             alt="sand background"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="100vw"
           />
         </div>
         <h4>Trusted partner</h4>
@@ -173,7 +173,7 @@ function Rikas() {
                 width={146}
                 height={220}
               />
-              <Link className={styles.projectBtn} href="#">
+              <Link className={styles.projectBtn} href="/projects/rikas">
                 View Project
                 <NextImage
                   src="/arrow-black-right.svg"

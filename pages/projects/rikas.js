@@ -1,9 +1,12 @@
 import React from "react";
 import ProjectHero from "@/components/ProjectHero";
 import Restaurants from "@/page-sections/rikas/Restaurants";
+import Results from "@/components/Results";
+import { ReactLenis } from "@studio-freight/react-lenis";
 
 function Rikas() {
   const projectInfo = {
+    title: "Rikas Hospitality Group",
     banner: "/images/single-project/rikas/rikas-hero.webp",
     services: [
       "Web design",
@@ -14,11 +17,24 @@ function Rikas() {
     ],
     description:
       "Commodo lectus turpis ridiculus id auctor eget enim sapien tellus. Fermentum cursus pellentesque purus faucibus feugiat egestas vel diam. Purus pellentesque rhoncus vel lectus a. Vulputate volutpat quisque id tristique arcu consequat. <br /><br /> Congue pellentesque mollis pellentesque mauris eget amet. Ornare volutpat vestibulum massa molestie metus nisi purus nec. Rhoncus eget nisi amet id tellus mollis id. Purus ut donec molestie laoreet id feugiat bibendum gravida. Placerat elementum et libero amet neque vitae lacinia pellentesque sed.",
+    projectLink: "https://rikasgroup.com",
+    logo: {
+      src: "/images/home/rikas-logo.svg",
+      width: 195,
+      height: 295,
+    },
+    results: [
+      "Nibh sit sed sem risus eget at nisl. Morbi massa interdum odio dis consequat. Non turpis eget dolor consequat donec tellus.",
+      "Sit tincidunt porttitor porttitor convallis ut purus pellentesque. Ipsum est dolor phasellus sit amet ultrices nisi.",
+    ],
   };
   return (
     <div>
-      <ProjectHero content={projectInfo} />
-      <Restaurants />
+      <ReactLenis root options={{ duration: 1.2 }}>
+        <ProjectHero content={projectInfo} />
+        <Restaurants />
+        <Results content={projectInfo} />
+      </ReactLenis>
     </div>
   );
 }
