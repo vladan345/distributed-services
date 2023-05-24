@@ -1,0 +1,43 @@
+.FourOFour {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fourWrap {
+  display: flex;
+  align-items: center;
+  height: 157px;
+}
+.four {
+  font-size: 220px;
+  line-height: 0.85;
+  letter-spacing: -6.6px;
+  color: var(--main-blue);
+  font-family: "Flexa";
+  font-weight: bold;
+}
+.lottie {
+  max-width: 147px;
+  margin: 0 15px;
+}
+.heading {
+  font-size: 82px;
+  margin-top: 40px;
+}
+.link {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.44px;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.link img {
+  margin-left: 20px;
+}
+.link:hover {
+  color: var(--main-blue);
+}
