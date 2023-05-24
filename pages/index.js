@@ -32,7 +32,7 @@ export default function Home() {
           <London />
           <Rikas />
           <RikasM />
-          <GetInTouch />
+          <GetInTouch darkMode={false} />
         </main>
       </ReactLenis>
     </>

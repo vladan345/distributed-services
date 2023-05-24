@@ -5,6 +5,24 @@
   position: fixed;
   top: 0;
   z-index: 99999;
+  transition: 0.3s;
+}
+.HeaderFill {
+  color: var(--main-blue);
+  background: var(--background);
+}
+.HeaderTran {
+  color: var(--background);
+}
+.HeaderFill span {
+  background: var(--main-blue);
+}
+.HeaderFill .cta a {
+  border-color: var(--main-blue);
+  color: var(--main-blue);
+}
+.HeaderFill .cta a:hover {
+  background: var(--main-blue);
   color: var(--background);
 }
 .Header > div {
@@ -20,6 +38,10 @@
 }
 .Header nav a {
   margin: 0 25px;
+  transition: 0.3s;
+}
+.Header nav a:hover {
+  color: var(--main-green);
 }
 .Header .cta {
   display: inline-block;
@@ -73,6 +95,27 @@
 }
 .active .line {
   background: var(--main-blue);
+}
+
+.scrollActive {
+  color: var(--main-blue);
+  background: var(--background);
+  padding: 15px 0;
+}
+.scrollActive span {
+  background: var(--main-blue);
+}
+.scrollActive nav a {
+  color: var(--main-blue);
+}
+
+.scrollActive .cta a {
+  border-color: var(--main-blue);
+  color: var(--main-blue);
+}
+.scrollActive .cta a:hover {
+  background: var(--main-blue);
+  color: var(--background);
 }
 @media (max-width: 1240px) {
   .ham {

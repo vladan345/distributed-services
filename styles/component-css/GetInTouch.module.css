@@ -5,6 +5,15 @@
   display: block;
   background: var(--background);
 }
+.dark {
+  background: var(--main-blue);
+}
+.GetInTouch.dark h2 {
+  color: var(--background);
+}
+.GetInTouch.dark:hover h2 {
+  color: var(--foreground);
+}
 .textWrap {
   display: flex;
   align-items: center;
@@ -84,5 +93,8 @@
   }
   .GetInTouch:hover h2 {
     color: var(--background);
+  }
+  .dark {
+    background: var(--background);
   }
 }

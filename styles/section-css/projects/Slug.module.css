@@ -1,0 +1,25 @@
+.Slug {
+  padding-top: 200px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+}
+.singleLink {
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.44px;
+  font-weight: bold;
+}
+.singleLink img {
+  margin: 0 20px;
+}
+
+@media (max-width: 800px) {
+  .Slug {
+    padding-top: 110px;
+  }
+  .Slug span {
+    font-size: 14px;
+  }
+}

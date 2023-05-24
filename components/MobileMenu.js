@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,8 @@ import styles from "../styles/component-css/MobileMenu.module.css";
 
 function MobileMenu({ isActive }) {
   const router = useRouter();
+  let route = router.asPath;
+
   return (
     <aside
       className={styles.MobileMenu}
@@ -23,12 +26,13 @@ function MobileMenu({ isActive }) {
         className={styles.backgroundImage}
       />
       <div className={styles.mobileHeader}>
-        <Link href="#">
+        <Link href="/">
           <Image
-            src="/rikas-logo-positive.svg"
+            src="/logo-positive.svg"
             alt="logo for mobile"
             width={241}
             height={72}
+            priority
           />
         </Link>
       </div>

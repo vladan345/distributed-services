@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function GetInTouch({ mode }) {
+function GetInTouch({ darkMode }) {
   const main = useRef(null);
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -28,7 +28,11 @@ function GetInTouch({ mode }) {
   }, []);
 
   return (
-    <Link className={`${styles.GetInTouch} `} ref={main} href="#">
+    <Link
+      className={`${styles.GetInTouch} ${darkMode ? styles.dark : null}`}
+      ref={main}
+      href="#"
+    >
       <div className="container trigger">
         <div className={`${styles.textWrap} `}>
           <h2>Get in touch!</h2>

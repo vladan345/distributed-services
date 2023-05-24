@@ -159,6 +159,15 @@ h3 {
 .active {
   color: var(--main-blue);
 }
+.Projects p {
+  font-size: 48px;
+  font-family: "Flexa";
+  line-height: 1.2;
+  font-weight: 500;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 @media (max-width: 1640px) {
   :root {
     --max-width: 1200px;
@@ -208,5 +217,9 @@ h3 {
   .tag-large {
     font-size: 20px;
     margin-bottom: 10px;
+  }
+  .Projects p {
+    font-size: 32px;
+    padding: 0 20px;
   }
 }
