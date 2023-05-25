@@ -12,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Header({ isTransparent }) {
   const router = useRouter();
-  const [icon, setIcon] = useState(false);
   const [isActive, setActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -30,9 +29,9 @@ function Header({ isTransparent }) {
     });
   }, []);
 
-  const toggleIcon = () => {
-    setIcon(!icon);
-    setActive(!isActive);
+  const toggleMenu = (e) => {
+    const logo = e.currentTarget;
+    logo.id == "logo" ? setActive(false) : setActive(!isActive);
   };
 
   return (
@@ -42,10 +41,17 @@ function Header({ isTransparent }) {
       } header ${scrolled ? styles.scrollActive : ""}`}
     >
       <div className="container">
-        <Link href="/" className={styles.logoLink}>
+        <Link
+          href="/"
+          className={styles.logoLink}
+          id="logo"
+          onClick={toggleMenu}
+        >
           <Image
             src={
-              scrolled || !isTransparent ? "/logo-positive.svg" : "/logo.svg"
+              scrolled || !isTransparent || isActive
+                ? "/logo-positive.svg"
+                : "/logo.svg"
             }
             width={240}
             height={72}
@@ -90,14 +96,14 @@ function Header({ isTransparent }) {
           </Link>
         </div>
         <div
-          className={`${styles.ham} ${icon ? styles.active : null}`}
-          onClick={toggleIcon}
+          className={`${styles.ham} ${isActive ? styles.active : null}`}
+          onClick={toggleMenu}
         >
           <span className={styles.line}></span>
           <span className={styles.line}></span>
         </div>
       </div>
-      <MobileMenu isActive={isActive} />
+      <MobileMenu isActive={isActive} toggleMenu={toggleMenu} />
     </header>
   );
 }

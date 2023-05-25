@@ -98,3 +98,8 @@
     background: var(--background);
   }
 }
+@media (max-width: 400px) {
+  .GetInTouch h2 {
+    font-size: 9vw;
+  }
+}

@@ -16,6 +16,10 @@
   border-radius: 0 1000px 1000px 0;
   left: 0;
 }
+.left .imageWrap img {
+  position: absolute;
+  right: 0;
+}
 .left .imageWrap {
   border-radius: 1000px 0 0 1000px;
   right: 0;
@@ -24,7 +28,9 @@
 }
 .imageWrap img {
   object-fit: cover;
+  width: 50vw;
 }
+
 .rowWrap {
   display: flex;
   align-items: center;

@@ -6,11 +6,12 @@
   top: 0;
   left: 0;
   transition: 0.3s;
-  z-index: 99999;
-  padding: 45px 20px;
+  z-index: -1;
+  padding: 125px 20px;
   display: flex;
   flex-direction: column;
 }
+
 aside.MobileMenu nav {
   display: flex;
   flex-direction: column;

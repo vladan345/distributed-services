@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import styles from "../styles/component-css/MobileMenu.module.css";
 
-function MobileMenu({ isActive }) {
+function MobileMenu({ isActive, toggleMenu }) {
   const router = useRouter();
   let route = router.asPath;
 
@@ -25,21 +25,12 @@ function MobileMenu({ isActive }) {
         height={558}
         className={styles.backgroundImage}
       />
-      <div className={styles.mobileHeader}>
-        <Link href="/">
-          <Image
-            src="/logo-positive.svg"
-            alt="logo for mobile"
-            width={241}
-            height={72}
-            priority
-          />
-        </Link>
-      </div>
+
       <nav>
         <Link
           className={router.pathname == "/services" ? "active" : ""}
           href="/services"
+          onClick={toggleMenu}
         >
           Services
         </Link>
@@ -47,6 +38,7 @@ function MobileMenu({ isActive }) {
         <Link
           className={router.pathname == "/projects" ? "active" : ""}
           href="/projects"
+          onClick={toggleMenu}
         >
           Projects
         </Link>
@@ -54,6 +46,7 @@ function MobileMenu({ isActive }) {
         <Link
           className={router.pathname == "/about" ? "active" : ""}
           href="/about"
+          onClick={toggleMenu}
         >
           About
         </Link>
@@ -61,8 +54,16 @@ function MobileMenu({ isActive }) {
         <Link
           className={router.pathname == "/contact" ? "active" : ""}
           href="/contact"
+          onClick={toggleMenu}
         >
           Contact
+        </Link>
+        <Link
+          className={router.pathname == "/contact" ? "active" : ""}
+          href="/contact"
+          onClick={toggleMenu}
+        >
+          Book a meeting
         </Link>
       </nav>
       <div className={styles.socials}>

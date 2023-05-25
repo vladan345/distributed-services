@@ -1,0 +1,90 @@
+.mapWrap {
+  display: flex;
+  margin-top: 80px;
+}
+.mapWrap:first-of-type {
+  margin-top: 120px;
+}
+.mapWrap:last-of-type {
+  margin-bottom: 140px;
+}
+.mapWrap iframe {
+  width: 60%;
+}
+.textBox {
+  width: 40%;
+  padding: 80px;
+}
+.textBox h2 {
+  font-size: 48px;
+  color: var(--main-blue);
+  font-weight: 500;
+}
+.address {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.44px;
+  margin: 40px 0;
+}
+.textBox a {
+  display: block;
+  font-size: 22px;
+}
+
+@media (max-width: 1240px) {
+  .mapWrap:first-of-type .textBox {
+    padding-left: 0;
+    padding-right: 40px;
+  }
+  .mapWrap:last-of-type .textBox {
+    padding-right: 0;
+    padding-left: 40px;
+  }
+  .address {
+    font-size: 20px;
+  }
+  .textBox a {
+    font-size: 20px;
+  }
+  .mapWrap iframe {
+    width: 50%;
+  }
+  .textBox {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .mapWrap {
+    margin: 60px -20px;
+    padding: 0;
+    flex-direction: column;
+  }
+  .mapWrap:first-of-type {
+    margin-top: 60px;
+  }
+  .mapWrap iframe {
+    width: 100%;
+  }
+  .textBox {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px 60px 20px;
+  }
+  .mapWrap:first-of-type .textBox {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .mapWrap:last-of-type .textBox {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mapWrap:last-of-type {
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+  .textBox h2 {
+    font-size: 32px;
+  }
+}

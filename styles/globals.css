@@ -157,7 +157,7 @@ h3 {
   padding: 0 20px;
 }
 .active {
-  color: var(--main-blue);
+  color: var(--main-green);
 }
 .Projects p {
   font-size: 48px;
@@ -168,6 +168,23 @@ h3 {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--background);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--background);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--background);
+}
+
 @media (max-width: 1640px) {
   :root {
     --max-width: 1200px;

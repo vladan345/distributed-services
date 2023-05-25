@@ -1,0 +1,212 @@
+.Hero {
+  min-height: 1140px;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(129deg, var(--main-blue) 0%, #15319d 100%);
+  color: var(--background);
+}
+.form {
+  max-width: 800px;
+  margin-top: 60px;
+}
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+}
+.inputBox,
+.textarea {
+  background: transparent;
+  color: var(--background);
+  font-size: 22px;
+  font-weight: 500;
+  font-family: inherit;
+  border-bottom: 1px solid var(--background);
+  border-width: 0 0 1px 0;
+  outline: none;
+  transition: 0.3s;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+.inputBox:focus,
+.textarea:focus {
+  border-color: var(--main-green);
+}
+.textarea {
+  height: 120px;
+}
+.submitBtn {
+  font-size: 28px;
+  color: var(--main-blue);
+  background: var(--background);
+  border: 1px solid var(--background);
+  border-radius: var(--border-radius);
+  padding: 15px 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+.submitBtn:hover {
+  background: transparent;
+  color: var(--background);
+}
+.submitBtn img {
+  filter: var(--arrow-filter);
+}
+.submitBtn:hover img {
+  filter: invert(100%) sepia(1%) saturate(600%) hue-rotate(80deg)
+    brightness(112%) contrast(100%);
+}
+.Hero h1 {
+  font-size: 82px;
+  max-width: 970px;
+  letter-spacing: -4.1px;
+  font-weight: 500;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+
+.background1 {
+  position: absolute;
+  right: 530px;
+  top: -400px;
+  z-index: 0;
+  animation: rotation 1.5s forwards;
+  transform: rotate(116deg);
+}
+
+.video {
+  position: absolute;
+  top: 20px;
+  right: -120px;
+  transform: rotate(-26deg);
+  width: 557px;
+  border-radius: 0 557px 557px 0;
+  height: 1035px;
+  overflow: hidden;
+}
+.video video {
+  object-fit: cover;
+  object-position: -700px 0;
+  width: 100%;
+  height: 100%;
+}
+.video:after {
+  width: 100%;
+  display: block;
+  height: 100%;
+  background: linear-gradient(134deg, #01bf5d 23%, #00e56f 65%, #2dff93 95%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  animation: fadeIn 1.5s 1.2s forwards;
+}
+
+@keyframes rotation {
+  from {
+    top: -100%;
+    transform: rotate(116deg);
+  }
+  to {
+    transform: rotate(0);
+    top: -400px;
+  }
+}
+@keyframes rotationT {
+  from {
+    top: -100%;
+    transform: rotate(116deg) scale(0.8) translateX(-100%);
+  }
+  to {
+    transform: rotate(0) scale(0.8) translateX(-100%);
+    top: -300px;
+  }
+}
+@keyframes rotationM {
+  from {
+    top: -100%;
+    left: -100%;
+    transform: rotate(116deg) scale(0.3) translate(-100%, -100%);
+  }
+  to {
+    transform: rotate(0) scale(0.3) translate(-1600px, 0);
+    top: -457px;
+    left: 50%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@media (max-width: 1240px) {
+  .video {
+    transform: rotate(-26deg) scale(0.7);
+    transform-origin: top left;
+    top: calc(50% - 300px);
+    left: 50%;
+    right: auto;
+  }
+  .background1 {
+    right: auto;
+    left: 50%;
+    animation: rotationT 1.5s forwards;
+  }
+}
+@media (max-width: 800px) {
+  .Hero {
+    justify-content: flex-end;
+    min-height: 100vh;
+    padding-top: 300px;
+  }
+
+  .Hero h1 {
+    max-width: 270px;
+    margin-bottom: 40px;
+    font-size: 36px;
+    letter-spacing: -1.8px;
+  }
+  .content {
+    margin-bottom: 45px;
+  }
+  .video {
+    transform: rotate(-26deg) scale(0.3);
+    transform-origin: top left;
+    top: 50px;
+    left: calc(50% - 20px);
+  }
+  .background1 {
+    animation: rotationM 1.5s forwards;
+    left: 50%;
+  }
+  .inputBox,
+  .textarea {
+    font-size: 18px;
+  }
+  .submitBtn {
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .submitBtn img {
+    width: 23px;
+    height: 19px;
+  }
+}

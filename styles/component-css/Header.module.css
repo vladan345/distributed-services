@@ -9,7 +9,7 @@
 }
 .HeaderFill {
   color: var(--main-blue);
-  background: var(--background);
+  background: transparent;
 }
 .HeaderTran {
   color: var(--background);

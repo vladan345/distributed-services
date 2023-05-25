@@ -8,7 +8,9 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
-  const urls = ["/", "/projects/rikas"];
+
+  // Here you can add paths where you want to use Header that is initialy transparent then fades to filled background (white)
+  const urls = ["/", "/projects/rikas", "/contact"];
   return (
     <>
       <style jsx global>{`

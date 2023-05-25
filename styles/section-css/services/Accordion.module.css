@@ -1,0 +1,28 @@
+.tag {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  margin-top: 200px;
+}
+.tab {
+  max-height: 117px;
+  transition: max-height 1s ease;
+  max-width: 720px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.tab .title {
+  margin-bottom: 60px;
+}
+.number {
+  font-size: 28px;
+  font-weight: 500;
+}
+.activeTab .title,
+.activeTab .number {
+  color: var(--main-blue);
+}
+.activeTab {
+  max-height: 600px;
+}
