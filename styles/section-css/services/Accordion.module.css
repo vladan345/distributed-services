@@ -4,16 +4,39 @@
   letter-spacing: 0.64px;
   text-transform: uppercase;
   margin-top: 200px;
+  margin-bottom: 40px;
 }
 .tab {
-  max-height: 117px;
-  transition: max-height 1s ease;
-  max-width: 720px;
+  max-height: 130px;
+  transition: 0.5s ease-in-out;
+  max-width: 800px;
   overflow: hidden;
   margin-bottom: 40px;
 }
+
 .tab .title {
   margin-bottom: 60px;
+  font-size: 82px;
+  font-weight: 500;
+  letter-spacing: -4.1px;
+  transition: 0.7s ease-in-out;
+  cursor: pointer;
+}
+.link {
+  margin-top: 60px;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+.link img {
+  filter: var(--arrow-filter);
+}
+.link:hover {
+  background: var(--main-blue);
+  color: var(--background);
+}
+.link:hover img {
+  filter: invert();
 }
 .number {
   font-size: 28px;
@@ -24,5 +47,7 @@
   color: var(--main-blue);
 }
 .activeTab {
-  max-height: 600px;
+  max-height: 700px;
+  transition-delay: 1s;
+  transition: 1s ease-in-out;
 }

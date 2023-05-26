@@ -3,12 +3,40 @@
   min-height: 100vh;
   background: var(--background);
 }
-.Who > div {
+.trigger {
+  height: 100vh;
+  width: 100%;
+}
+.Who .sticky {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
 }
+.circle {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 120%;
+}
+.scratch {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+}
+.scratchWrap {
+  position: relative;
+}
+.circleWrap {
+  position: relative;
+}
+
 .tag {
   color: var(--main-blue);
 }
