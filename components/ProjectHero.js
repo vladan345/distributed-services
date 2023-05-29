@@ -28,7 +28,9 @@ function ProjectHero({ content }) {
   return (
     <div className={styles.projectHero}>
       <div
-        style={{ backgroundImage: `url(${content.banner})` }}
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), #000), url(${content.banner})`,
+        }}
         className={`${styles.banner} banner`}
       >
         {/* <Image

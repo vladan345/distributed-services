@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Restaurants() {
   const main = useRef(null);
+  const triggerM = useRef(null);
   useEffect(() => {
     let ctx = gsap.context(() => {
       let rows = gsap.utils.toArray(".trigger");
@@ -73,6 +74,72 @@ function Restaurants() {
           trigger: ".circleTrigger",
         },
       });
+      gsap.to(".sandBackground", {
+        y: 100,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          start: "top bottom",
+          scrub: true,
+          trigger: ".circleTrigger",
+        },
+      });
+
+      let slides = gsap.utils.toArray(".slide");
+      let images = gsap.utils.toArray(".mobileImages");
+      let currentSection;
+      let currentImage;
+      currentSection = slides[0];
+      currentImage = images[0];
+      const sectionPos = triggerM.current.getBoundingClientRect();
+      slides.forEach((slide, i) => {
+        var tl = gsap.timeline({
+          scrollTrigger: {
+            start: () => (i - 0.3) * innerHeight + sectionPos.top,
+            end: () => (i + 0.3) * innerHeight + sectionPos.top,
+
+            markers: true,
+            onToggle: (self) => {
+              return self.isActive && setSection(slide, images[i]);
+            },
+          },
+        });
+      });
+
+      function setSection(newSection, newImage) {
+        if (newSection !== currentSection) {
+          var tl = gsap.timeline();
+          tl.to(currentSection, {
+            autoAlpha: 0,
+            y: 100,
+            duration: 0.5,
+            overwrite: true,
+          });
+          var tl = gsap.timeline();
+          tl.to(newSection, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.5,
+            overwrite: true,
+          });
+
+          var tl = gsap.timeline();
+
+          tl.to(currentImage, {
+            autoAlpha: 0,
+            duration: 0.5,
+            overwrite: true,
+          });
+
+          tl.to(newImage, {
+            autoAlpha: 1,
+            duration: 0.5,
+            overwrite: true,
+          });
+
+          currentSection = newSection;
+          currentImage = newImage;
+        }
+      }
     }, main.current);
     return () => {
       ctx.revert();
@@ -81,6 +148,50 @@ function Restaurants() {
 
   return (
     <div className={styles.Restaurants} ref={main}>
+      {/* Mobile restaurant list */}
+      <div className={styles.mobileRestaurants}>
+        <div className={`${styles.triggerM} triggerM`} ref={triggerM}>
+          {restaurants1 &&
+            restaurants1.map((restaurant, index) => {
+              return (
+                <div key={index} className={`${styles.wrapper} slide`}>
+                  <div className={styles.textBox}>
+                    <h2 className={styles.title}>{restaurant.title}</h2>
+                    <p className={styles.description}>
+                      {restaurant.description}
+                    </p>
+                    <Link className={styles.cta} href={restaurant.link}>
+                      Go to website
+                      <Image
+                        src="/arrow-black-right.svg"
+                        width={29}
+                        height={35}
+                        alt="arrow down white"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          <div className={styles.imageWrapM}>
+            {restaurants1 &&
+              restaurants1.map((restaurant, index) => {
+                return (
+                  <Image
+                    width={900}
+                    height={1060}
+                    key={index}
+                    src={restaurant.image}
+                    alt={restaurant.title}
+                    className="mobileImages"
+                  />
+                );
+              })}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop restaurant list */}
       {restaurants1 &&
         restaurants1.map((restaurant, index) => {
           return (
@@ -249,8 +360,9 @@ function Restaurants() {
         <Image
           src="/images/home/sand_bgr.jpg"
           alt="Sand background"
-          fill
-          sizes="100vw"
+          width={1920}
+          height={2878}
+          className={`sandBackground ${styles.sandBackground}`}
         />
         <div className={styles.restaurantText}>
           <div className={styles.dualText}>

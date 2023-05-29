@@ -148,12 +148,100 @@
   color: var(--background);
   position: relative;
   padding: 80px 0 100px;
+  overflow: hidden;
+  max-height: 600px;
+  clip-path: inset(0);
 }
-.circleSection > img {
+.sandBackground {
   object-fit: cover;
-  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .circleSection .restaurantText {
   margin-top: 0;
   position: relative;
+}
+.triggerM {
+  display: none;
+}
+.triggerM .textBox {
+  width: 100%;
+  text-align: center;
+  max-width: none;
+  padding: 0 20px;
+}
+.triggerM .wrapper {
+  height: 100vh;
+  padding-top: 120px;
+  opacity: 0;
+}
+.triggerM .wrapper:first-of-type {
+  opacity: 1;
+}
+.triggerM .description {
+  font-size: 14px;
+}
+.triggerM .title {
+  font-size: 32px;
+}
+.triggerM .cta {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+.imageWrapM {
+  overflow: hidden;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  border-radius: 400px 400px 0 0;
+}
+.imageWrapM img {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+}
+.imageWrapM img:first-of-type {
+  opacity: 1;
+}
+.firstWrapper {
+  opacity: 1;
+}
+@media (max-width: 1375px) {
+  .circle {
+    width: 100%;
+    height: 49vw;
+  }
+  .circle img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1240px) {
+  .imageWrap,
+  .dualCircle {
+    height: 500px;
+  }
+  .imageWrap {
+    width: 260px;
+  }
+}
+
+@media (max-width: 800px) {
+  .row {
+    display: none;
+  }
+  .triggerM {
+    display: block;
+  }
+  .intersection {
+    margin-top: 0;
+  }
 }

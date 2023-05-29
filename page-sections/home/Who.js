@@ -14,11 +14,26 @@ gsap.registerPlugin(ScrollTrigger);
 function Who() {
   const main = useRef(null);
 
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(".explore", {
+        duration: 1,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".trigger",
+          start: "50% bottom",
+          markers: true,
+        },
+      });
+    }, main.current);
+
+    return () => ctx.revert();
+  }, []);
   const interactivity = {
     mode: "scroll",
     actions: [
       {
-        visibility: [0.5, 0.9],
+        visibility: [0.2, 0.6],
         type: "seek",
         frames: [0, 40],
       },
@@ -28,7 +43,7 @@ function Who() {
     mode: "scroll",
     actions: [
       {
-        visibility: [0.2, 0.5],
+        visibility: [0.2, 0.6],
         type: "seek",
         frames: [0, 45],
       },
@@ -67,7 +82,7 @@ function Who() {
             our clients with the complete digital package.
           </p>
 
-          <div className={styles.explore}>
+          <div className={`${styles.explore} explore`}>
             <span>EXPLORE</span>
             <Image
               src="/arrow-blue-down.svg"

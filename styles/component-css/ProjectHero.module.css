@@ -120,4 +120,41 @@
   .colWrap {
     gap: 40px;
   }
+  .banner {
+    height: 660px;
+  }
+  .col > p {
+    font-size: 18px;
+  }
+  .service p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .logo {
+    top: 50%;
+  }
+  .colWrap {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    text-align: center;
+  }
+  .serviceList {
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    gap: 30px;
+    margin: 0 auto;
+  }
+  .service {
+    width: auto;
+    margin-bottom: 0;
+  }
+  .info:after,
+  .info:before {
+    width: 60vw;
+    height: 60vw;
+  }
 }

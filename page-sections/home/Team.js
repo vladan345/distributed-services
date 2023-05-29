@@ -94,7 +94,7 @@ function Team() {
   return (
     <section className={styles.Team} ref={main}>
       <div className={`${styles.progressbar} progressbar`}></div>
-      <div className="trigger">
+      <div className="trigger" style={{ marginTop: "-20px" }}>
         <div className={styles.sticky}>
           <section className={`${styles.slide} ${styles.first} slide`}>
             <div className="container">

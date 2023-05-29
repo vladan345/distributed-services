@@ -4,7 +4,7 @@
   background: var(--background);
 }
 .trigger {
-  height: 100vh;
+  height: 200vh;
   width: 100%;
 }
 .Who .sticky {
@@ -21,20 +21,24 @@
 }
 .circle {
   position: absolute;
-  left: -30px;
-  top: 0;
+  left: -40px;
+  top: -5px;
   width: 120%;
+  display: inline-block;
 }
 .scratch {
+  display: inline-block;
   position: absolute;
-  bottom: 0;
-  width: auto;
+  top: 20px;
+  width: 100%;
 }
 .scratchWrap {
   position: relative;
+  display: inline-block;
 }
 .circleWrap {
   position: relative;
+  display: inline-block;
 }
 
 .tag {
@@ -55,6 +59,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
 }
 .explore span {
   margin-bottom: 15px;
