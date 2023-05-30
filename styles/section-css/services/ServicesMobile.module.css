@@ -1,0 +1,207 @@
+.Services {
+  margin-top: 120px;
+  background: var(--background);
+  display: none;
+}
+.Services .stickyWrap {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+.Services section {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transform: translateY(100px);
+}
+.Services .container {
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.imageWrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  overflow: hidden;
+}
+.imageSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom right;
+}
+.imageSlide img {
+  transform: translateX(100px);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.imageSlide.first img {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide .number {
+  font-size: 28px;
+  color: var(--main-blue);
+  font-weight: 500;
+}
+.slide h3 {
+  max-width: 560px;
+  min-height: 152px;
+  margin-bottom: 60px;
+}
+.slide p {
+  max-width: 475px;
+  min-height: 93px;
+  margin-bottom: 90px;
+}
+.slide a {
+  font-size: 28px;
+  color: var(--main-blue);
+  padding: 15px 35px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--main-blue);
+}
+.Services h2 {
+  padding: 45px 0;
+  color: var(--main-blue);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.headingWrap {
+  border-top: 1px solid var(--main-blue);
+  border-bottom: 1px solid var(--main-blue);
+  padding-left: 20px;
+  margin-top: -850px;
+}
+section.first {
+  transform: translateY(0);
+}
+.Services section:not(.first) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.progressbar {
+  width: 0;
+  height: 20px;
+  background-image: linear-gradient(to right, #3150e9 0%, #1c39b0 100%);
+  position: sticky;
+  top: calc(100% - 20px);
+  z-index: 10;
+}
+.circleWrap {
+  width: 850px;
+  height: 850px;
+  position: sticky;
+  top: calc(100% - 850px);
+  left: 100%;
+  transform-origin: bottom right;
+  overflow: hidden;
+}
+.circle {
+  background: url("/images/test-gradient.jpg") no-repeat right center;
+  background-size: cover;
+  border-radius: 50%;
+  width: 1700px;
+  height: 1700px;
+}
+
+@media (max-width: 1600px) {
+  .imageSlide {
+    transform: scale(0.8);
+    margin-bottom: -20px;
+  }
+}
+@media (max-width: 1240px) {
+  .Services {
+    margin-top: 0;
+  }
+  .imageSlide {
+    transform: scale(0.7);
+  }
+  .circle {
+    transform: scale(0.7);
+  }
+  .slide h3 {
+    margin-bottom: 30px;
+    min-height: 0;
+  }
+  .slide p {
+    margin-bottom: 30px;
+  }
+  .Services section {
+    padding-top: 170px;
+    width: calc(100% - 40px);
+    justify-content: flex-start;
+  }
+  .circleWrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    height: 450px;
+    top: calc(100% - 450px);
+    width: 100%;
+  }
+  .circle {
+    flex-shrink: 0;
+    width: 1200px;
+    height: 1200px;
+  }
+  .headingWrap {
+    margin-top: -450px;
+  }
+}
+@media (max-width: 955px) {
+  .Services {
+    display: block;
+  }
+  .imageSlide {
+    transform: scale(1) translateX(-50%);
+    max-height: 400px;
+    top: calc(100% - 400px);
+    left: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .imageSlide img {
+    width: auto;
+    height: auto;
+    max-height: 500px;
+    position: static;
+  }
+}
+@media (max-width: 800px) {
+  .Services section {
+    padding-top: 120px;
+  }
+
+  .slide p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    min-height: 0;
+  }
+  .slide a {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+}

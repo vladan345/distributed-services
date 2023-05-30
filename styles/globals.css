@@ -184,7 +184,10 @@ h3 {
   /* Microsoft Edge */
   color: var(--background);
 }
-
+img.imageActive {
+  opacity: 1;
+  right: calc(-30% + 50px);
+}
 @media (max-width: 1640px) {
   :root {
     --max-width: 1200px;
