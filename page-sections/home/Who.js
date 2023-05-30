@@ -22,7 +22,6 @@ function Who() {
         scrollTrigger: {
           trigger: ".trigger",
           start: "50% bottom",
-          markers: true,
         },
       });
     }, main.current);

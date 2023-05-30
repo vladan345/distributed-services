@@ -37,6 +37,16 @@
   font-weight: bold;
   color: var(--background);
 }
+.scratch {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  width: 100%;
+}
+.scratchWrap {
+  position: relative;
+  display: inline-block;
+}
 @media (max-width: 1240px) {
   .Approach {
     min-height: 0;
