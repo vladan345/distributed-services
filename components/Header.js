@@ -76,10 +76,10 @@ function Header({ isTransparent }) {
           </Link>
 
           <Link
-            className={router.pathname == "/about" ? "active" : ""}
-            href="/about"
+            className={router.pathname == "/outsourcing" ? "active" : ""}
+            href="/outsourcing"
           >
-            About
+            Outsourcing
           </Link>
 
           <Link

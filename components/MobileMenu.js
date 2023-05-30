@@ -44,11 +44,11 @@ function MobileMenu({ isActive, toggleMenu }) {
         </Link>
 
         <Link
-          className={router.pathname == "/about" ? "active" : ""}
-          href="/about"
+          className={router.pathname == "/outsourcing" ? "active" : ""}
+          href="/outsourcing"
           onClick={toggleMenu}
         >
-          About
+          Outsourcing
         </Link>
 
         <Link

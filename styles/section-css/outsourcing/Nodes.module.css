@@ -1,0 +1,37 @@
+.Nodes {
+  background: linear-gradient(143deg, var(--main-blue) 5%, #15319d 92%);
+  padding: 150px 20px 170px 20px;
+  color: var(--background);
+}
+.Nodes h2 {
+  font-size: 92px;
+  letter-spacing: -2.05px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.textBoxes {
+  display: flex;
+  gap: 200px;
+}
+.subheading {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: "Flexa";
+  font-weight: 500;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 560px;
+}
+.col p {
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.lottieWrapper {
+  max-width: 1000px;
+  margin: 80px auto 0 auto;
+}

@@ -16,7 +16,7 @@
 .Hero h1 {
   color: var(--main-blue);
   margin-bottom: 80px;
-  max-width: 850px;
+  max-width: 1050px;
 }
 .subheading {
   max-width: 880px;
@@ -109,7 +109,7 @@
 @media (max-width: 1240px) {
   .Hero h1 {
     font-size: 60px;
-    max-width: 400px;
+    max-width: 500px;
   }
   .video {
     transform: rotate(-26deg) scale(0.7);
@@ -134,7 +134,7 @@
   }
   .subheading {
     font-size: 14px;
-    max-width: 300px;
+    max-width: 320px;
   }
   .Hero h1 {
     max-width: 350px;

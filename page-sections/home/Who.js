@@ -68,7 +68,7 @@ function Who() {
             <span className={styles.circleWrap}>
               <Lottie
                 animationData={circle}
-                interactivity={interactivity2}
+                interactivity={interactivity}
                 className={styles.circle}
               />
               enhance
