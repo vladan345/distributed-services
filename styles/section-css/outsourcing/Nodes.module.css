@@ -1,6 +1,6 @@
 .Nodes {
   background: linear-gradient(143deg, var(--main-blue) 5%, #15319d 92%);
-  padding: 150px 20px 170px 20px;
+  padding: 150px 0 170px 0;
   color: var(--background);
 }
 .Nodes h2 {
@@ -34,4 +34,66 @@
 .lottieWrapper {
   max-width: 1000px;
   margin: 80px auto 0 auto;
+}
+.textBoxes.mobile {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  .Nodes h2 {
+    font-size: 78px;
+  }
+  .textBoxes {
+    gap: 120px;
+  }
+}
+@media (max-width: 1240px) {
+  .Nodes h2 {
+    font-size: 68px;
+    max-width: 700px;
+    margin: 0 auto 100px auto;
+  }
+  .textBoxes {
+    gap: 80px;
+  }
+  .col p {
+    font-size: 20px;
+  }
+  .subheading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .Nodes {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .textBoxes.desktop {
+    display: none;
+  }
+  .textBoxes.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+  }
+  .lottieWrapper {
+    max-width: 1000px;
+    margin: 60px auto 60px auto;
+  }
+  .col {
+    gap: 20px;
+  }
+  .col p {
+    font-size: 14px;
+  }
+  .subheading {
+    font-size: 32px;
+  }
+  .Nodes h2 {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+    margin: 60px -15px 0 -15px;
+  }
 }

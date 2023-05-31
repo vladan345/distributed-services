@@ -15,7 +15,7 @@
 }
 .tab {
   max-height: 130px;
-  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
   max-width: 800px;
   overflow: hidden;
   margin-bottom: 40px;
@@ -26,7 +26,7 @@
   font-size: 82px;
   font-weight: 500;
   letter-spacing: -4.1px;
-  transition: 0.7s ease-in-out;
+  transition: 1s ease-in-out;
   cursor: pointer;
 }
 
@@ -56,8 +56,7 @@
 }
 .activeTab {
   max-height: 700px;
-  transition-delay: 1s;
-  transition: 1s ease-in-out;
+  transition: 1s 1s ease-in-out;
 }
 .container {
   margin-top: calc(0px - var(--height) * 1);
