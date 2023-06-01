@@ -161,7 +161,15 @@ function ServicesMobile() {
                       <span className={styles.number}>0{index + 1}</span>
                       <h3>{service.title}</h3>
                       <p>{service.text}</p>
-                      <a href={service.link}>View Project</a>
+                      <Link href={service.link}>
+                        View Project{" "}
+                        <Image
+                          src="/arrow-black-right.svg"
+                          width={29}
+                          height={35}
+                          alt="arrow down white"
+                        />
+                      </Link>
                     </section>
                   );
                 }

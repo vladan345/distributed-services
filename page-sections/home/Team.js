@@ -163,32 +163,11 @@ function Team() {
                 className={`${styles.imageSlide} ${styles.firstImage} imageSlide`}
               >
                 <Image
-                  src="/images/home/team/4.png"
+                  src="/images/home/team/team.png"
                   alt="Dedicated team"
-                  width={546}
-                  height={950}
-                  style={{ left: "25%" }}
-                />
-                <Image
-                  src="/images/home/team/3.png"
-                  alt="Dedicated team"
-                  width={473}
-                  height={950}
-                  style={{ left: "130px" }}
-                />
-                <Image
-                  src="/images/home/team/1.png"
-                  alt="Dedicated team"
-                  width={390}
-                  height={950}
-                  style={{ top: "48%" }}
-                />
-                <Image
-                  src="/images/home/team/2.png"
-                  alt="Dedicated team"
-                  width={748}
-                  height={950}
-                  style={{ right: 0 }}
+                  width={1297}
+                  height={1172}
+                  className={styles.teamImage}
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>

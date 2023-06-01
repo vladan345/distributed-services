@@ -1,6 +1,11 @@
 import React from "react";
 import ProjectHero from "@/components/ProjectHero";
-import Restaurants from "@/page-sections/rikas/Restaurants";
+import { restaurants1, restaurants2, dual } from "@/lib/rikasRestaurants";
+import RestaurantRows from "@/page-sections/rikas/RestaurantRows";
+import RestaurantRowsMobile from "@/page-sections/rikas/RestaurantRowsMobile";
+import Dual from "@/page-sections/rikas/Dual";
+import DualMobile from "@/page-sections/rikas/DualMobile";
+import Circle from "@/page-sections/rikas/Circle";
 import Results from "@/components/Results";
 import { ReactLenis } from "@studio-freight/react-lenis";
 
@@ -32,7 +37,13 @@ function Rikas() {
     <div>
       <ReactLenis root options={{ duration: 1.2 }}>
         <ProjectHero content={projectInfo} />
-        <Restaurants />
+        <RestaurantRows content={restaurants1} />
+        <RestaurantRowsMobile content={restaurants1} />
+        <Dual />
+        <DualMobile content={dual} />
+        <RestaurantRows content={restaurants2} />
+        <RestaurantRowsMobile content={restaurants2} />
+        <Circle />
         <Results content={projectInfo} />
       </ReactLenis>
     </div>

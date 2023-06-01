@@ -43,7 +43,7 @@ function Projects() {
         <div className={styles.grid}>
           <div className={`${styles.col} left`}>
             <Link className={styles.card} href="#">
-              <div>
+              <div className={styles.content}>
                 <h4>Project Name</h4>
                 <p>WEB DESIGN / WEB DEVELOPMENT</p>
               </div>

@@ -13,12 +13,7 @@ function Hero() {
         className={styles.background1}
       />
       <div className={styles.video}>
-        <video
-          src="/images/distributed_services_hero.mp4"
-          autoPlay
-          loop
-          muted
-        ></video>
+        <video src="/images/contact/contact.mp4" autoPlay loop muted></video>
       </div>
 
       <div className={styles.content + " container"}>

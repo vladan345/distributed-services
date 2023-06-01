@@ -2,12 +2,14 @@
   margin-top: 120px;
   background: var(--background);
   display: none;
+  margin-bottom: -60px;
 }
 .Services .stickyWrap {
   position: sticky;
   top: 0;
   height: 100vh;
   width: 100%;
+  margin-top: -400px;
 }
 .Services section {
   position: absolute;
@@ -17,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   transform: translateY(100px);
 }
 .Services .container {
@@ -26,15 +28,7 @@
   top: 0;
   left: 50%;
 }
-.imageWrap {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 0;
-  overflow: hidden;
-}
+
 .imageSlide {
   position: absolute;
   left: 0;
@@ -44,15 +38,13 @@
   transform-origin: bottom right;
 }
 .imageSlide img {
-  transform: translateX(100px);
   opacity: 0;
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 
 .imageSlide.first img {
-  transform: translateX(0);
   opacity: 1;
 }
 .slide .number {
@@ -64,11 +56,13 @@
   max-width: 560px;
   min-height: 152px;
   margin-bottom: 60px;
+  text-align: center;
 }
 .slide p {
   max-width: 475px;
   min-height: 93px;
   margin-bottom: 90px;
+  text-align: center;
 }
 .slide a {
   font-size: 28px;
@@ -127,64 +121,64 @@ section.first {
   width: 1700px;
   height: 1700px;
 }
-
-@media (max-width: 800px) {
+.imageWrap {
+  width: 100%;
+  height: 300px;
+  position: sticky;
+  top: calc(100% - 300px);
+  border-radius: 1000px 1000px 0 0;
+  margin-top: 300px;
+  overflow: hidden;
+}
+.imageWrap .imageSlide {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+.imageWrap .imageSlide img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+}
+@media (max-width: 955px) {
   .Services {
     display: block;
   }
   .Services section {
-    padding-top: 170px;
+    padding-top: 120px;
     width: calc(100% - 40px);
     justify-content: flex-start;
   }
-  .circleWrap {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    height: 450px;
-    top: calc(100% - 450px);
-    width: 100%;
-  }
-  .circle {
-    flex-shrink: 0;
-    width: 1200px;
-    height: 1200px;
-    transform: scale(0.7);
-  }
-  .imageSlide {
-    transform: scale(1) translateX(-50%);
-    max-height: 400px;
-    top: calc(100% - 400px);
-    left: 50%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
-  .imageSlide img {
-    width: auto;
-    height: 100%;
-    max-height: 500px;
-    position: static;
-  }
+
   .slide h3 {
     margin-bottom: 30px;
     min-height: 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
+    font-size: 32px;
   }
   .slide p {
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 16px;
     min-height: 0;
-  }
-  .slide a {
-    display: flex;
+    padding: 15px 0;
   }
 }
 @media (max-width: 800px) {
-  .Services section {
-    padding-top: 120px;
+  .slide a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .slide a img {
+    height: 19px;
+    width: 23px;
+  }
+}
+@media (max-width: 500px) {
+  .imageWrap {
+    height: 300px;
+    top: calc(100% - 300px);
   }
 }

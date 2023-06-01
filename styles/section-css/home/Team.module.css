@@ -73,7 +73,9 @@
   top: calc(100% - 20px);
   z-index: 10;
 }
-
+.teamImage {
+  left: -25%;
+}
 @media (max-width: 1640px) {
   .imageWrap {
     width: 650px;
@@ -113,6 +115,9 @@
   }
   .textBox p {
     font-size: 16px;
+  }
+  .teamImage {
+    left: 0;
   }
 }
 @media (max-width: 800px) {

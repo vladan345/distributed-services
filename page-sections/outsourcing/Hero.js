@@ -13,7 +13,7 @@ function Hero() {
       />
       <div className={styles.video}>
         <video
-          src="/images/distributed_services_hero.mp4"
+          src="/images/outsourcing/outsourcing.mp4"
           autoPlay
           loop
           muted
