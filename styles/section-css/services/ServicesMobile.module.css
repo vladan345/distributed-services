@@ -32,7 +32,7 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 .imageSlide {
@@ -71,17 +71,19 @@
   margin-bottom: 90px;
 }
 .slide a {
-  font-size: 28px;
+  font-size: 16px;
   color: var(--main-blue);
   padding: 15px 35px;
   border-radius: var(--border-radius);
   border: 2px solid var(--main-blue);
   display: inline-flex;
   align-items: center;
+  gap: 20px;
 }
 .slide a img {
   filter: var(--arrow-filter);
-  margin-left: 20px;
+  width: 23px;
+  height: 19px;
 }
 .Services h2 {
   padding: 45px 0;
@@ -128,7 +130,7 @@ section.first {
   height: 1700px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   .Services {
     display: block;
   }
@@ -186,5 +188,10 @@ section.first {
 @media (max-width: 800px) {
   .Services section {
     padding-top: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .imageSlide img {
+    max-height: 300px;
   }
 }

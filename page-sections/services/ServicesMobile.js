@@ -143,36 +143,27 @@ function ServicesMobile() {
           <div className={`${styles.container} container`}>
             {services &&
               services.map((service, index) => {
-                if (index === 0) {
-                  return (
-                    <section
-                      key={index}
-                      className={`${styles.slide} ${styles.first}`}
-                    >
-                      <span className={styles.number}>0{index + 1}</span>
-                      <h3>{service.title}</h3>
-                      <p>{service.text}</p>
-                      <Link href={service.link}>View Project</Link>
-                    </section>
-                  );
-                } else {
-                  return (
-                    <section className={styles.slide} key={index}>
-                      <span className={styles.number}>0{index + 1}</span>
-                      <h3>{service.title}</h3>
-                      <p>{service.text}</p>
-                      <Link href={service.link}>
-                        View Project{" "}
-                        <Image
-                          src="/arrow-black-right.svg"
-                          width={29}
-                          height={35}
-                          alt="arrow down white"
-                        />
-                      </Link>
-                    </section>
-                  );
-                }
+                return (
+                  <section
+                    key={index}
+                    className={`${styles.slide} ${
+                      index === 0 ? styles.first : ""
+                    }`}
+                  >
+                    <span className={styles.number}>0{index + 1}</span>
+                    <h3>{service.title}</h3>
+                    <p>{service.text}</p>
+                    <Link href={service.link}>
+                      View Project{" "}
+                      <Image
+                        src="/arrow-black-right.svg"
+                        width={29}
+                        height={35}
+                        alt="arrow down white"
+                      />
+                    </Link>
+                  </section>
+                );
               })}
           </div>
           <div className={styles.imageWrap}>
@@ -195,7 +186,15 @@ function ServicesMobile() {
                 style={{ transform: "rotate(90deg)" }}
               />
             </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
+            <div
+              style={{
+                transform: "scale(1) translateX(-50%) rotate(30deg)",
+                transformOrigin: "center bottom",
+                top: "calc(100% - 400px)",
+                left: "30%",
+              }}
+              className={`${styles.imageSlide} imageSlide`}
+            >
               <Image
                 src="/images/services/accordion/phone-desktop.webp"
                 alt="Digital marketing"
@@ -204,7 +203,12 @@ function ServicesMobile() {
                 className={`${styles.accordionImage}`}
               />
             </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
+            <div
+              style={{
+                left: "40%",
+              }}
+              className={`${styles.imageSlide} imageSlide`}
+            >
               <Image
                 src="/images/services/accordion/brandbook-desktop.webp"
                 alt="Branding"
@@ -213,7 +217,10 @@ function ServicesMobile() {
                 className={`${styles.accordionImage}`}
               />
             </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
+            <div
+              style={{ left: "32%" }}
+              className={`${styles.imageSlide} imageSlide`}
+            >
               <Image
                 src="/images/services/accordion/planet-desktop.webp"
                 alt="Outsourcing"

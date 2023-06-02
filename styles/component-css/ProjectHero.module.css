@@ -125,7 +125,7 @@
   .banner {
     height: 660px;
   }
-  .col > p {
+  .description {
     font-size: 18px;
   }
   .service p {
@@ -135,6 +135,10 @@
 @media (max-width: 800px) {
   .logo {
     top: 50%;
+  }
+  .col h1 {
+    font-size: 32px;
+    letter-spacing: -1.6px;
   }
   .colWrap {
     flex-direction: column;
@@ -149,6 +153,7 @@
     max-width: 340px;
     gap: 30px;
     margin: 0 auto;
+    margin-bottom: 30px;
   }
   .service {
     width: auto;
@@ -158,5 +163,19 @@
   .info:before {
     width: 60vw;
     height: 60vw;
+  }
+  .projectBtn {
+    font-size: 16px;
+  }
+  .projectBtn img {
+    width: 23px;
+    height: 19px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .serviceHeading {
+    font-size: 20px;
+    font-weight: 500;
   }
 }

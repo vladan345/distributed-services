@@ -165,6 +165,9 @@ section.first {
   }
 }
 @media (max-width: 800px) {
+  .slide p {
+    font-size: 14px;
+  }
   .slide a {
     display: flex;
     width: 100%;
@@ -178,7 +181,7 @@ section.first {
 }
 @media (max-width: 500px) {
   .imageWrap {
-    height: 300px;
-    top: calc(100% - 300px);
+    height: 250px;
+    top: calc(100% - 250px);
   }
 }

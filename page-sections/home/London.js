@@ -44,7 +44,7 @@ function London() {
           trigger: ".trigger",
           start: "top left",
           scrub: 1,
-          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
+          end: window.innerWidth < 1240 ? "+=1500" : "+=4000",
         },
       });
       sections.forEach((section) => {

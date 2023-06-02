@@ -21,10 +21,11 @@
 }
 .circle {
   position: absolute;
-  left: -40px;
+  left: 50%;
   top: -5px;
   width: 120%;
   display: inline-block;
+  transform: translateX(-50%);
 }
 .scratch {
   display: inline-block;

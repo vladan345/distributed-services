@@ -31,7 +31,7 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
 }
 .imageSlide {
@@ -41,6 +41,8 @@
   width: 100%;
   height: 100%;
   transform-origin: bottom right;
+  transform: scale(0.8);
+  margin-bottom: -20px;
 }
 .imageSlide img {
   transform: translateX(100px);
@@ -75,6 +77,19 @@
   padding: 15px 35px;
   border-radius: var(--border-radius);
   border: 2px solid var(--main-blue);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.slide a img {
+  filter: var(--arrow-filter);
+}
+.slide a:hover {
+  background: var(--main-blue);
+  color: var(--background);
+}
+.slide a:hover img {
+  filter: invert();
 }
 .Services h2 {
   padding: 45px 0;
@@ -121,18 +136,12 @@ section.first {
   height: 1700px;
 }
 
-@media (max-width: 1600px) {
-  .imageSlide {
-    transform: scale(0.8);
-    margin-bottom: -20px;
-  }
-}
 @media (max-width: 1240px) {
   .Services {
     margin-top: 0;
   }
   .imageSlide {
-    transform: scale(0.7);
+    transform: scale(1);
   }
   .circle {
     transform: scale(0.7);
@@ -158,6 +167,12 @@ section.first {
     top: calc(100% - 450px);
     width: 100%;
   }
+  .imageSlide img {
+    left: 50%;
+    width: auto;
+    max-height: 400px;
+  }
+
   .circle {
     flex-shrink: 0;
     width: 1200px;
@@ -171,9 +186,6 @@ section.first {
   .Services section {
     padding-top: 120px;
   }
-  .imageSlide {
-    transform: scale(0.4);
-  }
   .slide p {
     font-size: 14px;
     margin-bottom: 30px;
@@ -183,5 +195,11 @@ section.first {
     font-size: 16px;
     width: 100%;
     text-align: center;
+
+    justify-content: center;
+  }
+  .slide a img {
+    width: 23px;
+    height: 19px;
   }
 }

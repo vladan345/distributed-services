@@ -138,9 +138,7 @@
   .col {
     width: 100%;
   }
-  .col:first-of-type {
-    margin-bottom: 50px;
-  }
+
   .Projects {
     margin-top: 60px;
   }

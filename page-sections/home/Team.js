@@ -172,11 +172,11 @@ function Team() {
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
                 <Image
-                  src="/images/home/team/Paket.png"
+                  src="/images/home/team/paket.png"
                   alt="Full package"
-                  width={765}
+                  width={1004}
                   height={590}
-                  style={{ right: "15%" }}
+                  className={styles.paket}
                 />
               </div>
               <div className={`${styles.imageSlide} imageSlide`}>
@@ -185,14 +185,14 @@ function Team() {
                   alt="Custom solutions"
                   width={880}
                   height={670}
-                  style={{ left: "0" }}
+                  className={styles.wireframe}
                 />
                 <Image
                   src="/images/home/team/Ruka-olovka.png"
                   alt="Custom solutions"
                   width={671}
                   height={950}
-                  style={{ right: "23%" }}
+                  className={styles.pen}
                 />
               </div>
             </div>

@@ -14,7 +14,7 @@ function GetInTouch({ darkMode }) {
     let ctx = gsap.context(() => {
       gsap.from(".container", {
         scrollTrigger: {
-          start: "top 50%",
+          start: "top 70%",
           end: "bottom top",
           trigger: ".trigger",
           toggleClass: styles.active,

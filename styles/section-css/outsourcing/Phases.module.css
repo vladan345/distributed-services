@@ -137,6 +137,7 @@
 @media (max-width: 800px) {
   .Phases {
     padding-bottom: 0;
+    padding-top: 60px;
   }
   .item h3 {
     font-size: 36px;

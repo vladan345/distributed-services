@@ -107,6 +107,9 @@
 }
 
 @media (max-width: 1240px) {
+  .Hero {
+    margin-bottom: -450px;
+  }
   .Hero h1 {
     font-size: 60px;
     max-width: 400px;
@@ -131,6 +134,7 @@
   .Hero {
     justify-content: flex-end;
     min-height: 100vh;
+    margin-bottom: -250px;
   }
   .subheading {
     font-size: 14px;

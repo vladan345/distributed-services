@@ -15,19 +15,19 @@ function Services() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      const randomX = (el) => {
-        var tl = gsap.timeline();
-        tl.set(el, { y: 0 });
-        tl.to(el, { y: 50, ease: "power1.inOut", duration: 5 });
-        tl.to(el, {
-          y: 0,
-          ease: "power1.inOut",
-          duration: 5,
-          onComplete: randomX,
-          onCompleteParams: [el],
-          stagger: 0.5,
-        });
-      };
+      // const randomX = (el) => {
+      //   var tl = gsap.timeline();
+      //   tl.set(el, { y: 0 });
+      //   tl.to(el, { y: 50, ease: "power1.inOut", duration: 5 });
+      //   tl.to(el, {
+      //     y: 0,
+      //     ease: "power1.inOut",
+      //     duration: 5,
+      //     onComplete: randomX,
+      //     onCompleteParams: [el],
+      //     stagger: 0.5,
+      //   });
+      // };
 
       let currentSection;
       let currentImage;
@@ -120,12 +120,13 @@ function Services() {
           currentImage = newImages;
         }
       }
-      const floatImages = gsap.utils.toArray(".float");
-      floatImages.forEach((image, index) => {
-        setTimeout(function () {
-          randomX(image);
-        }, index * interval);
-      });
+      // const floatImages = gsap.utils.toArray(".float");
+
+      // floatImages.forEach((image, index) => {
+      //   setTimeout(function () {
+      //     randomX(image);
+      //   }, index * interval);
+      // });
     }, main.current);
 
     return () => ctx.revert();
@@ -146,28 +147,27 @@ function Services() {
           <div className={`${styles.container} container`}>
             {services &&
               services.map((service, index) => {
-                if (index === 0) {
-                  return (
-                    <section
-                      key={index}
-                      className={`${styles.slide} ${styles.first}`}
-                    >
-                      <span className={styles.number}>0{index + 1}</span>
-                      <h3>{service.title}</h3>
-                      <p>{service.text}</p>
-                      <Link href={service.link}>View Project</Link>
-                    </section>
-                  );
-                } else {
-                  return (
-                    <section className={styles.slide} key={index}>
-                      <span className={styles.number}>0{index + 1}</span>
-                      <h3>{service.title}</h3>
-                      <p>{service.text}</p>
-                      <a href={service.link}>View Project</a>
-                    </section>
-                  );
-                }
+                return (
+                  <section
+                    key={index}
+                    className={`${styles.slide} ${
+                      index === 0 ? styles.first : ""
+                    }`}
+                  >
+                    <span className={styles.number}>0{index + 1}</span>
+                    <h3>{service.title}</h3>
+                    <p>{service.text}</p>
+                    <Link href={service.link}>
+                      View Project
+                      <Image
+                        src="/arrow-black-right.svg"
+                        width={29}
+                        height={35}
+                        alt="arrow down white"
+                      />
+                    </Link>
+                  </section>
+                );
               })}
           </div>
           <div className={styles.imageWrap}>
@@ -184,15 +184,15 @@ function Services() {
                 alt="Web design laptop mockup"
                 width={1027}
                 height={638}
-                style={{ bottom: 0 }}
+                style={{ bottom: 0, right: "-250px" }}
                 className="float"
               />
               <Image
-                src="/images/home/services/service1-phone.webp"
-                alt="Web design laptop mockup"
-                width={444}
-                height={478}
-                style={{ bottom: 0 }}
+                src="/images/home/services/service1-phone.png"
+                alt="Web design mobile mockup"
+                width={568}
+                height={632}
+                style={{ bottom: "-100px", right: "400px" }}
                 className="float"
               />
             </div>
@@ -209,24 +209,25 @@ function Services() {
                 alt="Web design desktop mockup"
                 width={388}
                 height={374}
-                style={{ right: "35%" }}
+                style={{ right: "650px" }}
                 className="float"
               />
             </div>
             <div className={`${styles.imageSlide} imageSlide`}>
               <Image
-                src="/images/home/services/marketing-phone-1.webp"
+                src="/images/home/services/marketing-phone-1.png"
                 alt="Web design desktop mockup"
-                width={952}
-                height={1066}
-                className="float"
+                width={1046}
+                height={970}
+                className={`float`}
+                style={{ right: "-250px" }}
               />
               <Image
-                src="/images/home/services/point-1.webp"
+                src="/images/home/services/point-1.png"
                 alt="Web design desktop mockup"
-                width={1079}
-                height={706}
-                style={{ right: "10%" }}
+                width={925}
+                height={1136}
+                style={{ right: "250px", bottom: "-420px" }}
                 className="float"
               />
             </div>

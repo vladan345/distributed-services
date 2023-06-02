@@ -151,4 +151,7 @@ section.first {
     height: 19px;
     width: 23px;
   }
+  .slide p {
+    font-size: 14px;
+  }
 }
