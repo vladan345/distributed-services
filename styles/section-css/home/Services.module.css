@@ -34,6 +34,13 @@
   z-index: -1;
   overflow: hidden;
 }
+.singleImage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+}
 .imageSlide {
   position: absolute;
   left: 0;
@@ -136,6 +143,47 @@ section.first {
   height: 1700px;
 }
 
+.laptop {
+  right: -250px;
+  top: auto;
+}
+.phone {
+  bottom: -100px;
+  right: 400px;
+}
+.devLaptop {
+  right: -300px;
+  bottom: -200px;
+}
+.kafa {
+  right: 650px;
+}
+.marketingPhone {
+  right: -250px;
+}
+.point {
+  right: 250px;
+  bottom: -420px;
+}
+.vizit {
+  bottom: 35%;
+  right: 20%;
+}
+.can {
+  bottom: 35%;
+}
+.brandbook {
+  right: -350px;
+  bottom: -30%;
+}
+.zemlja {
+  right: -500px;
+  bottom: -600px;
+}
+.moon {
+  bottom: 75%;
+  right: 5%;
+}
 @media (max-width: 1240px) {
   .Services {
     margin-top: 0;
@@ -167,12 +215,85 @@ section.first {
     top: calc(100% - 450px);
     width: 100%;
   }
-  .imageSlide img {
-    left: 50%;
+  .singleImage img {
     width: auto;
     max-height: 400px;
   }
-
+  .singleImage {
+    transform: translateX(-50%);
+    left: 50%;
+    width: 50vw;
+  }
+  .laptop {
+    left: auto;
+    right: -16%;
+  }
+  .laptop img {
+    height: 300px;
+  }
+  .phone {
+    bottom: 0;
+    left: 25%;
+  }
+  .phone img {
+    height: 300px;
+  }
+  .devLaptop {
+    left: auto;
+    right: -12%;
+    bottom: -220px;
+    transform: rotate(35deg) translateX(-50%);
+  }
+  .kafa {
+    right: 300px;
+    left: auto;
+  }
+  .kafa img {
+    height: 120px;
+  }
+  .marketingPhone {
+    transform: translate(-20%) rotate(20deg);
+    right: auto;
+    left: 50%;
+    bottom: -150px;
+  }
+  .point {
+    bottom: -200px;
+    right: 120px;
+    left: auto;
+  }
+  .vizit {
+    bottom: 100px;
+    left: auto;
+    right: 150px;
+  }
+  .vizit img {
+    height: 200px;
+  }
+  .can {
+    bottom: 150px;
+    right: 70px;
+    left: auto;
+  }
+  .can img {
+    height: 250px;
+  }
+  .brandbook {
+    left: auto;
+    right: -100px;
+    bottom: -100px;
+  }
+  .zemlja {
+    bottom: -140px;
+  }
+  .moon {
+    bottom: 200px;
+    left: auto;
+    right: 100px;
+  }
+  .moon img {
+    height: 80px;
+  }
   .circle {
     flex-shrink: 0;
     width: 1200px;
@@ -201,5 +322,55 @@ section.first {
   .slide a img {
     width: 23px;
     height: 19px;
+  }
+}
+@media (max-width: 620px) {
+  .laptop img {
+    height: 200px;
+  }
+  .laptop {
+    right: -30%;
+  }
+  .desktop img {
+    height: 300px;
+  }
+  .phone {
+    bottom: -50px;
+  }
+  .phone img {
+    height: 250px;
+  }
+  .devLaptop {
+    right: -200px;
+  }
+  .kafa {
+    right: 200px;
+  }
+  .marketingPhone {
+    right: -200px;
+    left: auto;
+  }
+  .point {
+    right: -20px;
+  }
+  .brandbook {
+    right: -200px;
+    left: auto;
+  }
+  .can {
+    right: -40px;
+    bottom: 100px;
+  }
+  .vizit {
+    right: 50px;
+    left: auto;
+  }
+  .zemlja {
+    right: -120px;
+    left: auto;
+  }
+  .moon {
+    right: 140px;
+    left: auto;
   }
 }

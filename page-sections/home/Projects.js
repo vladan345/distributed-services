@@ -18,14 +18,14 @@ function Projects() {
         gsap.to(".left", {
           scrollTrigger: {
             trigger: ".projects",
-            scrub: 1,
+            scrub: true,
           },
           y: -50,
         });
         gsap.from(".right", {
           scrollTrigger: {
             trigger: ".projects",
-            scrub: 1,
+            scrub: true,
           },
           y: -50,
         });
