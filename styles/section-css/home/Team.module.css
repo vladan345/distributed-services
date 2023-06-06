@@ -79,7 +79,7 @@
   width: auto;
 }
 .paket {
-  right: -50px;
+  right: 100px;
 }
 .pen {
   right: 180px;
@@ -100,7 +100,7 @@
     left: -35%;
   }
   img.paket {
-    right: 100px;
+    right: 300px;
   }
 }
 @media (max-width: 1240px) {
@@ -149,6 +149,7 @@
   }
   img.teamImage {
     left: 15%;
+    width: 100%;
     max-width: 1000px;
     height: auto;
   }

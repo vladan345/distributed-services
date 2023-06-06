@@ -18,7 +18,7 @@ function London() {
         scrollTrigger: {
           trigger: ".trigger",
           pin: true,
-          scrub: 1,
+          scrub: true,
           end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
         },
       });
@@ -28,7 +28,7 @@ function London() {
         scrollTrigger: {
           trigger: ".trigger",
           start: "top left",
-          scrub: 1,
+          scrub: true,
           end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
         },
       });
@@ -43,8 +43,8 @@ function London() {
         scrollTrigger: {
           trigger: ".trigger",
           start: "top left",
-          scrub: 1,
-          end: window.innerWidth < 1240 ? "+=1500" : "+=4000",
+          scrub: true,
+          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
         },
       });
       sections.forEach((section) => {

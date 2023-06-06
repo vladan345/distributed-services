@@ -1,8 +1,35 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../../styles/section-css/contact/Hero.module.css";
-import Link from "next/link";
+import { sendContactForm } from "@/lib/api";
 
 function Hero() {
+  const [values, setValues] = useState({
+    name: "",
+    company: "",
+    email: "",
+    country: "",
+    budget: "",
+    comment: "",
+  });
+
+  const handleChange = (e) => {
+    setValues((prevState) => {
+      return {
+        ...prevState,
+        [e.target.id]: e.target.value,
+      };
+    });
+    return { values, handleChange };
+  };
+
+  const handleSubmit = async () => {
+    setValues((prev) => ({
+      ...prev,
+    }));
+    await sendContactForm(values);
+  };
+
   return (
     <section className={styles.Hero}>
       <Image
@@ -25,6 +52,8 @@ function Hero() {
             name="name"
             id="name"
             placeholder="Your name*"
+            onChange={handleChange}
+            value={values.name}
           />
           <input
             className={styles.inputBox}
@@ -32,6 +61,8 @@ function Hero() {
             name="company"
             id="company"
             placeholder="Your company name*"
+            onChange={handleChange}
+            value={values.company}
           />
           <input
             className={styles.inputBox}
@@ -39,6 +70,8 @@ function Hero() {
             name="email"
             id="email"
             placeholder="Your e-mail*"
+            onChange={handleChange}
+            value={values.email}
           />
           <input
             className={styles.inputBox}
@@ -46,6 +79,8 @@ function Hero() {
             name="country"
             id="country"
             placeholder="Country"
+            onChange={handleChange}
+            value={values.country}
           />
           <input
             className={styles.inputBox}
@@ -53,6 +88,8 @@ function Hero() {
             name="budget"
             id="budget"
             placeholder="Your budget"
+            onChange={handleChange}
+            value={values.budget}
           />
           <textarea
             placeholder="Comments or Questions"
@@ -60,6 +97,8 @@ function Hero() {
             name="comment"
             id="comment"
             rows="4"
+            onChange={handleChange}
+            value={values.comment}
           ></textarea>
           <button className={styles.submitBtn} type="submit">
             Send

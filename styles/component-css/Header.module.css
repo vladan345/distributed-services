@@ -51,9 +51,6 @@
   display: inline-block;
 }
 
-.Header .logoLink img {
-  width: 100%;
-}
 .ham {
   display: none;
   width: 30px;
@@ -132,5 +129,6 @@
   }
   .Header .logoLink img {
     height: 40px;
+    width: auto;
   }
 }

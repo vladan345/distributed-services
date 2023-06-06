@@ -52,7 +52,7 @@ function Services() {
           trigger: ".trigger",
           start: "top top",
           end: "bottom bottom",
-          scrub: 1,
+          scrub: true,
           toggleActions: "restart none reverse none",
         },
         width: "100%",
@@ -64,7 +64,7 @@ function Services() {
           start: "top top",
           end: "bottom bottom",
 
-          scrub: 1,
+          scrub: true,
           toggleActions: "restart none reverse none",
         },
         backgroundPosition: "0% 0",
@@ -75,7 +75,7 @@ function Services() {
           scrollTrigger: {
             start: () => (i - 0.5) * innerHeight * 2 + sectionPos.top,
             end: () => (i + 0.5) * innerHeight * 2 + sectionPos.top,
-            scrub: 1,
+            scrub: true,
             onToggle: (self) => {
               return self.isActive && setSection(section, imageSections[i]);
             },
@@ -172,107 +172,127 @@ function Services() {
           </div>
           <div className={styles.imageWrap}>
             <div className={`${styles.imageSlide} imageSlide ${styles.first}`}>
-              <Image
-                src="/images/home/services/service1-desktop.webp"
-                alt="Web design desktop mockup"
-                width={847}
-                height={782}
-                className="float"
-              />
-              <Image
-                src="/images/home/services/service1-laptop.webp"
-                alt="Web design laptop mockup"
-                width={1027}
-                height={638}
-                style={{ bottom: 0, right: "-250px" }}
-                className="float"
-              />
-              <Image
-                src="/images/home/services/service1-phone.png"
-                alt="Web design mobile mockup"
-                width={568}
-                height={632}
-                style={{ bottom: "-100px", right: "400px" }}
-                className="float"
-              />
+              <div className={`float ${styles.singleImage} ${styles.desktop}`}>
+                <Image
+                  src="/images/home/services/service1-desktop.webp"
+                  alt="Web design desktop mockup"
+                  width={847}
+                  height={782}
+                />
+              </div>
+              <div className={`float ${styles.singleImage} ${styles.laptop}`}>
+                <Image
+                  src="/images/home/services/service1-laptop.webp"
+                  alt="Web design laptop mockup"
+                  width={1027}
+                  height={638}
+                  className="float"
+                />
+              </div>
+              <div className={`float ${styles.singleImage} ${styles.phone}`}>
+                <Image
+                  src="/images/home/services/service1-phone.png"
+                  alt="Web design mobile mockup"
+                  width={568}
+                  height={632}
+                  className="float"
+                />
+              </div>
             </div>
             <div className={`${styles.imageSlide} imageSlide`}>
-              <Image
-                src="/images/home/services/dev-laptop-1.webp"
-                alt="Web design desktop mockup"
-                width={962}
-                height={1041}
-                className="float"
-              />
-              <Image
-                src="/images/home/services/kafa-1.webp"
-                alt="Web design desktop mockup"
-                width={388}
-                height={374}
-                style={{ right: "650px" }}
-                className="float"
-              />
+              <div
+                className={`float ${styles.singleImage} ${styles.devLaptop}`}
+              >
+                <Image
+                  src="/images/home/services/dev-laptop.png"
+                  alt="Web design desktop mockup"
+                  width={1224}
+                  height={1245}
+                  className="float"
+                />
+              </div>
+              <div className={`float ${styles.singleImage} ${styles.kafa}`}>
+                <Image
+                  src="/images/home/services/kafa-1.webp"
+                  alt="Web design desktop mockup"
+                  width={388}
+                  height={374}
+                  className="float"
+                />
+              </div>
             </div>
             <div className={`${styles.imageSlide} imageSlide`}>
-              <Image
-                src="/images/home/services/marketing-phone-1.png"
-                alt="Web design desktop mockup"
-                width={1046}
-                height={970}
-                className={`float`}
-                style={{ right: "-250px" }}
-              />
-              <Image
-                src="/images/home/services/point-1.png"
-                alt="Web design desktop mockup"
-                width={925}
-                height={1136}
-                style={{ right: "250px", bottom: "-420px" }}
-                className="float"
-              />
+              <div
+                className={`float ${styles.singleImage} ${styles.marketingPhone}`}
+              >
+                <Image
+                  src="/images/home/services/marketing-phone-1.png"
+                  alt="Web design desktop mockup"
+                  width={1046}
+                  height={970}
+                  className={`float`}
+                />
+              </div>
+              <div className={`float ${styles.singleImage} ${styles.point}`}>
+                <Image
+                  src="/images/home/services/point-1.png"
+                  alt="Web design desktop mockup"
+                  width={925}
+                  height={1136}
+                  className="float"
+                />
+              </div>
             </div>
             <div className={`${styles.imageSlide} imageSlide`}>
-              <Image
-                src="/images/home/services/vizitke-1.webp"
-                alt="Web design desktop mockup"
-                width={506}
-                height={331}
-                style={{ bottom: "35%", right: "20%" }}
-                className="float"
-              />
-              <Image
-                src="/images/home/services/can.webp"
-                alt="Web design desktop mockup"
-                width={624}
-                height={569}
-                style={{ bottom: "35%" }}
-                className="float"
-              />
-              <Image
-                src="/images/home/services/brandbook-1.webp"
-                alt="Web design desktop mockup"
-                width={1102}
-                height={915}
-                style={{ bottom: "-10%", right: "-10%" }}
-                className="float"
-              />
+              <div className={`float ${styles.singleImage} ${styles.vizit}`}>
+                <Image
+                  src="/images/home/services/vizitke-1.webp"
+                  alt="Web design desktop mockup"
+                  width={506}
+                  height={331}
+                  className="float"
+                />
+              </div>
+              <div className={`float ${styles.singleImage} ${styles.can}`}>
+                <Image
+                  src="/images/home/services/can.webp"
+                  alt="Web design desktop mockup"
+                  width={624}
+                  height={569}
+                  className="float"
+                />
+              </div>
+              <div
+                className={`float ${styles.singleImage} ${styles.brandbook}`}
+              >
+                <Image
+                  src="/images/home/services/brandbook-1.png"
+                  alt="Web design desktop mockup"
+                  width={1390}
+                  height={995}
+                  className="float"
+                />
+              </div>
             </div>
             <div className={`${styles.imageSlide} imageSlide`}>
-              <Image
-                src="/images/home/services/zemlja.webp"
-                alt="Web design desktop mockup"
-                width={800}
-                height={750}
-                className="float"
-              />
-              <Image
-                src="/images/home/services/moon-1.webp"
-                alt="Web design desktop mockup"
-                width={137}
-                height={145}
-                style={{ bottom: "75%", right: "5%" }}
-                className="float"
-              />
+              <div className={`float ${styles.singleImage} ${styles.zemlja}`}>
+                <Image
+                  src="/images/home/services/earth.png"
+                  alt="Web design desktop mockup"
+                  width={1489}
+                  height={1489}
+                  className="float"
+                />
+              </div>
+              <div className={`float ${styles.singleImage} ${styles.moon}`}>
+                <Image
+                  src="/images/home/services/moon-1.webp"
+                  alt="Web design desktop mockup"
+                  width={137}
+                  height={145}
+                  className="float"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ function DualMobile({ content }) {
           trigger: ".triggerM",
           start: "top top",
           end: "bottom bottom",
-          scrub: 1,
+          scrub: true,
           toggleActions: "restart none reverse none",
         },
         width: "100%",
@@ -45,7 +45,7 @@ function DualMobile({ content }) {
           scrollTrigger: {
             start: () => (i - 0.5) * innerHeight * 2 + sectionPos.top,
             end: () => (i + 0.5) * innerHeight * 2 + sectionPos.top,
-            scrub: 1,
+            scrub: true,
             onToggle: (self) => {
               return self.isActive && setSection(section, imageSections[i]);
             },

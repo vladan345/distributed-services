@@ -25,6 +25,7 @@
   background-image: linear-gradient(118deg, var(--main-blue) 10%, #15319d 85%);
   position: relative;
   color: var(--background);
+  overflow: hidden;
 }
 .info:after {
   display: block;

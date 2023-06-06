@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
+
+import { projects } from "@/lib/projects";
+import ProjectCard from "@/components/ProjectCard";
 import styles from "../../styles/section-css/services/Projects.module.css";
 
 import gsap from "gsap";
@@ -18,14 +19,14 @@ function Projects() {
         gsap.to(".left", {
           scrollTrigger: {
             trigger: ".projects",
-            scrub: 1,
+            scrub: true,
           },
           y: -50,
         });
         gsap.from(".right", {
           scrollTrigger: {
             trigger: ".projects",
-            scrub: 1,
+            scrub: true,
           },
           y: -50,
         });
@@ -42,50 +43,20 @@ function Projects() {
       <div className={`${styles.projectWrap} projects`}>
         <div className={styles.grid}>
           <div className={`${styles.col} left`}>
-            <Link className={styles.card} href="#">
-              <div>
-                <h4>Project Name</h4>
-                <p>WEB DESIGN / WEB DEVELOPMENT</p>
-              </div>
-              <span className={styles.cardButton} href="#">
-                View Project
-                <Image
-                  src="/arrow-black-right.svg"
-                  width={29}
-                  height={35}
-                  alt="arrow down white"
-                />
-              </span>
-              <Image
-                src="/images/home/project1.webp"
-                alt="Project background"
-                fill
-                sizes="100vw"
-              />
-            </Link>
+            <ProjectCard
+              title={projects[0].title}
+              link={projects[0].link}
+              projectImage={projects[0].projectImage}
+              services={projects[0].services}
+            />
           </div>
           <div className={`${styles.col} right`}>
-            <Link className={styles.card} href="#">
-              <div>
-                <h4>Project Name</h4>
-                <p>WEB DESIGN / WEB DEVELOPMENT</p>
-              </div>
-              <span className={styles.cardButton} href="#">
-                View Project
-                <Image
-                  src="/arrow-black-right.svg"
-                  width={29}
-                  height={35}
-                  alt="arrow down white"
-                />
-              </span>
-              <Image
-                src="/images/home/project3.webp"
-                alt="Project background"
-                fill
-                sizes="100vw"
-              />
-            </Link>
+            <ProjectCard
+              title={projects[1].title}
+              link={projects[1].link}
+              projectImage={projects[1].projectImage}
+              services={projects[1].services}
+            />
           </div>
         </div>
       </div>
