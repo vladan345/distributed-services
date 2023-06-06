@@ -188,6 +188,16 @@ img.imageActive {
   opacity: 1;
   right: calc(-30% + 50px);
 }
+
+.projectParagraph {
+  font-size: 48px;
+  font-family: "Flexa";
+  line-height: 1.2;
+  font-weight: 500;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 @media (max-width: 1640px) {
   :root {
     --max-width: 1200px;
@@ -241,5 +251,8 @@ img.imageActive {
   .Projects p {
     font-size: 32px;
     padding: 0 20px;
+  }
+  .projectParagraph {
+    font-size: 20px;
   }
 }

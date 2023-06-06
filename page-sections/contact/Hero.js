@@ -45,7 +45,7 @@ function Hero() {
 
       <div className={styles.content + " container"}>
         <h1>Do you have any questions about our work?</h1>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={styles.form}>
           <input
             className={styles.inputBox}
             type="text"

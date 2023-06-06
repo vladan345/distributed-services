@@ -5,21 +5,48 @@
   display: flex;
   align-items: center;
 }
-.singleLink {
-  font-size: 22px;
+.serviceWrap {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.service {
+  border: 2px solid var(--main-blue);
+  height: 50px;
+  max-width: 200px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  font-size: 14px;
+  letter-spacing: 0.28px;
+  line-height: 1.2;
+  color: var(--main-blue);
   text-transform: uppercase;
-  letter-spacing: 0.44px;
-  font-weight: bold;
+  border-radius: var(--border-radius);
 }
-.singleLink img {
-  margin: 0 20px;
+.service img {
+  filter: var(--arrow-filter);
 }
-
+.service:hover {
+  background: linear-gradient(114deg, var(--main-blue) 10%, #15319d 84%);
+  color: var(--background);
+}
+.service.active {
+  background: linear-gradient(114deg, var(--main-blue) 10%, #15319d 84%);
+  color: var(--background);
+}
+.service:hover img {
+  filter: invert();
+}
+.service.active img {
+  filter: invert();
+}
 @media (max-width: 800px) {
   .Slug {
     padding-top: 110px;
   }
-  .Slug span {
-    font-size: 14px;
+  .serviceWrap {
+    gap: 15px;
   }
 }
