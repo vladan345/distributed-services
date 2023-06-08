@@ -173,7 +173,7 @@ function Team() {
 
               <div className={`${styles.imageSlide} imageSlide`}>
                 <Image
-                  src="/images/home/team/paket.png"
+                  src="/images/home/team/paket2.png"
                   alt="Full package"
                   width={1004}
                   height={590}
