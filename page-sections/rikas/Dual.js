@@ -79,7 +79,10 @@ function Dual() {
                 cursus et mattis. Ac pulvinar sodales adipiscing nec elit nibh.
               </p>
             </div>
-            <Link className={`${styles.cta} ${styles.white}`} href="#">
+            <Link
+              className={`${styles.cta} ${styles.white}`}
+              href="https://madeleineetmarcel.com/"
+            >
               Go to website
               <Image
                 src="/arrow-black-right.svg"
@@ -100,7 +103,10 @@ function Dual() {
                 pretium semper pellentesque a.
               </p>
             </div>
-            <Link className={`${styles.cta} ${styles.white}`} href="#">
+            <Link
+              className={`${styles.cta} ${styles.white}`}
+              href="https://lacantine.ae/events/gohan"
+            >
               Go to website
               <Image
                 src="/arrow-black-right.svg"

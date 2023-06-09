@@ -67,7 +67,7 @@ function MobileMenu({ isActive, toggleMenu }) {
         </Link>
       </nav>
       <div className={styles.socials}>
-        <p>Follow us</p>
+        {/* <p>Follow us</p>
         <div className={styles.icons}>
           <Link href="#">
             <Image
@@ -101,7 +101,7 @@ function MobileMenu({ isActive, toggleMenu }) {
               height={22}
             />
           </Link>
-        </div>
+        </div> */}
       </div>
     </aside>
   );

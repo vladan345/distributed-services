@@ -198,6 +198,9 @@ img.imageActive {
   margin: 0 auto;
   padding: 0 20px;
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
 @media (max-width: 1640px) {
   :root {
     --max-width: 1200px;

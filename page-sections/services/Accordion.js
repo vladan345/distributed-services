@@ -22,19 +22,19 @@ function Accordion() {
       title: "Digital Marketing",
       content:
         "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
-      link: "/projects/digital-marketing",
+      link: "/projects",
     },
     {
       title: "Branding",
       content:
         "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
-      link: "/projects/branding",
+      link: "/projects",
     },
     {
       title: "Outsourcing",
       content:
         "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
-      link: "/projects/outsourcing",
+      link: "/projects",
     },
   ];
   const wrapper = useRef(null);

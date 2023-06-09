@@ -74,7 +74,10 @@ function Circle() {
                 cursus et mattis. Ac pulvinar sodales adipiscing nec elit nibh.
               </p>
             </div>
-            <Link className={`${styles.cta} ${styles.white}`} href="#">
+            <Link
+              className={`${styles.cta} ${styles.white}`}
+              href="https://tagomago.ae/"
+            >
               Go to website
               <Image
                 src="/arrow-black-right.svg"
@@ -86,7 +89,7 @@ function Circle() {
           </div>
           <div className={styles.dualText}>
             <div>
-              <h2>Gohan</h2>
+              <h2>Chez Wam</h2>
               <p>
                 Nibh elementum dui imperdiet mauris nunc ac non nibh cras.
                 Fermentum quis lacinia odio ipsum. Viverra maecenas vulputate
@@ -95,7 +98,10 @@ function Circle() {
                 pretium semper pellentesque a.
               </p>
             </div>
-            <Link className={`${styles.cta} ${styles.white}`} href="#">
+            <Link
+              className={`${styles.cta} ${styles.white}`}
+              href="https://chezwam.ae"
+            >
               Go to website
               <Image
                 src="/arrow-black-right.svg"

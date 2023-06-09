@@ -39,7 +39,6 @@ function Slug() {
   const router = useRouter();
   let path = router.asPath.split("/");
   // path = path.filter((string) => string != "");
-  console.log(path);
   return (
     <div className={styles.Slug}>
       <div className="container">

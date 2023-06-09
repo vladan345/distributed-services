@@ -43,7 +43,7 @@ function Footer() {
           </div>
           <div className={styles.col}>
             <div className={styles.socials}>
-              <p>Follow us</p>
+              {/* <p>Follow us</p>
               <div className={styles.icons}>
                 <Link href="#">
                   <Image
@@ -77,7 +77,7 @@ function Footer() {
                     height={22}
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

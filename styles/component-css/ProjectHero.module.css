@@ -90,9 +90,9 @@
   margin-bottom: 30px;
   color: var(--background);
 }
-.service:hover {
+/* .service:hover {
   color: var(--main-green);
-}
+} */
 
 .projectBtn {
   font-size: 22px;

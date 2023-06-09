@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import styles from "../../styles/section-css/contact/Hero.module.css";
 import { sendContactForm } from "@/lib/api";
-
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 function Hero() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [values, setValues] = useState({
     name: "",
     company: "",
@@ -23,13 +24,22 @@ function Hero() {
     return { values, handleChange };
   };
 
-  const handleSubmit = async () => {
-    setValues((prev) => ({
-      ...prev,
-    }));
-    await sendContactForm(values);
-  };
-
+  const handleSumitForm = useCallback(
+    (e) => {
+      setValues((prev) => ({
+        ...prev,
+      }));
+      e.preventDefault();
+      if (!executeRecaptcha) {
+        console.log("Execute recaptcha not yet available");
+        return;
+      }
+      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
+        sendContactForm(gReCaptchaToken, values);
+      });
+    },
+    [executeRecaptcha, values]
+  );
   return (
     <section className={styles.Hero}>
       <Image
@@ -45,7 +55,11 @@ function Hero() {
 
       <div className={styles.content + " container"}>
         <h1>Do you have any questions about our work?</h1>
-        <form className={styles.form}>
+        <form
+          className={styles.form}
+          onSubmit={handleSumitForm}
+          id="contactForm"
+        >
           <input
             className={styles.inputBox}
             type="text"
@@ -54,6 +68,7 @@ function Hero() {
             placeholder="Your name*"
             onChange={handleChange}
             value={values.name}
+            required
           />
           <input
             className={styles.inputBox}
@@ -63,6 +78,7 @@ function Hero() {
             placeholder="Your company name*"
             onChange={handleChange}
             value={values.company}
+            required
           />
           <input
             className={styles.inputBox}
@@ -72,6 +88,7 @@ function Hero() {
             placeholder="Your e-mail*"
             onChange={handleChange}
             value={values.email}
+            required
           />
           <input
             className={styles.inputBox}
@@ -91,6 +108,7 @@ function Hero() {
             onChange={handleChange}
             value={values.budget}
           />
+          <input type="hidden" name="recaptchaToken" id="recaptchaToken" />
           <textarea
             placeholder="Comments or Questions"
             className={styles.textarea}
@@ -104,11 +122,19 @@ function Hero() {
             Send
             <Image
               src="/arrow-black-right.svg"
+              width={29}
+              height={35}
+              alt="arrow down white"
+            />
+          </button>
+          {/* Send
+            <Image
+              src="/arrow-black-right.svg"
               alt="arrow icon"
               width={35}
               height={29}
             />
-          </button>
+          </input> */}
         </form>
       </div>
     </section>

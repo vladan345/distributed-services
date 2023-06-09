@@ -57,9 +57,9 @@ function ProjectHero({ content }) {
               <div className={styles.serviceList}>
                 {content.services.map((service) => {
                   return (
-                    <Link key={service} href="#" className={styles.service}>
+                    <div key={service} className={styles.service}>
                       <p>{service}</p>
-                    </Link>
+                    </div>
                   );
                 })}
               </div>
@@ -69,7 +69,7 @@ function ProjectHero({ content }) {
                 className={styles.description}
                 dangerouslySetInnerHTML={{ __html: content.description }}
               />
-              <Link className={styles.projectBtn} href="#">
+              <Link className={styles.projectBtn} href={content.projectLink}>
                 Go to website
                 <Image
                   src="/arrow-black-right.svg"

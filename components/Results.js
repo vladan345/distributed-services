@@ -15,7 +15,10 @@ function Results({ content }) {
               </p>
             );
           })}
-        <Link className={`${styles.cta} ${styles.white}`} href="#">
+        <Link
+          className={`${styles.cta} ${styles.white}`}
+          href={content.projectLink}
+        >
           Go to website
           <Image
             src="/arrow-black-right.svg"

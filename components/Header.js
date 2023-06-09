@@ -91,7 +91,7 @@ function Header({ isTransparent }) {
         </nav>
 
         <div className={styles.cta}>
-          <Link className="button-outline-white" href="#">
+          <Link className="button-outline-white" href="/contact">
             Book a meeting
           </Link>
         </div>
