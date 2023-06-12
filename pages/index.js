@@ -40,7 +40,7 @@ export default function Home() {
 
         <meta
           property="og:image"
-          content={`https://distributedservices.tech/images/featured/home.jpg`}
+          content="https://distributedservices.tech/images/featured/home.jpg"
         />
         <meta
           name="twitter:image"
