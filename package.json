@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +22,7 @@
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.11.0",
     "next": "^13.3.4",
+    "next-sitemap": "^4.1.3",
     "nodemailer": "^6.9.3",
     "ogl": "^0.0.116",
     "react": "^18.2.0",

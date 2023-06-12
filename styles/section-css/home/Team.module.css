@@ -79,7 +79,7 @@
   width: auto;
 }
 .paket {
-  right: 100px;
+  right: -100px;
 }
 .pen {
   right: 180px;
@@ -100,7 +100,7 @@
     left: -35%;
   }
   img.paket {
-    right: 300px;
+    right: 50px;
   }
 }
 @media (max-width: 1240px) {
@@ -159,8 +159,9 @@
     height: 250px;
   }
   img.paket {
-    width: 70%;
-    left: 35%;
+    width: 60%;
+    right: 0px;
+    left: auto;
   }
   img.teamImage {
     left: 15%;
@@ -179,5 +180,11 @@
   }
   .textBox p {
     font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  img.paket {
+    right: auto;
+    left: 35%;
   }
 }

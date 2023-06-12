@@ -8,6 +8,44 @@ import { ReactLenis } from "@studio-freight/react-lenis";
 function contact() {
   return (
     <>
+      <Head>
+        <title>Distributed Services | Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Do you have any questions about our work?"
+        />
+        <meta
+          name="twitter:description"
+          content="Do you have any questions about our work?"
+        />
+
+        <meta name="title" content="Distributed Services | Contact" />
+        <meta name="twitter:title" content="Distributed Services | Contact" />
+
+        <meta
+          property="og:url"
+          content="https://distributedservices.tech/contact"
+        />
+        <meta
+          property="twitter:url"
+          content="https://distributedservices.tech/contact"
+        />
+        <meta property="twitter:domain" content="distributedservices.tech" />
+
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:image"
+          content="https://square43.com/images/Home.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://square43.com/images/Home.png"
+        />
+      </Head>
       <Script
         async
         src="https://www.google.com/recaptcha/api.js?render=6Lc8Tn0mAAAAAO7BUUYZ51CF_aw_uUCcsz71I8Sm"

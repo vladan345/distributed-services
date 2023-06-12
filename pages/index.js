@@ -17,9 +17,35 @@ export default function Home() {
     <>
       <Head>
         <title>Distributed Services</title>
-        <meta name="description" content="Design. Develop. Distribute." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Design. Develop. Distribute." />
+        <meta
+          name="twitter:description"
+          content="Design. Develop. Distribute."
+        />
+
+        <meta name="title" content="Distributed Services" />
+        <meta name="twitter:title" content="Distributed Services" />
+
+        <meta property="og:url" content="https://distributedservices.tech" />
+        <meta
+          property="twitter:url"
+          content="https://distributedservices.tech"
+        />
+        <meta property="twitter:domain" content="distributedservices.tech" />
+
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:image"
+          content="https://square43.com/images/Home.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://square43.com/images/Home.png"
+        />
       </Head>
       <ReactLenis root options={{ duration: 1.2 }}>
         <main>

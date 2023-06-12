@@ -1,4 +1,4 @@
-import React from "react";
+import Head from "next/head";
 import ProjectHero from "@/components/ProjectHero";
 import { restaurants1, restaurants2, dual } from "@/lib/rikasRestaurants";
 import RestaurantRows from "@/page-sections/rikas/RestaurantRows";
@@ -34,19 +34,67 @@ function Rikas() {
     ],
   };
   return (
-    <div>
-      <ReactLenis root options={{ duration: 1.2 }}>
-        <ProjectHero content={projectInfo} />
-        <RestaurantRows content={restaurants1} />
-        <RestaurantRowsMobile content={restaurants1} />
-        <Dual />
-        <DualMobile content={dual} />
-        <RestaurantRows content={restaurants2} />
-        <RestaurantRowsMobile content={restaurants2} />
-        <Circle />
-        <Results content={projectInfo} />
-      </ReactLenis>
-    </div>
+    <>
+      <Head>
+        <title>Projects | Rikas Hospitality Group</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Anyone can find an offshore or nearshore vendor to build software, but not everyone can create global partnerships that work."
+        />
+        <meta
+          name="twitter:description"
+          content="Anyone can find an offshore or nearshore vendor to build software, but not everyone can create global partnerships that work."
+        />
+
+        <meta
+          name="title"
+          content="Projects | Rikas Hospitality Group
+"
+        />
+        <meta
+          name="twitter:title"
+          content="Projects | Rikas Hospitality Group
+"
+        />
+
+        <meta
+          property="og:url"
+          content="https://distributedservices.tech/projects"
+        />
+        <meta
+          property="twitter:url"
+          content="https://distributedservices.tech/projects"
+        />
+        <meta property="twitter:domain" content="distributedservices.tech" />
+
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:image"
+          content="https://square43.com/images/Home.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://square43.com/images/Home.png"
+        />
+      </Head>
+      <div>
+        <ReactLenis root options={{ duration: 1.2 }}>
+          <ProjectHero content={projectInfo} />
+          <RestaurantRows content={restaurants1} />
+          <RestaurantRowsMobile content={restaurants1} />
+          <Dual />
+          <DualMobile content={dual} />
+          <RestaurantRows content={restaurants2} />
+          <RestaurantRowsMobile content={restaurants2} />
+          <Circle />
+          <Results content={projectInfo} />
+        </ReactLenis>
+      </div>
+    </>
   );
 }
 
