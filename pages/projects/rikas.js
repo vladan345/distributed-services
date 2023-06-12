@@ -61,11 +61,11 @@ function Rikas() {
 
         <meta
           property="og:url"
-          content="https://distributedservices.tech/projects"
+          content="https://distributedservices.tech/projects/rikas"
         />
         <meta
           property="twitter:url"
-          content="https://distributedservices.tech/projects"
+          content="https://distributedservices.tech/projects/rikas"
         />
         <meta property="twitter:domain" content="distributedservices.tech" />
 
@@ -74,11 +74,11 @@ function Rikas() {
 
         <meta
           property="og:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/rikas.jpg"
         />
         <meta
           name="twitter:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/rikas.jpg"
         />
       </Head>
       <div>

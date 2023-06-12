@@ -40,11 +40,11 @@ function services() {
 
         <meta
           property="og:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/services.jpg"
         />
         <meta
           name="twitter:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/services.jpg"
         />
       </Head>
       <div>

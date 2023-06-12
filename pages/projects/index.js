@@ -38,11 +38,11 @@ function Projects() {
 
         <meta
           property="og:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/projects.jpg"
         />
         <meta
           name="twitter:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/projects.jpg"
         />
       </Head>
       <div className="Projects">

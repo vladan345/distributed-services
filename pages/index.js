@@ -40,11 +40,11 @@ export default function Home() {
 
         <meta
           property="og:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/home.jpg"
         />
         <meta
           name="twitter:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/home.jpg"
         />
       </Head>
       <ReactLenis root options={{ duration: 1.2 }}>

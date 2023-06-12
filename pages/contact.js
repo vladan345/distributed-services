@@ -39,11 +39,11 @@ function contact() {
 
         <meta
           property="og:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/contact.jpg"
         />
         <meta
           name="twitter:image"
-          content="https://square43.com/images/Home.png"
+          content="https://distributedservices.tech/images/featured/contact.jpg"
         />
       </Head>
       <Script
