@@ -120,6 +120,7 @@ h3 {
 
 .button-outline-white {
   color: var(--background);
+  background: transparent;
   padding: 15px 30px;
   display: inline-flex;
   align-items: center;

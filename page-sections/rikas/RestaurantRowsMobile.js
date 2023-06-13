@@ -19,7 +19,7 @@ function RestaurantRowsMobile({ content }) {
       let currentImage;
       let sections = gsap.utils.toArray("section");
       let imageSections = gsap.utils.toArray(".imageSlide");
-      console.log(imageSections);
+
       currentSection = sections[0];
       currentImage = imageSections[0];
 
@@ -56,7 +56,6 @@ function RestaurantRowsMobile({ content }) {
       });
 
       function setSection(newSection, newImages) {
-        console.log(newImages);
         if (newSection !== currentSection) {
           let newImageSet = newImages.querySelectorAll("img");
           let currentImageSet = currentImage.querySelectorAll("img");

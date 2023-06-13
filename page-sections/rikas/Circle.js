@@ -17,8 +17,9 @@ function Circle() {
         ease: "power1.inOut",
         scrollTrigger: {
           start: "top bottom",
-          once: true,
+          end: "top top",
           trigger: ".circleTrigger",
+          toggleActions: "play none reverse none",
         },
       });
       gsap.to(".sandBackground", {
@@ -68,10 +69,14 @@ function Circle() {
             <div>
               <h2>Tagomago</h2>
               <p>
-                Volutpat dictumst risus nisl adipiscing non. Penatibus commodo
-                vel eget neque consectetur morbi odio facilisis. Congue rutrum
-                integer turpis vulputate integer at vitae in quis. Nisi gravida
-                cursus et mattis. Ac pulvinar sodales adipiscing nec elit nibh.
+                We had the privilege to complete a website development project
+                for Tagomago, a renowned restaurant in the RIKAS family. With
+                their existing design as our foundation, we meticulously crafted
+                and developed a fully functional website that showcased the
+                essence of Tagomago&apos;s brand, perfectly reflecting their
+                unique identity and culinary excellence. Our team ensured
+                seamless integration of the design elements while optimizing the
+                website for intuitive navigation and optimal user experience.
               </p>
             </div>
             <Link
@@ -91,11 +96,11 @@ function Circle() {
             <div>
               <h2>Chez Wam</h2>
               <p>
-                Nibh elementum dui imperdiet mauris nunc ac non nibh cras.
-                Fermentum quis lacinia odio ipsum. Viverra maecenas vulputate
-                sed morbi risus. Vitae dapibus faucibus in et adipiscing ac odio
-                nibh. Massa pellentesque vitae dolor eu. Pulvinar tristique
-                pretium semper pellentesque a.
+                A full package for an esteemed Dubai restaurant! Chez Wam
+                received a comprehensive suite of services tailored to their
+                needs: a visually appealing and user-friendly website, top-tier
+                performance marketing strategy using Google Ads and a dedicated
+                team for regular maintenance and updates!
               </p>
             </div>
             <Link

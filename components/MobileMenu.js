@@ -60,7 +60,8 @@ function MobileMenu({ isActive, toggleMenu }) {
         </Link>
         <Link
           className={router.pathname == "/contact" ? "active" : ""}
-          href="/contact"
+          target="_blank"
+          href="https://calendly.com/distributedservices"
           onClick={toggleMenu}
         >
           Book a meeting

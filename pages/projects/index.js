@@ -49,8 +49,8 @@ function Projects() {
         <ReactLenis root options={{ duration: 1.2 }}>
           <Slug />
           <p>
-            Egestas neque eu rhoncus et. Et amet scelerisque et dui massa nibh
-            montes. Donec tincidunt nunc sit vel at nisl elit dis eget sed.
+            We are what we create. Take a look at our latest projects that span
+            various industries - this is our very own hall of fame.
           </p>
           <List projects={projects} />
           <GetInTouch darkMode={true} />

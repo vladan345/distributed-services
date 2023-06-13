@@ -7,33 +7,38 @@ function Accordion() {
   const [tabActive, setTabActive] = useState(0);
   const content = [
     {
-      title: "Webiste Design",
+      title: "Website Design",
+
       content:
-        "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
+        "Brand identity meets optimized user experience that generates organic (re)visits. Prepare for take-off!",
       link: "/projects/web-design",
     },
     {
       title: "Website Development",
+
       content:
-        "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
+        "From a single line of code to a fully-functioning, traffic-filled website.",
       link: "/projects/web-development",
     },
     {
       title: "Digital Marketing",
+
       content:
-        "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
+        "Grow your online presence and connect with your audience in meaningful ways.",
       link: "/projects",
     },
     {
-      title: "Branding",
+      title: "Branding & Visual Identity",
+
       content:
-        "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
+        "See your brand come to life and stand above the crowd with a fully customizable solutions.",
       link: "/projects",
     },
     {
       title: "Outsourcing",
+
       content:
-        "As our client, your ultimate goal is a great product, delivered on time and on budget. Our goal is to ensure you achieve this by ensuring your product will be developed by the best talent in the region, handpicked by us, to suit your needs.",
+        "Access unparalleled talent without the inconvenience of hiring and managing a team.",
       link: "/projects",
     },
   ];

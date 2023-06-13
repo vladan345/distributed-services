@@ -12,16 +12,16 @@ gsap.registerPlugin(ScrollTrigger);
 function RikasM() {
   const textContent = {
     lacantine: [
-      "LACANTINE ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
-      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+      "Stunning design and website development websites for the restaurant's newly opened locations in Dubai and Mykonos, followed by strategic lead conversion campaigns!",
+      "That's how we supported La Cantine du Faubourg's brand expansion in the global culinary landscape.",
     ],
     tagomago: [
-      "TAGOMAGO ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
-      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+      "We had the privilege to complete a website development project for Tagomago, a renowned restaurant in the RIKAS family.",
+      "Our team ensured seamless integration of the design elements while optimizing the website for intuitive navigation and optimal user experience.",
     ],
     twiggy: [
-      "TWIGGY ipsum dolor sit amet consectetur. Semper praesent scelerisque blandit sed morbi feugiat pellentesque.",
-      "Fames ac diam quis et adipiscing orci vitae. Aliquam elit pellentesque diam faucibus.",
+      "Our talented team created a visually captivating website that truly captured Twiggy's unique essence.",
+      "By targeting the right audience and driving customer conversions, we managed to effectively enhance Twiggy's online presence, attract qualified leads, and ultimately contribute to their continued success in the competitive restaurant industry.",
     ],
   };
   const [restaurant, setRestaurant] = useState("lacantine");

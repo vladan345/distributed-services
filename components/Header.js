@@ -91,7 +91,11 @@ function Header({ isTransparent }) {
         </nav>
 
         <div className={styles.cta}>
-          <Link className="button-outline-white" href="/contact">
+          <Link
+            className="button-outline-white"
+            target="_blank"
+            href="https://calendly.com/distributedservices"
+          >
             Book a meeting
           </Link>
         </div>

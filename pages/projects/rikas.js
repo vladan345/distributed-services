@@ -21,7 +21,7 @@ function Rikas() {
       "Web maintenance",
     ],
     description:
-      "Commodo lectus turpis ridiculus id auctor eget enim sapien tellus. Fermentum cursus pellentesque purus faucibus feugiat egestas vel diam. Purus pellentesque rhoncus vel lectus a. Vulputate volutpat quisque id tristique arcu consequat. <br /><br /> Congue pellentesque mollis pellentesque mauris eget amet. Ornare volutpat vestibulum massa molestie metus nisi purus nec. Rhoncus eget nisi amet id tellus mollis id. Purus ut donec molestie laoreet id feugiat bibendum gravida. Placerat elementum et libero amet neque vitae lacinia pellentesque sed.",
+      "RIKAS Hospitality Group is a Dubai-based collection of award-winning restaurants and cafes, which has a rapidly growing portfolio of dining establishments. We had the pleasure of providing RIKAS Group with comprehensive marketing solutions.<br /><br /> Our team embarked on an exciting journey by designing and developing captivating websites for several prestigious restaurants in the RIKAS family. We ensure that these websites remain up-to-date with regular maintenance, guaranteeing a seamless user experience. Leveraging our expertise in performance marketing, we implemented targeted strategies to maximize online visibility with Google Ads and similar tools, ultimately driving increased customer conversions. Growth and success of our valued client in the highly competitive hospitality industry is our biggest reward!",
     projectLink: "https://rikasgroup.com",
     logo: {
       src: "/images/home/rikas-logo.svg",
@@ -29,8 +29,8 @@ function Rikas() {
       height: 295,
     },
     results: [
-      "Nibh sit sed sem risus eget at nisl. Morbi massa interdum odio dis consequat. Non turpis eget dolor consequat donec tellus.",
-      "Sit tincidunt porttitor porttitor convallis ut purus pellentesque. Ipsum est dolor phasellus sit amet ultrices nisi.",
+      "Elevated online presence and showcase of each restaurant's unique concept.",
+      "Increased online traffic, higher customer conversions, and continued success in the competitive digital landscape.",
     ],
   };
   return (
@@ -86,7 +86,7 @@ function Rikas() {
           <ProjectHero content={projectInfo} />
           <RestaurantRows content={restaurants1} />
           <RestaurantRowsMobile content={restaurants1} />
-          <Dual />
+          <Dual content={dual} />
           <DualMobile content={dual} />
           <RestaurantRows content={restaurants2} />
           <RestaurantRowsMobile content={restaurants2} />
