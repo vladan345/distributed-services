@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "../../styles/section-css/home/Approach.module.css";
 import Lottie from "lottie-react";
-import scratch from "@/public/scratch.json";
+import scratchBlue from "@/public/scratch-blue.json";
+import scratchGreen from "@/public/scratch-green.json";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -37,7 +38,7 @@ function Approach() {
           Our approach is based on customized solutions that make a real{" "}
           <span className={styles.scratchWrap}>
             <Lottie
-              animationData={scratch}
+              animationData={scratchBlue}
               interactivity={interactivity2}
               className={styles.scratch}
             />
