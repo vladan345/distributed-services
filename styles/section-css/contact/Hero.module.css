@@ -43,16 +43,18 @@
   min-height: 52px;
   border-bottom: 1px solid var(--background);
   margin-bottom: 40px;
+  margin-top: -15px;
 }
 .tagWrap {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .tagWrap img {
   filter: invert();
   transition: 0.3s;
+  margin-top: 15px;
 }
 .activeImage {
   transform: rotate(-180deg);
@@ -65,7 +67,7 @@
   gap: 10px;
   font-size: 22px;
   padding-bottom: 10px;
-  height: 52px;
+  min-height: 52px;
 }
 .serviceTag {
   text-transform: capitalize;
@@ -74,6 +76,14 @@
   background: var(--background);
   padding: 10px 15px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.serviceTag img {
+  filter: none;
+  pointer-events: none;
+  margin-top: 0;
+  margin-left: 12px;
 }
 .dropdown {
   display: flex;
@@ -109,6 +119,37 @@
 }
 .dropdown input:checked ~ span {
   color: #cdcdcd;
+}
+
+.budgetHeading {
+  margin-bottom: 35px;
+}
+.budgetList input {
+  display: none;
+}
+.budgetList {
+  display: flex;
+  gap: 45px;
+  margin-bottom: 35px;
+  overflow-x: scroll;
+}
+.budgetList::-webkit-scrollbar {
+  display: none;
+}
+.budgetList span {
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid var(--background);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.budgetList input:checked + span {
+  background: var(--background);
+  color: var(--main-blue);
 }
 .textarea {
   height: 120px;
@@ -231,7 +272,7 @@
   .video {
     transform: rotate(-26deg) scale(0.7);
     transform-origin: top left;
-    top: calc(50% - 300px);
+    top: calc(50% - 360px);
     left: 50%;
     right: auto;
   }
@@ -268,8 +309,13 @@
     left: 50%;
   }
   .inputBox,
-  .textarea {
+  .textarea,
+  .tags,
+  .dropdown span {
     font-size: 18px;
+  }
+  .serviceTag {
+    padding: 3px 10px;
   }
   .submitBtn {
     font-size: 16px;
@@ -281,5 +327,16 @@
   .submitBtn img {
     width: 23px;
     height: 19px;
+  }
+  .budgetList {
+    gap: 10px;
+  }
+  .budgetList span {
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+  }
+  .budgetHeading {
+    font-size: 18px;
   }
 }

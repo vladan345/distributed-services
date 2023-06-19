@@ -20,16 +20,24 @@ function Hero() {
 
   useEffect(() => {
     setServices(collectServices());
-    console.log(values.services);
-  }, [values.services]);
+  }, []);
 
   const handleChange = (e) => {
-    setValues((prevState) => {
-      return {
-        ...prevState,
-        [e.target.id]: e.target.value,
-      };
-    });
+    if (e.target.type != "radio") {
+      setValues((prevState) => {
+        return {
+          ...prevState,
+          [e.target.id]: e.target.value,
+        };
+      });
+    } else {
+      setValues((prevState) => {
+        return {
+          ...prevState,
+          [e.target.name]: e.target.value,
+        };
+      });
+    }
     return { values, handleChange };
   };
 
@@ -60,8 +68,8 @@ function Hero() {
   };
 
   const handleDrop = (e) => {
-    let target = e.currentTarget;
-    if (target.id == "dropWrap") {
+    let target = e.target;
+    if (target.tagName == "DIV") {
       setActive(!active);
     }
   };
@@ -96,7 +104,7 @@ function Hero() {
       </div>
 
       <div className={styles.content + " container"}>
-        <h1>Do you have any questions about our work?</h1>
+        <h1>Work with us.</h1>
         <form
           className={styles.form}
           onSubmit={handleSumitForm}
@@ -147,12 +155,16 @@ function Hero() {
                 {values.services.length != 0
                   ? values.services.map((service, index) => {
                       return (
-                        <span
-                          className={styles.serviceTag}
-                          onClick={removeTag}
-                          key={index}
-                        >
-                          {service.split("-").join(" ")}
+                        <span key={index} className={styles.serviceTag}>
+                          <span onClick={removeTag}>
+                            {service.split("-").join(" ")}
+                          </span>
+                          <Image
+                            src="/images/contact/close-service.svg"
+                            alt="close icon"
+                            width={9}
+                            height={10}
+                          />
                         </span>
                       );
                     })
@@ -184,15 +196,47 @@ function Hero() {
                 ))}
             </div>
           </div>
-          <input
-            className={styles.inputBox}
-            type="number"
-            name="budget"
-            id="budget"
-            placeholder="Your budget"
-            onChange={handleChange}
-            value={values.budget}
-          />
+          <div className={styles.budgetWrap}>
+            <p className={styles.budgetHeading}>Your budget</p>
+            <div className={styles.budgetList}>
+              <label>
+                <input
+                  type="radio"
+                  name="budget"
+                  value="$1K - $10K"
+                  onChange={handleChange}
+                />
+                <span>$1K - $10K</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="budget"
+                  value="$10K - $50K"
+                  onChange={handleChange}
+                />
+                <span>$10K - $50K</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="budget"
+                  value="$50K - $100K"
+                  onChange={handleChange}
+                />
+                <span>$50K - $100K</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="budget"
+                  value="$100K+"
+                  onChange={handleChange}
+                />
+                <span>$100K+</span>
+              </label>
+            </div>
+          </div>
 
           <input type="hidden" name="recaptchaToken" id="recaptchaToken" />
           <textarea
@@ -205,7 +249,7 @@ function Hero() {
             value={values.comment}
           ></textarea>
           <button className={styles.submitBtn} type="submit">
-            Send
+            Submit Form
             <Image
               src="/arrow-black-right.svg"
               width={29}

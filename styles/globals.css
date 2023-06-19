@@ -7,6 +7,25 @@
 //1640px: Laptop
 //1240px: Tablet
 //800px: Mobile */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-blue);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-green);
+}
 
 :root {
   --max-width: 1400px;
