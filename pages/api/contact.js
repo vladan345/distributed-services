@@ -18,6 +18,7 @@ const handler = async (req, res) => {
 
     const response = await verifyRecaptcha(token);
     const data = req.body.data;
+    console.log(data);
     if (response.data.success && response.data.score >= 0.5) {
       if (req.method === "POST") {
         if (!data.name || !data.company || !data.email) {
@@ -32,6 +33,13 @@ const handler = async (req, res) => {
           <p><b>Company:</b> ${data.company}</p>
           <p><b>Email:</b> ${data.email}</p>
           <p><b>Country:</b> ${data.country}</p>
+          <p><b>Services:</b> ${data.services.map((service, index) => {
+            return `
+              <span key=${index} style="text-transform: capitalize">
+                ${service}
+              </span>
+              `;
+          })}</p>
           <p><b>Budget:</b> ${data.budget}</p>
           <p><b>Comment:</b> ${data.comment}</p>`,
           });

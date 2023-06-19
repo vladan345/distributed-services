@@ -37,6 +37,79 @@
 .textarea:focus {
   border-color: var(--main-green);
 }
+.selectWrap {
+  position: relative;
+  cursor: pointer;
+  min-height: 52px;
+  border-bottom: 1px solid var(--background);
+  margin-bottom: 40px;
+}
+.tagWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tagWrap img {
+  filter: invert();
+  transition: 0.3s;
+}
+.activeImage {
+  transform: rotate(-180deg);
+}
+.tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 22px;
+  padding-bottom: 10px;
+  height: 52px;
+}
+.serviceTag {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: var(--main-blue);
+  background: var(--background);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.dropdown {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  flex-direction: column;
+  gap: 15px;
+  background: var(--background);
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.dropdown.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.dropdown input {
+  display: none;
+  width: auto;
+}
+.dropdown label {
+  cursor: pointer;
+}
+.dropdown span {
+  font-size: 22px;
+
+  color: var(--main-blue);
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+.dropdown input:checked ~ span {
+  color: #cdcdcd;
+}
 .textarea {
   height: 120px;
 }

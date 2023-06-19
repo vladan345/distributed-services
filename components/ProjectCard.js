@@ -3,12 +3,21 @@ import Link from "next/link";
 import Image from "next/image";
 
 function ProjectCard({ link, title, projectImage, services }) {
+  console.log(services);
   return (
     <Link className={styles.card} href={link}>
       <div className={styles.overlay}></div>
       <div>
         <h4>{title}</h4>
-        <p className={styles.services}>{services}</p>
+        <p className={styles.services}>
+          {services.map((service, index) => {
+            if (index == services.length - 1) {
+              return <span key={index}>{service.split("-").join(" ")}</span>;
+            } else {
+              return <span key={index}>{service.split("-").join(" ")} / </span>;
+            }
+          })}
+        </p>
       </div>
       <span className={styles.cardButton} href="#">
         View Project

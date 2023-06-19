@@ -15,7 +15,7 @@ function Rikas() {
     banner: "/images/single-project/rikas/rikas-hero.webp",
     services: [
       "Web design",
-      "Online marketing",
+      "Digital marketing",
       "Web development",
       "Google Analytics",
       "Web maintenance",

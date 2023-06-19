@@ -3,16 +3,25 @@ import Image from "next/image";
 import styles from "../../styles/section-css/contact/Hero.module.css";
 import { sendContactForm } from "@/lib/api";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { collectServices } from "@/lib/projects";
 function Hero() {
   const { executeRecaptcha } = useGoogleReCaptcha();
+  const [allServices, setServices] = useState([]);
+  const [active, setActive] = useState(false);
   const [values, setValues] = useState({
     name: "",
     company: "",
     email: "",
     country: "",
+    services: [],
     budget: "",
     comment: "",
   });
+
+  useEffect(() => {
+    setServices(collectServices());
+    console.log(values.services);
+  }, [values.services]);
 
   const handleChange = (e) => {
     setValues((prevState) => {
@@ -22,6 +31,39 @@ function Hero() {
       };
     });
     return { values, handleChange };
+  };
+
+  const handleCheckbox = (e) => {
+    if (e.target.checked) {
+      setValues({
+        ...values,
+        services: [...values.services, e.target.name],
+      });
+    } else {
+      setValues({
+        ...values,
+        services: values.services.filter((value) => value !== e.target.name),
+      });
+    }
+  };
+
+  const removeTag = (e) => {
+    let tag = e.currentTarget;
+    let tagText = tag.innerHTML;
+    let tagId = tagText.split(" ").join("-");
+    setValues({
+      ...values,
+      services: values.services.filter((value) => value != tagId),
+    });
+    let checkbox = document.getElementById(tagId);
+    checkbox.checked = false;
+  };
+
+  const handleDrop = (e) => {
+    let target = e.currentTarget;
+    if (target.id == "dropWrap") {
+      setActive(!active);
+    }
   };
 
   const handleSumitForm = useCallback(
@@ -99,6 +141,49 @@ function Hero() {
             onChange={handleChange}
             value={values.country}
           />
+          <div className={styles.selectWrap} onClick={handleDrop} id="dropWrap">
+            <div className={styles.tagWrap}>
+              <div className={styles.tags}>
+                {values.services.length != 0
+                  ? values.services.map((service, index) => {
+                      return (
+                        <span
+                          className={styles.serviceTag}
+                          onClick={removeTag}
+                          key={index}
+                        >
+                          {service.split("-").join(" ")}
+                        </span>
+                      );
+                    })
+                  : "Services"}
+              </div>
+              <Image
+                className={`${active ? styles.activeImage : ""}`}
+                src="/arrow-black-down.svg"
+                width={18}
+                height={22}
+                alt="arrow down white"
+              />
+            </div>
+
+            <div
+              className={`${styles.dropdown} ${active ? styles.active : ""}`}
+            >
+              {allServices &&
+                allServices.map((service, index) => (
+                  <label htmlFor={service} key={index}>
+                    <input
+                      type="checkbox"
+                      name={service}
+                      id={service}
+                      onChange={handleCheckbox}
+                    />
+                    <span> {service.split("-").join(" ")}</span>
+                  </label>
+                ))}
+            </div>
+          </div>
           <input
             className={styles.inputBox}
             type="number"
@@ -108,6 +193,7 @@ function Hero() {
             onChange={handleChange}
             value={values.budget}
           />
+
           <input type="hidden" name="recaptchaToken" id="recaptchaToken" />
           <textarea
             placeholder="Comments or Questions"

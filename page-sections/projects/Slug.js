@@ -20,11 +20,11 @@ function Slug() {
       name: "Web Development",
       icon: "/images/dev.svg",
     },
-    // {
-    //   id: "digital-marketing",
-    //   name: "Digital Marketing",
-    //   icon: "/images/marketing.svg",
-    // },
+    {
+      id: "digital-marketing",
+      name: "Digital Marketing",
+      icon: "/images/marketing.svg",
+    },
     // {
     //   id: "branding",
     //   name: "Branding & Visual Identity",
