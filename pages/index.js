@@ -20,12 +20,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Design. Develop. Distribute." />
+        <meta name="og:description" content="Design. Develop. Distribute." />
         <meta
           name="twitter:description"
           content="Design. Develop. Distribute."
         />
 
         <meta name="title" content="Distributed Services" />
+        <meta name="og:title" content="Distributed Services" />
         <meta name="twitter:title" content="Distributed Services" />
 
         <meta property="og:url" content="https://distributedservices.tech" />
