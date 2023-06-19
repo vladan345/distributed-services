@@ -57,6 +57,9 @@ function Hero() {
 
   const removeTag = (e) => {
     let tag = e.currentTarget;
+
+    tag = tag.querySelector(".tagValue span");
+
     let tagText = tag.innerHTML;
     let tagId = tagText.split(" ").join("-");
     setValues({
@@ -69,7 +72,10 @@ function Hero() {
 
   const handleDrop = (e) => {
     let target = e.target;
-    if (target.tagName == "DIV") {
+    if (
+      target.tagName == "DIV" ||
+      (target.tagName == "IMG" && !target.classList.contains("closeIcon"))
+    ) {
       setActive(!active);
     }
   };
@@ -155,15 +161,18 @@ function Hero() {
                 {values.services.length != 0
                   ? values.services.map((service, index) => {
                       return (
-                        <span key={index} className={styles.serviceTag}>
-                          <span onClick={removeTag}>
-                            {service.split("-").join(" ")}
-                          </span>
+                        <span
+                          key={index}
+                          className={`${styles.serviceTag} tagValue`}
+                          onClick={removeTag}
+                        >
+                          <span>{service.split("-").join(" ")}</span>
                           <Image
                             src="/images/contact/close-service.svg"
                             alt="close icon"
                             width={9}
                             height={10}
+                            className="closeIcon"
                           />
                         </span>
                       );
