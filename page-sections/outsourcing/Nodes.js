@@ -38,7 +38,7 @@ function Nodes() {
           </div>
         </div>
       </div>
-      <div className={styles.lottieWrapper}>
+      <div className={styles.lottieWrapper} id="nodes">
         <Lottie
           interactivity={interactivity}
           animationData={nodes}

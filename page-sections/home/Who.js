@@ -50,7 +50,7 @@ function Who() {
   };
 
   return (
-    <section className={styles.Who} ref={main}>
+    <section className={styles.Who} ref={main} id="who">
       <div id="circleTrigger" className={`${styles.trigger} trigger`}>
         <div className={`${styles.sticky} container`}>
           <span className={`${styles.tag} tag-large`}>Who are we?</span>

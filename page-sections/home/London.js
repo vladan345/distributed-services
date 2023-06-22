@@ -67,7 +67,7 @@ function London() {
   }, []);
 
   return (
-    <section className={styles.London} ref={main}>
+    <section className={styles.London} ref={main} id="london">
       <div className={`${styles.trigger} trigger`}>
         <div className={`${styles.panel} panel`}>
           <div className={`${styles.container} container`}>

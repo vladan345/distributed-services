@@ -142,7 +142,7 @@ function Services() {
         <h2>Services</h2>
       </div>
 
-      <div className="trigger">
+      <div className="trigger" id="services">
         <div className={styles.stickyWrap}>
           <div className={`${styles.container} container`}>
             {services &&

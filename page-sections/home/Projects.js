@@ -38,7 +38,7 @@ function Projects() {
   }, []);
 
   return (
-    <section className={styles.Projects} ref={main}>
+    <section className={styles.Projects} ref={main} id="projects">
       <div className="tag-large">Our work</div>
       <h2>Projects</h2>
       <div className={`${styles.projectWrap} projects`}>

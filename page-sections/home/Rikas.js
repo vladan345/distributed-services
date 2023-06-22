@@ -89,7 +89,7 @@ function Rikas() {
     });
   };
   return (
-    <section className={styles.Rikas}>
+    <section className={styles.Rikas} id="rikas">
       <div className={styles.featured} ref={main}>
         <div className={`${styles.bg} background`}>
           <NextImage

@@ -32,6 +32,7 @@ function GetInTouch({ darkMode }) {
       className={`${styles.GetInTouch} ${darkMode ? styles.dark : null}`}
       ref={main}
       href="/contact"
+      id="getintouch"
     >
       <div className="container trigger">
         <div className={`${styles.textWrap} `}>
