@@ -14,6 +14,18 @@ export default function Document() {
               })(window,document,'script','dataLayer','GTM-MP32CGN');`,
           }}
         />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-FL3WF5FCNE"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FL3WF5FCNE');`,
+          }}
+        />
       </Head>
       <body>
         <noscript>
