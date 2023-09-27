@@ -78,6 +78,17 @@ function Footer() {
                   />
                 </Link>
               </div> */}
+              <a
+                href="https://www.google.com/partners/agency?id=4527503534"
+                target="_blank"
+              >
+                <Image
+                  width={152}
+                  height={145}
+                  src="https://www.gstatic.com/partners/badge/images/2023/PartnerBadgeClickable.svg"
+                  alt="google partner"
+                />
+              </a>
             </div>
           </div>
         </div>
