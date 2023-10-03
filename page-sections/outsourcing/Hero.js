@@ -23,8 +23,13 @@ function Hero() {
       <div className={styles.content + " container"}>
         <h1>One team for all.</h1>
         <p className={styles.subheading}>
-          With our vast pool of resources, we guarantee to find the right team
-          to fit around your needs.
+          Time is your most valuable resource.
+        </p>
+        <p className={styles.subheading}>
+          Redirect your focus towards your core competencies while we handle the
+          rest- from digital marketing and all things creative to elaborate web
+          development solutions. Enhance your productivity with our
+          cost-effective and efficient outsourcing solutions.
         </p>
       </div>
     </section>

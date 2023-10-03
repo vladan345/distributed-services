@@ -37,7 +37,7 @@
   position: absolute;
   content: "";
   display: block;
-  background-image: linear-gradient(35deg, var(--main-blue) 5%, #15319d 93%);
+  background: linear-gradient(134deg, #01bf5d 23%, #00e56f 65%, #2dff93 95%);
   width: 0;
   height: 0;
   transform: translate(50%, -50%) rotate(-180deg);

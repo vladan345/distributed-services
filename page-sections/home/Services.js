@@ -133,171 +133,184 @@ function Services() {
   }, []);
 
   return (
-    <section className={styles.Services} ref={main}>
-      <div className={`${styles.circleWrap} circleWrap`}>
-        <div className={`${styles.circle} circle`}></div>
+    <div className={styles.ServicesWrap}>
+      <div className={`${styles.headingWrap} ${styles.mobileHeading}`}>
+        <div className={styles.borderWrap}>
+          <h2>Services</h2>
+        </div>
       </div>
-      <div className={`${styles.progressbar} progressbar`}></div>
-      <div className={styles.headingWrap}>
-        <h2>Services</h2>
-      </div>
+      <section className={styles.Services} ref={main}>
+        <div className={`${styles.progressbar} progressbar`}></div>
 
-      <div className="trigger" id="services">
-        <div className={styles.stickyWrap}>
-          <div className={`${styles.container} container`}>
-            {services &&
-              services.map((service, index) => {
-                return (
-                  <section
-                    key={index}
-                    className={`${styles.slide} ${
-                      index === 0 ? styles.first : ""
-                    }`}
-                  >
-                    <span className={styles.number}>0{index + 1}</span>
-                    <h3>{service.title}</h3>
-                    <p>{service.text}</p>
-                    <Link href={service.link}>
-                      View Project
-                      <Image
-                        src="/arrow-black-right.svg"
-                        width={29}
-                        height={35}
-                        alt="arrow down white"
-                      />
-                    </Link>
-                  </section>
-                );
-              })}
-          </div>
-          <div className={styles.imageWrap}>
-            <div className={`${styles.imageSlide} imageSlide ${styles.first}`}>
-              <div className={`float ${styles.singleImage} ${styles.desktop}`}>
-                <Image
-                  src="/images/home/services/service1-desktop.webp"
-                  alt="Web design desktop mockup"
-                  width={847}
-                  height={782}
-                />
-              </div>
-              <div className={`float ${styles.singleImage} ${styles.laptop}`}>
-                <Image
-                  src="/images/home/services/service1-laptop.webp"
-                  alt="Web design laptop mockup"
-                  width={1027}
-                  height={638}
-                  className="float"
-                />
-              </div>
-              <div className={`float ${styles.singleImage} ${styles.phone}`}>
-                <Image
-                  src="/images/home/services/service1-phone.png"
-                  alt="Web design mobile mockup"
-                  width={568}
-                  height={632}
-                  className="float"
-                />
+        <div className="trigger" id="services">
+          <div className={styles.stickyWrap}>
+            <div className={`${styles.circleWrap} circleWrap`}>
+              <div className={`${styles.circle} circle`}></div>
+            </div>
+            <div className={`${styles.headingWrap} ${styles.desktopHeading}`}>
+              <div className={styles.borderWrap}>
+                <h2>Services</h2>
               </div>
             </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
+            <div className={`${styles.container} container`}>
+              {services &&
+                services.map((service, index) => {
+                  return (
+                    <section
+                      key={index}
+                      className={`${styles.slide} ${
+                        index === 0 ? styles.first : ""
+                      }`}
+                    >
+                      <span className={styles.number}>0{index + 1}</span>
+                      <h3>{service.title}</h3>
+                      <p dangerouslySetInnerHTML={{ __html: service.text }}></p>
+                      <Link href={service.link}>
+                        View Project
+                        <Image
+                          src="/arrow-black-right.svg"
+                          width={29}
+                          height={35}
+                          alt="arrow down white"
+                        />
+                      </Link>
+                    </section>
+                  );
+                })}
+            </div>
+            <div className={styles.imageWrap}>
               <div
-                className={`float ${styles.singleImage} ${styles.devLaptop}`}
+                className={`${styles.imageSlide} imageSlide ${styles.first}`}
               >
-                <Image
-                  src="/images/home/services/dev-laptop.png"
-                  alt="Web design desktop mockup"
-                  width={1224}
-                  height={1245}
-                  className="float"
-                />
+                <div
+                  className={`float ${styles.singleImage} ${styles.desktop}`}
+                >
+                  <Image
+                    src="/images/home/services/service1-desktop.webp"
+                    alt="Web design desktop mockup"
+                    width={847}
+                    height={782}
+                  />
+                </div>
+                <div className={`float ${styles.singleImage} ${styles.laptop}`}>
+                  <Image
+                    src="/images/home/services/service1-laptop.webp"
+                    alt="Web design laptop mockup"
+                    width={1027}
+                    height={638}
+                    className="float"
+                  />
+                </div>
+                <div className={`float ${styles.singleImage} ${styles.phone}`}>
+                  <Image
+                    src="/images/home/services/service1-phone.png"
+                    alt="Web design mobile mockup"
+                    width={568}
+                    height={632}
+                    className="float"
+                  />
+                </div>
               </div>
-              <div className={`float ${styles.singleImage} ${styles.kafa}`}>
-                <Image
-                  src="/images/home/services/kafa-1.webp"
-                  alt="Web design desktop mockup"
-                  width={388}
-                  height={374}
-                  className="float"
-                />
+              <div className={`${styles.imageSlide} imageSlide`}>
+                <div
+                  className={`float ${styles.singleImage} ${styles.devLaptop}`}
+                >
+                  <Image
+                    src="/images/home/services/dev-laptop.png"
+                    alt="Web design desktop mockup"
+                    width={1224}
+                    height={1245}
+                    className="float"
+                  />
+                </div>
+                <div className={`float ${styles.singleImage} ${styles.kafa}`}>
+                  <Image
+                    src="/images/home/services/kafa-1.webp"
+                    alt="Web design desktop mockup"
+                    width={388}
+                    height={374}
+                    className="float"
+                  />
+                </div>
               </div>
-            </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
-              <div
-                className={`float ${styles.singleImage} ${styles.marketingPhone}`}
-              >
-                <Image
-                  src="/images/home/services/marketing-phone-1.png"
-                  alt="Web design desktop mockup"
-                  width={1046}
-                  height={970}
-                  className={`float`}
-                />
+              <div className={`${styles.imageSlide} imageSlide`}>
+                <div
+                  className={`float ${styles.singleImage} ${styles.marketingPhone}`}
+                >
+                  <Image
+                    src="/images/home/services/marketing-phone-1.png"
+                    alt="Web design desktop mockup"
+                    width={1046}
+                    height={970}
+                    className={`float`}
+                  />
+                </div>
+                <div className={`float ${styles.singleImage} ${styles.point}`}>
+                  <Image
+                    src="/images/home/services/point-1.png"
+                    alt="Web design desktop mockup"
+                    width={925}
+                    height={1136}
+                    className="float"
+                  />
+                </div>
               </div>
-              <div className={`float ${styles.singleImage} ${styles.point}`}>
-                <Image
-                  src="/images/home/services/point-1.png"
-                  alt="Web design desktop mockup"
-                  width={925}
-                  height={1136}
-                  className="float"
-                />
+              <div className={`${styles.imageSlide} imageSlide`}>
+                <div className={`float ${styles.singleImage} ${styles.vizit}`}>
+                  <Image
+                    src="/images/home/services/vizitke-1.webp"
+                    alt="Web design desktop mockup"
+                    width={506}
+                    height={331}
+                    className="float"
+                  />
+                </div>
+                <div className={`float ${styles.singleImage} ${styles.can}`}>
+                  <Image
+                    src="/images/home/services/can.webp"
+                    alt="Web design desktop mockup"
+                    width={624}
+                    height={569}
+                    className="float"
+                  />
+                </div>
+                <div
+                  className={`float ${styles.singleImage} ${styles.brandbook}`}
+                >
+                  <Image
+                    src="/images/home/services/brandbook-1.png"
+                    alt="Web design desktop mockup"
+                    width={1390}
+                    height={995}
+                    className="float"
+                  />
+                </div>
               </div>
-            </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
-              <div className={`float ${styles.singleImage} ${styles.vizit}`}>
-                <Image
-                  src="/images/home/services/vizitke-1.webp"
-                  alt="Web design desktop mockup"
-                  width={506}
-                  height={331}
-                  className="float"
-                />
-              </div>
-              <div className={`float ${styles.singleImage} ${styles.can}`}>
-                <Image
-                  src="/images/home/services/can.webp"
-                  alt="Web design desktop mockup"
-                  width={624}
-                  height={569}
-                  className="float"
-                />
-              </div>
-              <div
-                className={`float ${styles.singleImage} ${styles.brandbook}`}
-              >
-                <Image
-                  src="/images/home/services/brandbook-1.png"
-                  alt="Web design desktop mockup"
-                  width={1390}
-                  height={995}
-                  className="float"
-                />
-              </div>
-            </div>
-            <div className={`${styles.imageSlide} imageSlide`}>
-              <div className={`float ${styles.singleImage} ${styles.zemlja}`}>
-                <Image
-                  src="/images/home/services/earth.png"
-                  alt="Web design desktop mockup"
-                  width={1489}
-                  height={1489}
-                  className="float"
-                />
-              </div>
-              <div className={`float ${styles.singleImage} ${styles.moon}`}>
-                <Image
-                  src="/images/home/services/moon-1.webp"
-                  alt="Web design desktop mockup"
-                  width={137}
-                  height={145}
-                  className="float"
-                />
+              <div className={`${styles.imageSlide} imageSlide`}>
+                <div className={`float ${styles.singleImage} ${styles.zemlja}`}>
+                  <Image
+                    src="/images/home/services/earth.png"
+                    alt="Web design desktop mockup"
+                    width={1489}
+                    height={1489}
+                    className="float"
+                  />
+                </div>
+                <div className={`float ${styles.singleImage} ${styles.moon}`}>
+                  <Image
+                    src="/images/home/services/moon-1.webp"
+                    alt="Web design desktop mockup"
+                    width={137}
+                    height={145}
+                    className="float"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

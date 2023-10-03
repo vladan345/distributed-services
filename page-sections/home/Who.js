@@ -52,7 +52,7 @@ function Who() {
   return (
     <section className={styles.Who} ref={main} id="who">
       <div id="circleTrigger" className={`${styles.trigger} trigger`}>
-        <div className={`${styles.sticky} container`}>
+        <div className={`${styles.container} container`}>
           <span className={`${styles.tag} tag-large`}>Who are we?</span>
           <h2 className={styles.tagline}>
             Create a brand from{" "}

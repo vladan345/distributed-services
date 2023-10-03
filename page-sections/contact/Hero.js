@@ -6,6 +6,9 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { collectServices } from "@/lib/projects";
 function Hero() {
   const { executeRecaptcha } = useGoogleReCaptcha();
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [allServices, setServices] = useState([]);
   const [active, setActive] = useState(false);
   const [values, setValues] = useState({
@@ -91,7 +94,24 @@ function Hero() {
         return;
       }
       executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-        sendContactForm(gReCaptchaToken, values);
+        setLoading(true);
+        fetch("/api/contact", {
+          method: "POST",
+          body: JSON.stringify({
+            data: values,
+            gReCaptchaToken: gReCaptchaToken,
+          }),
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            setLoading(false);
+            setSuccess(data.success);
+          });
+        // sendContactForm(gReCaptchaToken, values);
       });
     },
     [executeRecaptcha, values]
@@ -257,15 +277,32 @@ function Hero() {
             onChange={handleChange}
             value={values.comment}
           ></textarea>
-          <button className={styles.submitBtn} type="submit">
-            Submit Form
-            <Image
-              src="/arrow-black-right.svg"
-              width={29}
-              height={35}
-              alt="arrow down white"
-            />
-          </button>
+          <div className={styles.buttonWrap}>
+            {loading ? (
+              <button className={styles.submitBtn} type="submit" disabled>
+                Submit Form
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </button>
+            ) : (
+              <button className={styles.submitBtn} type="submit">
+                Submit Form
+                <Image
+                  src="/arrow-black-right.svg"
+                  width={29}
+                  height={35}
+                  alt="arrow down white"
+                />
+              </button>
+            )}
+
+            {loading && <div className={styles.spin}></div>}
+            {success && <p>Submited successfully!</p>}
+          </div>
           {/* Send
             <Image
               src="/arrow-black-right.svg"

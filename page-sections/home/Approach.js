@@ -38,7 +38,7 @@ function Approach() {
           Our approach is based on customized solutions that make a real{" "}
           <span className={styles.scratchWrap}>
             <Lottie
-              animationData={scratchBlue}
+              animationData={scratchGreen}
               interactivity={interactivity2}
               className={styles.scratch}
             />
@@ -54,10 +54,10 @@ function Approach() {
         <div className={styles.explore}>
           <span>See how we do it</span>
           <Image
-            src="/arrow-blue-down.svg"
-            alt="arrow blue down"
-            width={100}
-            height={100}
+            src="/arrow-white-down.svg"
+            alt="arrow white down"
+            width={54}
+            height={54}
           />
         </div>
       </div>
