@@ -13,6 +13,6 @@ export const transporter = nodemailer.createTransport({
 
 export const mailOptions = {
   from: email,
-  to: [email, "aljos@distributedservices.tech"],
+  to: [email, "aljosa@distributedservices.tech"],
   subject: "Distributed Services Submission",
 };
