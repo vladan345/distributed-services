@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 function ProjectCard({ link, title, projectImage, services }) {
-  console.log(services);
   return (
     <Link className={styles.card} href={link}>
       <div className={styles.overlay}></div>

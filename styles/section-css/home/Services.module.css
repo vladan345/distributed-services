@@ -2,6 +2,29 @@
   margin-top: 120px;
   background: var(--background);
 }
+.desktopHeading {
+  position: sticky;
+  width: 100%;
+  top: 112px;
+  left: 0;
+  z-index: -1;
+  height: calc(100% - 112px);
+}
+.mobileHeading {
+  display: none;
+}
+.mobileHeading .borderWrap {
+  border-top: 1px solid var(--main-blue);
+  border-bottom: 1px solid var(--main-blue);
+  padding: 40px 20px;
+  color: var(--main-blue);
+}
+.desktopHeading .borderWrap {
+  border-top: 1px solid var(--main-blue);
+  border-bottom: 1px solid var(--main-blue);
+  margin-top: -850px;
+  padding: 0 20px;
+}
 .Services .stickyWrap {
   position: sticky;
   top: 0;
@@ -15,15 +38,17 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   transform: translateY(100px);
+  padding-bottom: 80px;
 }
 .Services .container {
   transform: translateX(-50%);
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 1;
 }
 .imageWrap {
   position: absolute;
@@ -31,7 +56,7 @@
   top: 0;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 .singleImage {
@@ -70,13 +95,12 @@
 }
 .slide h3 {
   max-width: 560px;
-  min-height: 152px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 .slide p {
-  max-width: 475px;
+  max-width: 500px;
   min-height: 93px;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 }
 .slide a {
   font-size: 28px;
@@ -104,12 +128,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
 }
-.headingWrap {
-  border-top: 1px solid var(--main-blue);
-  border-bottom: 1px solid var(--main-blue);
-  padding-left: 20px;
-  margin-top: -850px;
-}
+
 section.first {
   transform: translateY(0);
 }
@@ -134,6 +153,7 @@ section.first {
   left: 100%;
   transform-origin: bottom right;
   overflow: hidden;
+  z-index: 0;
 }
 .circle {
   background: url("/images/test-gradient.jpg") no-repeat right center;
@@ -202,7 +222,7 @@ section.first {
     margin-bottom: 30px;
   }
   .Services section {
-    padding-top: 170px;
+    padding-top: 320px;
     width: calc(100% - 40px);
     justify-content: flex-start;
   }
@@ -299,13 +319,26 @@ section.first {
     width: 1200px;
     height: 1200px;
   }
-  .headingWrap {
-    margin-top: -450px;
+  .desktopHeading {
+    display: none;
+  }
+
+  .mobileHeading {
+    display: block;
   }
 }
 @media (max-width: 800px) {
   .Services section {
-    padding-top: 120px;
+    padding-top: 140px;
+  }
+  .circleWrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    height: 450px;
+    top: calc(100% - 150px);
+    width: 100%;
   }
   .slide p {
     font-size: 14px;

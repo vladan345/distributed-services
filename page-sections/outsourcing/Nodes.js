@@ -7,7 +7,7 @@ function Nodes() {
     mode: "scroll",
     actions: [
       {
-        visibility: [0.15, 0.55],
+        visibility: [0.15, 0.45],
         type: "seek",
         frames: [0, 130],
         // Za drugi lottie frames: [0, 150],

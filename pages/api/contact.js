@@ -18,7 +18,7 @@ const handler = async (req, res) => {
 
     const response = await verifyRecaptcha(token);
     const data = req.body.data;
-    console.log(data);
+
     if (response.data.success && response.data.score >= 0.5) {
       if (req.method === "POST") {
         if (!data.name || !data.company || !data.email) {
@@ -43,7 +43,8 @@ const handler = async (req, res) => {
           <p><b>Budget:</b> ${data.budget}</p>
           <p><b>Comment:</b> ${data.comment}</p>`,
           });
-          console.log("success");
+
+          return res.status(200).json({ success: true });
         } catch (error) {
           console.log(error);
           return res.status(400).json({ message: error.message });

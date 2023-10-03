@@ -10,7 +10,6 @@
   font-weight: bold;
   letter-spacing: 0.64px;
   text-transform: uppercase;
-
   margin-bottom: 40px;
 }
 .tab {
@@ -66,9 +65,9 @@
   height: var(--height);
   background: linear-gradient(150deg, var(--main-blue) 4%, #15319d 94%);
   position: sticky;
-  top: 50%;
+  top: 25%;
   margin-bottom: calc(0px - var(--height) / 2);
-  transform: translateY(-50%);
+  transform: translateY(0%);
   left: 100vw;
   border-radius: 1000px 0 0 1000px;
 }
@@ -80,8 +79,8 @@
   width: auto;
   position: absolute;
   right: -30%;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0%;
+  transform: translateY(0%);
 }
 @media (max-width: 1600px) {
   .accordionImage {

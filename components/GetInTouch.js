@@ -18,7 +18,6 @@ function GetInTouch({ darkMode }) {
           end: "bottom top",
           trigger: ".trigger",
           toggleClass: styles.active,
-          once: true,
         },
       });
     }, main.current);

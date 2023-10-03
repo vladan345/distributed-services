@@ -155,6 +155,9 @@
 .textarea {
   height: 120px;
 }
+.buttonWrap p {
+  color: var(--main-green);
+}
 .submitBtn {
   font-size: 28px;
   color: var(--main-blue);
@@ -166,6 +169,18 @@
   align-items: center;
   gap: 10px;
   transition: 0.3s;
+  cursor: pointer;
+}
+.submitBtn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.submitBtn[disabled]:hover {
+  background: white;
+  color: var(--main-blue);
+}
+.submitBtn[disabled]:hover img {
+  filter: var(--arrow-filter);
 }
 .submitBtn:hover {
   background: transparent;
@@ -229,6 +244,30 @@
   animation: fadeIn 1.5s 1.2s forwards;
 }
 
+.buttonWrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
 @keyframes rotation {
   from {
     top: -100%;
@@ -285,6 +324,9 @@
   }
 }
 @media (max-width: 800px) {
+  .buttonWrap {
+    flex-direction: column;
+  }
   .Hero {
     justify-content: flex-end;
     min-height: 100vh;
