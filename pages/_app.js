@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   // Here you can add paths where you want to use Header that is initialy transparent then fades to filled background (white)
-  const urls = ["/", "/projects/rikas", "/contact"];
+  const urls = ["/", "/projects/rikas", "/contact", "/projects/jove"];
 
   return (
     <>

@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function ProjectHero({ content }) {
+function ProjectHero({ content, whiteTheme }) {
   const main = useRef(null);
 
   useEffect(() => {
@@ -26,10 +26,14 @@ function ProjectHero({ content }) {
   }, []);
 
   return (
-    <div className={styles.projectHero}>
+    <div
+      className={`${styles.projectHero} ${
+        whiteTheme ? styles.white : styles.blue
+      }`}
+    >
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), #000), url(${content.banner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 60%, #000 100%), url(${content.banner})`,
         }}
         className={`${styles.banner} banner`}
       >
