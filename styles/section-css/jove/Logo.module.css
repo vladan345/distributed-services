@@ -1,0 +1,78 @@
+.Logo {
+  margin-top: 200px;
+}
+.Logo h2 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+.rowWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  gap: 80px;
+}
+.video {
+  width: 680px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+.videoWrap {
+  position: relative;
+}
+.videoWrap:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.textBox {
+  max-width: 440px;
+}
+.textBox h2 {
+  margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  .Logo {
+    margin-top: 80px;
+  }
+  .rowWrap {
+    gap: 40px;
+  }
+  .videoWrap {
+    width: 50%;
+  }
+  .video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 900px) {
+  .rowWrap {
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  .videoWrap {
+    width: 100%;
+  }
+  .textBox h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+  .textBox p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  .Logo {
+    margin-top: 0;
+  }
+}

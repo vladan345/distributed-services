@@ -25,11 +25,11 @@ function Slug() {
       name: "Digital Marketing",
       icon: "/images/marketing.svg",
     },
-    // {
-    //   id: "branding",
-    //   name: "Branding & Visual Identity",
-    //   icon: "/images/branding.svg",
-    // },
+    {
+      id: "branding",
+      name: "Branding",
+      icon: "/images/branding.svg",
+    },
     // {
     //   id: "outsourcing",
     //   name: "Outsourcing",

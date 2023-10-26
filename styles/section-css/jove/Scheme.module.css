@@ -1,0 +1,25 @@
+.Scheme {
+  margin-top: -50px;
+  padding: 200px 0 100px;
+  background: linear-gradient(315deg, #c2c2c2 0%, #fff 100%);
+}
+.Scheme img {
+  margin: 0 auto 0 auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 908px;
+}
+@media (max-width: 1200px) {
+  .Scheme {
+    padding-top: 240px;
+  }
+  .Scheme img {
+    margin-top: 0;
+  }
+}
+@media (max-width: 900px) {
+  .Scheme {
+    margin-top: 0;
+  }
+}
