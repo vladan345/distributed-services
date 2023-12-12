@@ -16,8 +16,9 @@ function Negative() {
         duration: 1,
         stagger: 0.5,
         scrollTrigger: {
-          trigger: ".logo",
+          trigger: ".firstLogo",
           start: "top center",
+          toggleActions: "play none none none",
         },
       });
     }, main.current);
@@ -34,7 +35,7 @@ function Negative() {
             alt="logo variant 1"
             width={600}
             height={418}
-            className="logo"
+            className="logo firstLogo"
           />
           <Image
             src="/images/single-project/jove/logo2.svg"

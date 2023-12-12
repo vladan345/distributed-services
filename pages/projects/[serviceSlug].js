@@ -17,20 +17,6 @@ function Projects({ projects }) {
       <div className="Projects">
         <ReactLenis root options={{ duration: 1.2 }}>
           <Slug />
-          <p
-            style={{
-              fontSize: "48px",
-              fontFamily: "Flexa",
-              lineHeight: "1.2",
-              fontWeight: "500",
-              maxWidth: "1200px",
-              margin: "0 auto",
-              padding: "0 20px",
-            }}
-          >
-            We are what we create. Take a look at our latest projects that span
-            various industries - this is our very own hall of fame.
-          </p>
           <List projects={projects} />
           <GetInTouch darkMode={true} />
         </ReactLenis>

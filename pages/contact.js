@@ -61,7 +61,7 @@ function contact() {
                 <p className={styles.address}>
                   20 Alcester Crescent, E59PX London, UK
                 </p>
-                <Link href="tel:+44 7837 513593">+44 7837 513593</Link>
+                <Link href="tel:+971506340569">+971 50 634 0569</Link>
                 <Link href="info@distributedservices.tech">
                   info@distributedservices.tech
                 </Link>
@@ -85,7 +85,7 @@ function contact() {
                 <p className={styles.address}>
                   Dubai Silicon Oasis DDP Building A1, Dubai, UAE
                 </p>
-                <Link href="tel:+44 7837 513593">+44 7837 513593</Link>
+                <Link href="tel:+971506340569">+971 50 634 0569</Link>
                 <Link href="info@distributedservices.tech">
                   info@distributedservices.tech
                 </Link>

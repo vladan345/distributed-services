@@ -3,7 +3,9 @@
   padding: 190px 0;
   min-height: 100vh;
   background: linear-gradient(129deg, var(--main-blue) 8%, #15319d 88%);
-  margin-bottom: -20px;
+  margin-bottom: -80px;
+  z-index: 1;
+  position: relative;
 }
 .Provide > div {
   display: flex;

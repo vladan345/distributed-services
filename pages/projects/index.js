@@ -48,10 +48,6 @@ function Projects() {
       <div className="Projects">
         <ReactLenis root options={{ duration: 1.2 }}>
           <Slug />
-          <p>
-            We are what we create. Take a look at our latest projects that span
-            various industries - this is our very own hall of fame.
-          </p>
           <List projects={projects} />
           <GetInTouch darkMode={true} />
         </ReactLenis>

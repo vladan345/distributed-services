@@ -173,13 +173,14 @@
   }
   .textBox h3 {
     margin-bottom: 30px;
+    font-size: 24px;
   }
 
   .textBox {
     padding-top: 120px;
   }
   .textBox p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-width: 500px) {

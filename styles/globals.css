@@ -181,14 +181,7 @@ h3 {
 }
 .Projects p {
   font-size: 48px;
-  font-family: "Flexa";
-  line-height: 1.2;
-  font-weight: 500;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
-
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--background);
@@ -273,7 +266,6 @@ img.imageActive {
   }
   .Projects p {
     font-size: 32px;
-    padding: 0 20px;
   }
   .projectParagraph {
     font-size: 20px;

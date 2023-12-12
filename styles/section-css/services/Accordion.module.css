@@ -1,6 +1,7 @@
 .Accordion {
   --height: 600px;
-  margin-top: calc(200px + var(--height) / 4);
+  /* margin-bottom: calc(200px + var(--height) / 4); */
+  margin-top: 280px;
 }
 .container {
   position: relative;
@@ -66,7 +67,7 @@
   background: linear-gradient(150deg, var(--main-blue) 4%, #15319d 94%);
   position: sticky;
   top: 25%;
-  margin-bottom: calc(0px - var(--height) / 2);
+  margin-top: calc(0px - var(--height) / 2);
   transform: translateY(0%);
   left: 100vw;
   border-radius: 1000px 0 0 1000px;

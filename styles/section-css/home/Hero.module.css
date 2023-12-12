@@ -1,5 +1,5 @@
 .Hero {
-  min-height: 1140px;
+  min-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,7 +33,7 @@
 
 .background1 {
   position: absolute;
-  right: 530px;
+  right: 600px;
   top: -400px;
   z-index: 0;
   animation: rotation 1.5s forwards;
@@ -43,11 +43,11 @@
 .video {
   position: absolute;
   top: 20px;
-  right: -120px;
+  right: 120px;
   transform: rotate(-26deg);
-  width: 557px;
-  border-radius: 0 557px 557px 0;
-  height: 1035px;
+  width: 400px;
+  border-radius: 0 400px 400px 0;
+  height: 743px;
   overflow: hidden;
 }
 .video video {
@@ -75,7 +75,7 @@
   }
   to {
     transform: rotate(0);
-    top: -400px;
+    top: -290px;
   }
 }
 @keyframes rotationT {
@@ -85,7 +85,7 @@
   }
   to {
     transform: rotate(0) scale(0.8) translateX(-100%);
-    top: -300px;
+    top: -220px;
   }
 }
 @keyframes rotationM {
@@ -95,8 +95,8 @@
     transform: rotate(116deg) scale(0.3) translate(-100%, -100%);
   }
   to {
-    transform: rotate(0) scale(0.3) translate(-1600px, 0);
-    top: -240px;
+    transform: rotate(0) scale(0.3) translate(-1200px, 0);
+    top: -110px;
     left: 50%;
   }
 }

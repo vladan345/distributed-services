@@ -8,7 +8,7 @@ function Web() {
       <div className="container">
         <div className={styles.rowWrap}>
           <div className={styles.tabletWrap}>
-            <video autoPlay muted loop>
+            <video autoPlay muted loop playsInline>
               <source src="/images/single-project/jove/jove-tablet.mp4" />
             </video>
             <Image

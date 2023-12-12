@@ -6,8 +6,8 @@ function Hero() {
     <section className={styles.Hero}>
       <Image
         src="/images/home/hero-element2.svg"
-        width={747}
-        height={943}
+        width={550}
+        height={694}
         alt="Part of distributed logo"
         className={styles.background1}
       />
@@ -17,6 +17,7 @@ function Hero() {
           autoPlay
           loop
           muted
+          playsInline
         ></video>
       </div>
 

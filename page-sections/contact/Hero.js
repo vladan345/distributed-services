@@ -120,13 +120,19 @@ function Hero() {
     <section className={styles.Hero}>
       <Image
         src="/images/contact/hero-element-contact.svg"
-        width={747}
-        height={943}
+        width={550}
+        height={694}
         alt="Part of distributed logo"
         className={styles.background1}
       />
       <div className={styles.video}>
-        <video src="/images/contact/contact.mp4" autoPlay loop muted></video>
+        <video
+          src="/images/contact/contact.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
       </div>
 
       <div className={styles.content + " container"}>

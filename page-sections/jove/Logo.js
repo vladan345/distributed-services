@@ -14,9 +14,6 @@ function Logo() {
         scrollTrigger: {
           trigger: ".container",
           onEnter: () => videoElem.current.play(),
-          onEnterBack: () => videoElem.current.play(),
-          onLeave: () => videoElem.current.pause(),
-          onLeaveBack: () => videoElem.current.pause(),
         },
       });
     }, main.current);
@@ -39,7 +36,12 @@ function Logo() {
             </p>
           </div>
           <div className={styles.videoWrap}>
-            <video className={`${styles.video} video`} muted ref={videoElem}>
+            <video
+              className={`${styles.video} video`}
+              muted
+              ref={videoElem}
+              playsInline
+            >
               <source src="/images/single-project/jove/jove-logo4.mp4" />
             </video>
           </div>

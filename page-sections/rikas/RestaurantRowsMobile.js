@@ -37,6 +37,18 @@ function RestaurantRowsMobile({ content }) {
           scrub: true,
           toggleActions: "restart none reverse none",
         },
+        onComplete: () => {
+          gsap.to(".progressbar", {
+            opacity: 0,
+            duration: 0.5,
+          });
+        },
+        onReverseComplete: () => {
+          gsap.to(".progressbar", {
+            opacity: 1,
+            duration: 0.5,
+          });
+        },
         width: "100%",
         ease: "none",
       });

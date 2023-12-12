@@ -133,8 +133,10 @@ function ServicesMobile() {
 
   return (
     <section className={styles.Services} ref={main}>
-      <div className={`${styles.circleWrap} circleWrap`}>
-        <div className={`${styles.circle} circle`}></div>
+      <div className={styles.stickyCircle}>
+        <div className={`${styles.circleWrap} circleWrap`}>
+          <div className={`${styles.circle} circle`}></div>
+        </div>
       </div>
       <div className={`${styles.progressbar} progressbar`}></div>
 
@@ -152,7 +154,7 @@ function ServicesMobile() {
                   >
                     <span className={styles.number}>0{index + 1}</span>
                     <h3>{service.title}</h3>
-                    <p>{service.text}</p>
+                    <p dangerouslySetInnerHTML={{ __html: service.text }} />
                     <Link href={service.link}>
                       View Project{" "}
                       <Image

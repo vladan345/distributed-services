@@ -8,19 +8,21 @@ function List({ projects }) {
       <div className="container">
         <div className={styles.grid}>
           {projects.length != 0 ? (
-            projects.map((project, index) => {
-              let services = project.services.join(" / ");
-              services = services.replace(/-/g, " ");
-              return (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  link={project.link}
-                  projectImage={project.projectImage}
-                  services={project.services}
-                />
-              );
-            })
+            projects
+              .sort(() => Math.random() - 0.5)
+              .map((project, index) => {
+                let services = project.services.join(" / ");
+                services = services.replace(/-/g, " ");
+                return (
+                  <ProjectCard
+                    key={index}
+                    title={project.title}
+                    link={project.link}
+                    projectImage={project.projectImage}
+                    services={project.services}
+                  />
+                );
+              })
           ) : (
             <h1>No projects available for current category</h1>
           )}

@@ -1,5 +1,5 @@
 .Services {
-  margin-top: 120px;
+  margin-top: 0px;
   background: var(--background);
 }
 .desktopHeading {
@@ -204,6 +204,18 @@ section.first {
   bottom: 75%;
   right: 5%;
 }
+@media (max-width: 1600px) {
+  .desktopHeading h2 {
+    font-size: 64px;
+  }
+  .slide h3 {
+    font-size: 54px;
+  }
+  .slide p {
+    font-size: 18px;
+    max-width: 400px;
+  }
+}
 @media (max-width: 1240px) {
   .Services {
     margin-top: 0;
@@ -222,7 +234,7 @@ section.first {
     margin-bottom: 30px;
   }
   .Services section {
-    padding-top: 320px;
+    padding-top: 140px;
     width: calc(100% - 40px);
     justify-content: flex-start;
   }
@@ -329,7 +341,10 @@ section.first {
 }
 @media (max-width: 800px) {
   .Services section {
-    padding-top: 140px;
+    padding-top: 100px;
+  }
+  .Services .slide .number {
+    font-size: 18px;
   }
   .circleWrap {
     display: flex;
@@ -340,8 +355,12 @@ section.first {
     top: calc(100% - 150px);
     width: 100%;
   }
+
+  .slide h3 {
+    font-size: 24px;
+  }
   .slide p {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 30px;
     min-height: 0;
   }
@@ -365,7 +384,7 @@ section.first {
     right: -30%;
   }
   .desktop img {
-    height: 300px;
+    height: 280px;
   }
   .phone {
     bottom: -50px;

@@ -1,9 +1,11 @@
 .Projects {
   text-align: center;
   margin-top: 150px;
-  padding: 0 20px;
+  padding: 60px 20px;
   background: var(--background);
   padding-bottom: 80px;
+  z-index: 1;
+  position: relative;
 }
 .projectWrap {
   max-width: 1200px;

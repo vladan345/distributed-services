@@ -13,6 +13,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Who() {
   const main = useRef(null);
+  const handleScroll = () => {
+    let sectionHeight = main.current;
+    let homeHeight = document.querySelector(".homeHero");
+    let html = document.querySelector("html");
+    html.style.scrollBehavior = "smooth";
+    window.scrollTo(0, sectionHeight.offsetHeight + homeHeight.offsetHeight);
+    setTimeout(() => {
+      html.style.scrollBehavior = "auto";
+    }, 500);
+  };
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -81,7 +91,7 @@ function Who() {
             our clients with the complete digital package.
           </p>
 
-          <div className={`${styles.explore} explore`}>
+          <div className={`${styles.explore} explore`} onClick={handleScroll}>
             <span>EXPLORE</span>
             <Image
               src="/arrow-blue-down.svg"

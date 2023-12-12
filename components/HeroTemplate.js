@@ -18,6 +18,7 @@ function Hero() {
           autoPlay
           loop
           muted
+          playsInline
         ></video>
       </div>
 

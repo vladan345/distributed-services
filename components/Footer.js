@@ -26,9 +26,7 @@ function Footer() {
               20 Alcester Crescent, E59PX<br></br> London, UK
             </p>
             <p className={styles.info}>
-              +44 7837 513593
-              <br />
-              info@distributedservices.tech
+              +971 50 634 0569 info@distributedservices.tech
             </p>
           </div>
           <div className={styles.col}>
@@ -37,8 +35,7 @@ function Footer() {
               Dubai Silicon Oasis<br></br> DDP Building A1, Dubai, UAE
             </p>
             <p className={styles.info}>
-              +971 50 634 0569
-              <br /> info@distributedservices.tech
+              +971 50 634 0569 info@distributedservices.tech
             </p>
           </div>
           <div className={styles.col}>
