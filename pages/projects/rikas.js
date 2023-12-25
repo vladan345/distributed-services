@@ -84,8 +84,9 @@ function Rikas() {
       <div>
         <ReactLenis root options={{ duration: 1.2 }}>
           <ProjectHero content={projectInfo} />
-          <RestaurantRows content={restaurants1} />
           <RestaurantRowsMobile content={restaurants1} />
+          <RestaurantRows content={restaurants1} />
+
           <Dual content={dual} />
           <DualMobile content={dual} />
           <RestaurantRows content={restaurants2} />

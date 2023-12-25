@@ -19,9 +19,11 @@ function London() {
           trigger: ".trigger",
           pin: true,
           scrub: true,
-          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
+          end: window.innerWidth < 1240 ? "+=1000" : "+=6000",
+          markers: true,
         },
       });
+
       gsap.to(".cities", {
         xPercent: -50,
         ease: "none",
@@ -29,7 +31,7 @@ function London() {
           trigger: ".trigger",
           start: "top left",
           scrub: true,
-          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
+          end: window.innerWidth < 1240 ? "+=1000" : "+=6000",
         },
       });
       gsap.set(".gradient", {
@@ -44,7 +46,7 @@ function London() {
           trigger: ".trigger",
           start: "top left",
           scrub: true,
-          end: window.innerWidth < 1240 ? "+=1000" : "+=3000",
+          end: window.innerWidth < 1240 ? "+=1000" : "+=6000",
         },
       });
       sections.forEach((section) => {
@@ -57,7 +59,7 @@ function London() {
           scrollTrigger: {
             trigger: section,
             containerAnimation: scrollTween,
-            start: "left 30%",
+            start: "left 50%",
           },
         });
       });

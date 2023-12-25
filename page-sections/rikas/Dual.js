@@ -55,6 +55,7 @@ function Dual({ content }) {
             width={900}
             height={1060}
             className="dualImage"
+            id={content[0].id}
           />
           {/* </div> */}
           {/* <div className={`${styles.halfRight}`}> */}
@@ -64,6 +65,7 @@ function Dual({ content }) {
             width={900}
             height={1060}
             className="dualImage"
+            id={content[1].id}
           />
           {/* </div> */}
         </div>

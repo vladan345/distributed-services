@@ -97,6 +97,7 @@ function RestaurantRows({ content }) {
                 restaurant.imageOnLeft ? styles.right : styles.left
               }`}
               key={index}
+              id={restaurant.id}
             >
               <div className={`${styles.imageWrap} trigger`}>
                 <Image

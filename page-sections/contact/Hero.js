@@ -279,7 +279,7 @@ function Hero() {
             className={styles.textarea}
             name="comment"
             id="comment"
-            rows="4"
+            rows="6"
             onChange={handleChange}
             value={values.comment}
           ></textarea>

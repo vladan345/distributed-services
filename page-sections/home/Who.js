@@ -14,11 +14,10 @@ gsap.registerPlugin(ScrollTrigger);
 function Who() {
   const main = useRef(null);
   const handleScroll = () => {
-    let sectionHeight = main.current;
-    let homeHeight = document.querySelector(".homeHero");
-    let html = document.querySelector("html");
+    const container = main.current;
+    const html = document.querySelector("html");
     html.style.scrollBehavior = "smooth";
-    window.scrollTo(0, sectionHeight.offsetHeight + homeHeight.offsetHeight);
+    window.scrollTo(0, container.offsetHeight + container.offsetTop);
     setTimeout(() => {
       html.style.scrollBehavior = "auto";
     }, 500);

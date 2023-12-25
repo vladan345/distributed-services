@@ -130,6 +130,7 @@ function RestaurantRowsMobile({ content }) {
                     className={`${styles.slide} ${
                       index === 0 ? styles.first : ""
                     }`}
+                    id={restaurant.id}
                   >
                     <h3>{restaurant.title}</h3>
                     <p>{restaurant.description}</p>

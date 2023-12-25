@@ -47,7 +47,7 @@ function Circle() {
           className="circleImage"
         />
       </div>
-      <div className={`${styles.circleSection} circleTrigger`}>
+      <div className={`${styles.circleSection} circleTrigger`} id="tagomago">
         <div className={styles.circleM}>
           <Image
             src="/images/single-project/rikas/rikas-circle-mobile.png"
@@ -64,7 +64,7 @@ function Circle() {
           height={2878}
           className={`sandBackground ${styles.sandBackground}`}
         />
-        <div className={styles.restaurantText}>
+        <div className={styles.restaurantText} id="chez-wam">
           <div className={styles.dualText}>
             <div>
               <h2>Tagomago</h2>

@@ -204,7 +204,7 @@ section.first {
   bottom: 75%;
   right: 5%;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
   .desktopHeading h2 {
     font-size: 64px;
   }

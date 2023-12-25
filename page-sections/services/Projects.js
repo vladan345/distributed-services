@@ -44,18 +44,18 @@ function Projects() {
         <div className={styles.grid}>
           <div className={`${styles.col} left`}>
             <ProjectCard
-              title={projects[0].title}
-              link={projects[0].link}
-              projectImage={projects[0].projectImage}
-              services={projects[0].services}
+              title={projects[4].title}
+              link={projects[4].link}
+              projectImage={projects[4].projectImage}
+              services={projects[4].services}
             />
           </div>
           <div className={`${styles.col} right`}>
             <ProjectCard
-              title={projects[1].title}
-              link={projects[1].link}
-              projectImage={projects[1].projectImage}
-              services={projects[1].services}
+              title={projects[5].title}
+              link={projects[5].link}
+              projectImage={projects[5].projectImage}
+              services={projects[5].services}
             />
           </div>
         </div>
