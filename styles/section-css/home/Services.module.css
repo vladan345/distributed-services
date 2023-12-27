@@ -209,10 +209,10 @@ section.first {
     font-size: 64px;
   }
   .slide h3 {
-    font-size: 54px;
+    font-size: 44px;
   }
   .slide p {
-    font-size: 18px;
+    font-size: 16px;
     max-width: 400px;
   }
 }
@@ -424,5 +424,11 @@ section.first {
   .moon {
     right: 140px;
     left: auto;
+  }
+}
+
+@media (max-height: 738px) {
+  .Services section {
+    padding-bottom: 40px;
   }
 }

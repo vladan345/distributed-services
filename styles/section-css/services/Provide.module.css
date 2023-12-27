@@ -46,10 +46,10 @@
   max-width: 54px;
   cursor: pointer;
   transition: 0.3s;
+  filter: brightness(0) invert(1) grayscale(100%) brightness(10);
 }
 .explore img:hover {
-  filter: invert(85%) sepia(43%) saturate(3976%) hue-rotate(90deg)
-    brightness(259%) contrast(104%);
+  filter: none;
 }
 @media (max-width: 1240px) {
   .Provide {

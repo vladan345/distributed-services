@@ -165,7 +165,7 @@ function Services() {
                       <span className={styles.number}>0{index + 1}</span>
                       <h3>{service.title}</h3>
                       <p dangerouslySetInnerHTML={{ __html: service.text }}></p>
-                      <Link href={service.link}>
+                      <Link href={service.link} className={styles.cta}>
                         View Project
                         <Image
                           src="/arrow-black-right.svg"

@@ -56,8 +56,8 @@ function Approach() {
         <div className={styles.explore}>
           <span>See how we do it</span>
           <Image
-            src="/arrow-white-down.svg"
-            alt="arrow white down"
+            src="/arrow-down-green.svg"
+            alt="arrow green down"
             width={54}
             height={54}
             onClick={handleClick}

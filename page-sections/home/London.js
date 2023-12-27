@@ -20,7 +20,6 @@ function London() {
           pin: true,
           scrub: true,
           end: window.innerWidth < 1240 ? "+=1000" : "+=6000",
-          markers: true,
         },
       });
 

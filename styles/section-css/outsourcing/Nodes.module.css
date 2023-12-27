@@ -97,3 +97,9 @@
     margin: 60px -15px 0 -15px;
   }
 }
+
+@media (max-height: 790px) {
+  .lottieWrapper {
+    max-width: 650px;
+  }
+}

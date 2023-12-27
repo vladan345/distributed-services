@@ -58,6 +58,15 @@
   opacity: 0;
   cursor: pointer;
 }
+.explore img {
+  transition: all 0.3s;
+  filter: invert(25%) sepia(81%) saturate(5504%) hue-rotate(232deg)
+    brightness(95%) contrast(90%);
+}
+.explore:hover img {
+  filter: invert(60%) sepia(95%) saturate(887%) hue-rotate(97deg)
+    brightness(97%) contrast(102%);
+}
 .explore span {
   margin-bottom: 15px;
   font-size: 22px;

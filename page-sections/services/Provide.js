@@ -30,7 +30,7 @@ function Provide() {
         <div className={styles.explore}>
           <span>See our latest work</span>
           <Image
-            src="/arrow-white-down.svg"
+            src="/arrow-down-green.svg"
             alt="arrow blue down"
             width={100}
             height={100}

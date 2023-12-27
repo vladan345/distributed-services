@@ -3,6 +3,8 @@
   min-height: 100vh;
   background: linear-gradient(129deg, var(--main-blue) 8%, #15319d 88%);
   margin-bottom: -20px;
+  position: relative;
+  z-index: 2;
 }
 .Approach > div {
   display: flex;
@@ -42,10 +44,10 @@
   max-width: 54px;
   cursor: pointer;
   transition: 0.3s;
+  filter: brightness(0) invert(1) grayscale(100%) brightness(10);
 }
 .explore img:hover {
-  filter: invert(85%) sepia(43%) saturate(3976%) hue-rotate(90deg)
-    brightness(259%) contrast(104%);
+  filter: none;
 }
 .scratch {
   display: inline-block;

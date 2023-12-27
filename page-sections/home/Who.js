@@ -93,10 +93,10 @@ function Who() {
           <div className={`${styles.explore} explore`} onClick={handleScroll}>
             <span>EXPLORE</span>
             <Image
-              src="/arrow-blue-down.svg"
+              src="/arrow-black-down.svg"
               alt="arrow blue down"
-              width={100}
-              height={100}
+              width={52}
+              height={52}
             />
           </div>
         </div>

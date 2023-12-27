@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import ProjectHero from "@/components/ProjectHero";
 import { restaurants1, restaurants2, dual } from "@/lib/rikasRestaurants";
@@ -8,8 +9,23 @@ import DualMobile from "@/page-sections/rikas/DualMobile";
 import Circle from "@/page-sections/rikas/Circle";
 import Results from "@/components/Results";
 import { ReactLenis } from "@studio-freight/react-lenis";
-
+import { useRouter } from "next/router";
 function Rikas() {
+  // const router = useRouter();
+  // const [isLoaded, setIsLoaded] = useState(false);
+  // useEffect(() => {
+  //   if (!isLoaded) {
+  //     const currentFragment = router.asPath.split("#")[1];
+  //     if (currentFragment) {
+  //       router.push({
+  //         pathname: `/projects/rikas`,
+  //         hash: `${currentFragment}-mobile`,
+  //       });
+  //     }
+  //     setIsLoaded(true);
+  //   }
+  // }, [isLoaded, router]);
+
   const projectInfo = {
     title: "Rikas Hospitality Group",
     banner: "/images/single-project/rikas/rikas-hero.webp",
@@ -86,7 +102,6 @@ function Rikas() {
           <ProjectHero content={projectInfo} />
           <RestaurantRowsMobile content={restaurants1} />
           <RestaurantRows content={restaurants1} />
-
           <Dual content={dual} />
           <DualMobile content={dual} />
           <RestaurantRows content={restaurants2} />
