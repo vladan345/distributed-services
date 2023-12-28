@@ -127,10 +127,11 @@ function RestaurantRowsMobile({ content }) {
                 return (
                   <section
                     key={index}
+                    data-id={index}
                     className={`${styles.slide} ${
                       index === 0 ? styles.first : ""
                     }`}
-                    id={restaurant.id}
+                    id={`${restaurant.id}-mobile`}
                   >
                     <h3>{restaurant.title}</h3>
                     <p>{restaurant.description}</p>

@@ -11,20 +11,30 @@ import Results from "@/components/Results";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { useRouter } from "next/router";
 function Rikas() {
-  // const router = useRouter();
-  // const [isLoaded, setIsLoaded] = useState(false);
-  // useEffect(() => {
-  //   if (!isLoaded) {
-  //     const currentFragment = router.asPath.split("#")[1];
-  //     if (currentFragment) {
-  //       router.push({
-  //         pathname: `/projects/rikas`,
-  //         hash: `${currentFragment}-mobile`,
-  //       });
-  //     }
-  //     setIsLoaded(true);
-  //   }
-  // }, [isLoaded, router]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const excluded = ["tagomago", "chez-wam"];
+    if (window.innerWidth < 956) {
+      const currentFragment = router.asPath.split("#")[1];
+      if (currentFragment && !excluded.includes(currentFragment)) {
+        const container = document.querySelector(`#${currentFragment}-mobile`);
+        var rect = container.getBoundingClientRect();
+        const id = parseInt(container.dataset.id);
+        const scroll = rect.top;
+
+        const temp = id * (window.innerHeight * 2);
+        const final = temp + scroll;
+        const html = document.querySelector("html");
+        html.style.scrollBehavior = "smooth";
+        window.scrollTo(0, final);
+
+        setTimeout(() => {
+          html.style.scrollBehavior = "auto";
+        }, 500);
+      }
+    }
+  }, [router]);
 
   const projectInfo = {
     title: "Rikas Hospitality Group",
