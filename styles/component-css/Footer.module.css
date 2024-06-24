@@ -10,6 +10,12 @@
 .col {
   width: 25%;
 }
+.icons {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .socials p {
   font-size: 18px;
   margin-bottom: 40px;
@@ -17,9 +23,7 @@
 .socials a img {
   transition: 0.3s;
 }
-.socials a {
-  margin-right: 30px;
-}
+
 .socials a:last-of-type {
   margin-right: 0;
 }
@@ -76,6 +80,9 @@
   }
 }
 @media (max-width: 740px) {
+  .icons {
+    justify-content: center;
+  }
   .row {
     display: flex;
     flex-direction: column;
