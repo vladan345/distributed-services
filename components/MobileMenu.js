@@ -68,41 +68,45 @@ function MobileMenu({ isActive, toggleMenu }) {
         </Link>
       </nav>
       <div className={styles.socials}>
-        {/* <p>Follow us</p>
+        <p>Follow us</p>
         <div className={styles.icons}>
-          <Link href="#">
-            <Image
-              src="/facebook-blue.svg"
-              alt="facebook icon"
-              width={11}
-              height={22}
-            />
-          </Link>
-          <Link href="#">
-            <Image
-              src="/twitter-blue.svg"
-              alt="twitter icon"
-              width={28}
-              height={22}
-            />
-          </Link>
-          <Link href="#">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/distributedservices/"
+            rel="noopener noreferrer"
+          >
             <Image
               src="/instagram-blue.svg"
               alt="instagram icon"
               width={22}
               height={22}
             />
-          </Link>
-          <Link href="#">
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/distributed-services/"
+            rel="noopener noreferrer"
+          >
             <Image
-              src="/youtube-blue.svg"
-              alt="youtube icon"
-              width={32}
-              height={22}
+              src="/linkedin-blue.svg"
+              alt="Linkedin icon"
+              width={26}
+              height={26}
             />
-          </Link>
-        </div> */}
+          </a>
+          <a
+            target="_blank"
+            href="https://www.tiktok.com/@distributedservices"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/tiktok-blue.svg"
+              alt="Tiktok icon"
+              width={30}
+              height={30}
+            />
+          </a>
+        </div>
       </div>
     </aside>
   );
