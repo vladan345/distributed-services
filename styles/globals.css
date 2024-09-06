@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   src: url("/fonts/GT-Flexa-Var.ttf");
   font-family: "Flexa";
@@ -111,7 +115,43 @@ h2,
 h3 {
   font-family: "Flexa";
 }
-
+.hosp-container {
+  max-width: 1460px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.hosp-h1 {
+  font-size: 82px;
+  line-height: 1;
+  font-weight: 200;
+  font-family: inherit;
+}
+.hosp-h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: -0.64px;
+}
+.hosp-h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: inherit;
+}
+.hosp-h4 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: inherit;
+}
+.hosp-p {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: inherit;
+}
 .button {
   font-size: 28px;
   line-height: 1.4;

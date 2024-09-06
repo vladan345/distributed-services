@@ -31,12 +31,6 @@ export default function Document() {
             gtag('config', 'G-FL3WF5FCNE');`,
           }}
         />
-        <script
-          async
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="66aa2aedeae54c36d579346f"
-        ></script>
       </Head>
       <body>
         <noscript>

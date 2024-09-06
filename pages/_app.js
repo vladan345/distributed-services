@@ -18,7 +18,6 @@ export default function App({ Component, pageProps }) {
     "/projects/jove",
     "/projects/klei",
   ];
-
   return (
     <>
       <style jsx global>{`
@@ -27,7 +26,9 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
 
-      <Header isTransparent={urls.includes(router.asPath)} />
+      {router.asPath != "/hospitality" && (
+        <Header isTransparent={urls.includes(router.asPath)} />
+      )}
       <GoogleReCaptchaProvider
         reCaptchaKey="6Lc8Tn0mAAAAAO7BUUYZ51CF_aw_uUCcsz71I8Sm"
         scriptProps={{
@@ -39,7 +40,7 @@ export default function App({ Component, pageProps }) {
       >
         <Component {...pageProps} />
       </GoogleReCaptchaProvider>
-      <Footer />
+      {router.asPath != "/hospitality" && <Footer />}
     </>
   );
 }
