@@ -20,10 +20,14 @@ module.exports = {
         pistacio: "#C8EFA0",
         accent: "#FFCDB7",
       },
-      screens: {
-        "2xl": { max: "1600px" },
-        "1xl": { max: "1400px" },
-      },
+    },
+    screens: {
+      "2xl": { max: "1600px" },
+      "1xl": { max: "1400px" },
+      xl: { max: "1240px" },
+      lg: { max: "1024px" },
+      md: { max: "800px" },
+      sm: { max: "450px" },
     },
   },
   plugins: [],

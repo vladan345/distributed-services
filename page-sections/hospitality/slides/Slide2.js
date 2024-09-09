@@ -6,18 +6,40 @@ export default function Slide2({ opacity, gsapRef }) {
   const main = useRef();
   useGSAP(
     () => {
-      gsapRef.current = gsap.timeline({ paused: true });
+      gsapRef.current = gsap
+        .timeline({ paused: true })
+        .from(".symbol", {
+          duration: 1,
+          autoAlpha: 0,
+          left: "+=100px",
+        })
+        .from(
+          ".leaf",
+          {
+            duration: 1,
+            autoAlpha: 0,
+            rotate: 10,
+          },
+          "<",
+        );
     },
     { scope: main },
   );
   return (
-    <div
-      className="fader__slide absolute top-0 h-full w-full"
+    <section
+      className="fader__slide absolute top-0 h-full w-full overflow-x-clip"
       style={{ opacity: opacity }}
       ref={main}
     >
-      <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between">
-        <div className="max-w-[450px]">
+      <Image
+        src="/images/hospitality/leaf.png"
+        width={733}
+        height={636}
+        alt="Decorative object"
+        className="leaf absolute right-0 top-[5%] origin-bottom-right"
+      />
+      <div className="relative mx-auto flex h-full w-full max-w-[1480px] items-center justify-between">
+        <div className="relative z-[1] max-w-[450px]">
           <h2 className="hosp-h2 text-pine-green">
             Artful, Reservation-Boosting Websites
           </h2>
@@ -30,7 +52,23 @@ export default function Slide2({ opacity, gsapRef }) {
             ridiculus senectus congue.
           </p>
         </div>
+        <div className="relative">
+          <Image
+            src="/images/hospitality/symbol.svg"
+            width={420}
+            height={420}
+            alt="Decorative object"
+            className="symbol absolute left-0 top-0 -translate-x-[70%]"
+          />
+          <Image
+            src="/images/hospitality/laptop.png"
+            width={805}
+            height={463}
+            alt="Laptop"
+            className="relative"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

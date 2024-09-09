@@ -14,7 +14,7 @@ function Dual({ content }) {
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.set(".dualImage", {
-        y: -300,
+        y: "-=100px",
       });
       gsap.to(".dualImage", {
         y: 0,
@@ -54,7 +54,7 @@ function Dual({ content }) {
             alt={`${content[0].title} restaurant`}
             width={900}
             height={1060}
-            className="dualImage"
+            className="dualImage !h-[120%] max-w-none object-cover"
             id={content[0].id}
           />
           {/* </div> */}
@@ -64,7 +64,7 @@ function Dual({ content }) {
             alt={`${content[1].title} restaurant`}
             width={900}
             height={1060}
-            className="dualImage"
+            className="dualImage !h-[120%] max-w-none object-cover"
             id={content[1].id}
           />
           {/* </div> */}

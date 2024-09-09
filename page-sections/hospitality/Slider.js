@@ -59,7 +59,7 @@ export default function Slider() {
   });
   return (
     <>
-      <div ref={sliderRef} className="fader overlow-hidden relative h-screen">
+      <div ref={sliderRef} className="fader relative h-screen overflow-hidden">
         <Slide1 opacity={opacities[0]} gsapRef={gsapRefSlide1} />
         <Slide2 opacity={opacities[1]} gsapRef={gsapRefSlide2} />
         <Slide3 opacity={opacities[2]} gsapRef={gsapRefSlide3} />

@@ -4,6 +4,11 @@ import Header from "@/page-sections/hospitality/Header";
 import Hero from "@/page-sections/hospitality/Hero";
 import Who from "@/page-sections/hospitality/Who";
 import Slider from "@/page-sections/hospitality/Slider";
+import Logos from "@/page-sections/hospitality/Logos";
+import Banner from "@/page-sections/hospitality/Banner";
+import Booking from "@/page-sections/hospitality/Booking";
+import Video from "@/page-sections/hospitality/Video";
+import Footer from "@/page-sections/hospitality/Footer";
 
 export default function hospitality() {
   return (
@@ -51,7 +56,12 @@ export default function hospitality() {
           <Header />
           <Hero />
           <Who />
+          <Video />
           <Slider />
+          <Logos />
+          <Banner />
+          <Booking />
+          <Footer />
         </ReactLenis>
       </div>
     </>

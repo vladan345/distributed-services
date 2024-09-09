@@ -31,7 +31,7 @@ export default function Slide1({ opacity, gsapRef }) {
   return (
     <div
       ref={main}
-      className="fader__slide absolute top-0 h-full w-full"
+      className="fader__slide absolute top-0 h-full w-full overflow-x-clip"
       style={{ opacity: opacity }}
     >
       <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between">

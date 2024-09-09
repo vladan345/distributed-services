@@ -310,4 +310,10 @@ img.imageActive {
   .projectParagraph {
     font-size: 20px;
   }
+  .hosp-h1 {
+    font-size: 46px;
+    line-height: 1;
+    font-weight: 200;
+    font-family: inherit;
+  }
 }

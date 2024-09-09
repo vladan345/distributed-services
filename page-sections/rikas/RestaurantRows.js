@@ -105,7 +105,7 @@ function RestaurantRows({ content }) {
                   alt="La cantine restaurant"
                   height={1060}
                   width={900}
-                  className="restaurantImage"
+                  className="restaurantImage !h-[120%] max-w-none"
                 />
               </div>
               <div className="container">
