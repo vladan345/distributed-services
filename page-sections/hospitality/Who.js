@@ -20,10 +20,10 @@ export default function Who() {
       </p>
       <div className="flex gap-[20px] md:flex-col md:items-center">
         <Link
-          href="#"
+          href="/projects"
           className="hosp-h3 flex w-[220px] items-center justify-between rounded-full bg-white p-[20px] !text-black transition duration-300 hover:invert"
         >
-          View Project{" "}
+          View Projects{" "}
           <Image
             src="/images/hospitality/carret-right.svg"
             alt="Carret icon"
@@ -32,7 +32,8 @@ export default function Who() {
           />
         </Link>
         <Link
-          href="#"
+          target="_blank"
+          href="https://calendly.com/distributedservices"
           className="hosp-h3 flex w-[220px] items-center justify-between rounded-full p-[20px] !text-black underline md:justify-center"
         >
           Book a meeting
