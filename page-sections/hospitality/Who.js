@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function Who() {
   return (
-    <section className="flex flex-col items-center bg-accent px-[20px] py-[80px]">
+    <section
+      id="about"
+      className="flex flex-col items-center bg-accent px-[20px] py-[80px]"
+    >
       <h2 className="hosp-h1">Who are we?</h2>
       <p className="hosp-p my-[60px] max-w-[700px] text-center">
         Integer vel amet amet non sit quisque. Elementum ut scelerisque purus
@@ -18,7 +21,7 @@ export default function Who() {
       <div className="flex gap-[20px] md:flex-col md:items-center">
         <Link
           href="#"
-          className="hosp-h3 flex w-[220px] items-center justify-between rounded-full bg-white p-[20px] !text-black"
+          className="hosp-h3 flex w-[220px] items-center justify-between rounded-full bg-white p-[20px] !text-black transition duration-300 hover:invert"
         >
           View Project{" "}
           <Image

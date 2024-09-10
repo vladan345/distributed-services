@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Logos() {
   return (
-    <section className="relative pb-[120px] pt-[120px] md:pb-[60px] md:pt-[60px]">
+    <section
+      id="clients"
+      className="relative pb-[120px] pt-[120px] md:pb-[60px] md:pt-[60px]"
+    >
       <Image
         src="/images/hospitality/logo-bg.png"
         fill

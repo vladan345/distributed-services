@@ -29,9 +29,11 @@ export default function Video() {
         className="keen-slider !hidden pb-[80px] pl-[20px] md:!flex"
       >
         {[...Array(4).keys()].map((index) => (
-          <div className="keen-slider__slide rounded-[32px] drop-shadow-2xl">
+          <div
+            key={index}
+            className="keen-slider__slide rounded-[32px] drop-shadow-2xl"
+          >
             <video
-              key={index}
               src={`/images/hospitality/mobile${index + 1}.mp4`}
               autoPlay
               loop

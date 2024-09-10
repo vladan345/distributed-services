@@ -59,13 +59,33 @@ export default function Slider() {
   });
   return (
     <>
-      <div ref={sliderRef} className="fader relative h-screen overflow-hidden">
-        <Slide1 opacity={opacities[0]} gsapRef={gsapRefSlide1} />
-        <Slide2 opacity={opacities[1]} gsapRef={gsapRefSlide2} />
-        <Slide3 opacity={opacities[2]} gsapRef={gsapRefSlide3} />
-        <Slide4 opacity={opacities[3]} gsapRef={gsapRefSlide4} />
+      <div
+        id="work"
+        ref={sliderRef}
+        className="fader relative h-[1030px] overflow-hidden md:h-[940px]"
+      >
+        <Slide1
+          pointerEvents={currentSlide == 0}
+          opacity={opacities[0]}
+          gsapRef={gsapRefSlide1}
+        />
+        <Slide2
+          pointerEvents={currentSlide == 1}
+          opacity={opacities[1]}
+          gsapRef={gsapRefSlide2}
+        />
+        <Slide3
+          pointerEvents={currentSlide == 2}
+          opacity={opacities[2]}
+          gsapRef={gsapRefSlide3}
+        />
+        <Slide4
+          pointerEvents={currentSlide == 3}
+          opacity={opacities[3]}
+          gsapRef={gsapRefSlide4}
+        />
         {instanceRef.current && (
-          <div className="absolute bottom-[120px] left-1/2 flex -translate-x-1/2 gap-[12px]">
+          <div className="absolute bottom-[120px] left-1/2 flex -translate-x-1/2 gap-[12px] md:bottom-[60px]">
             {[
               ...Array(instanceRef.current.track.details.slides.length).keys(),
             ].map((idx) => {

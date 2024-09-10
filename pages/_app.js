@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
 
-      {router.asPath != "/hospitality" && (
+      {!router.asPath.includes("/hospitality") && (
         <Header isTransparent={urls.includes(router.asPath)} />
       )}
       <GoogleReCaptchaProvider
@@ -40,7 +40,7 @@ export default function App({ Component, pageProps }) {
       >
         <Component {...pageProps} />
       </GoogleReCaptchaProvider>
-      {router.asPath != "/hospitality" && <Footer />}
+      {!router.asPath.includes("/hospitality") && <Footer />}
     </>
   );
 }

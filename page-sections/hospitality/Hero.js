@@ -2,16 +2,32 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const main = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.to(".reveal", {
+        width: 0,
+        duration: 2,
+        ease: "power2.inOut",
+      });
+    },
+    { scope: main },
+  );
+
   const services = [
     {
       tags: ["Web design", "Dev", "Back-end"],
       title: "Web&Dev",
       description:
         "Placerat est sapien sem maecenas quis enim. Bibendum vel id vehicula arcu gravida quam in luctus arcu. Mauris nec suspendisse in.",
-      link: "#",
+      link: "/projects",
       icon: "symbol1.svg",
     },
     {
@@ -19,7 +35,7 @@ export default function Hero() {
       title: "Digital Marketing",
       description:
         "Placerat est sapien sem maecenas quis enim. Bibendum vel id vehicula arcu gravida quam in luctus arcu. Mauris nec suspendisse in.",
-      link: "#",
+      link: "/projects",
       icon: "symbol2.svg",
     },
     {
@@ -27,7 +43,7 @@ export default function Hero() {
       title: "Full-Cycle Project Dev",
       description:
         "Placerat est sapien sem maecenas quis enim. Bibendum vel id vehicula arcu gravida quam in luctus arcu. Mauris nec suspendisse in.",
-      link: "#",
+      link: "/projects",
       icon: "symbol3.svg",
     },
     {
@@ -35,7 +51,7 @@ export default function Hero() {
       title: "Social Media",
       description:
         "Placerat est sapien sem maecenas quis enim. Bibendum vel id vehicula arcu gravida quam in luctus arcu. Mauris nec suspendisse in.",
-      link: "#",
+      link: "/projects",
       icon: "symbol4.svg",
     },
     {
@@ -43,26 +59,44 @@ export default function Hero() {
       title: "Distributed Teams",
       description:
         "Placerat est sapien sem maecenas quis enim. Bibendum vel id vehicula arcu gravida quam in luctus arcu. Mauris nec suspendisse in.",
-      link: "#",
+      link: "/projects",
       icon: "symbol5.svg",
     },
   ];
   return (
-    <section className="*: mx-auto mt-[90px] w-full max-w-[1920px] px-[20px] md:mt-[70px]">
+    <section
+      ref={main}
+      className="*: mx-auto mt-[90px] w-full max-w-[1920px] px-[20px] md:mt-[70px]"
+    >
       <div className="relative h-[calc(100vh-100px)] w-full overflow-hidden rounded-[40px]">
-        <Image
-          src="/images/hospitality/hero.png"
-          alt="Hero temp"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
+        <video
+          src={`/images/hospitality/hero.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover md:hidden"
+        ></video>
+        <video
+          src={`/images/hospitality/hero-mobile.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hidden h-full w-full object-cover md:block"
+        ></video>
+        <div className="absolute left-0 top-0 h-full w-full bg-[rgba(0,0,0,0.2)]"></div>
         <h1 className="hosp-h1 absolute left-1/2 top-1/2 w-full max-w-[950px] -translate-x-1/2 -translate-y-1/2 text-center text-white">
           Stay Ahead in the Hospitality Industry
         </h1>
+        <div className="reveal absolute left-0 top-0 h-full w-full bg-white"></div>
+        <div className="reveal absolute right-0 top-0 h-full w-full bg-white"></div>
       </div>
 
-      <div className="mx-auto my-[120px] flex h-[450px] max-w-[1690px] items-stretch justify-center gap-[40px] md:my-[60px] 2xl:gap-[20px] 1xl:h-auto 1xl:max-w-[640px] 1xl:flex-col 1xl:items-center">
+      <div
+        id="services"
+        className="mx-auto my-[120px] flex h-[450px] max-w-[1690px] items-stretch justify-center gap-[40px] 2xl:gap-[20px] 1xl:h-auto 1xl:max-w-[640px] 1xl:flex-col 1xl:items-center md:my-[60px]"
+      >
         {services.map((service, index) => (
           <ServiceCard
             id={index}
@@ -122,7 +156,7 @@ const ServiceCard = ({ service, isActive, id, setActiveSlide }) => {
           {service.description}
         </p>
         <Link
-          className={`${isActive ? "opacity-100" : "opacity-0"} hosp-h3 mt-[40px] flex w-full items-center justify-between rounded-full bg-accent p-[20px] !text-black`}
+          className={`${isActive ? "opacity-100" : "opacity-0"} hosp-h3 mt-[40px] flex w-full items-center justify-between rounded-full bg-accent p-[20px] !text-black transition duration-300 hover:bg-white`}
           href={service.link}
         >
           Learn more

@@ -1,66 +1,88 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="relative bg-accent">
-      <div className="container relative z-[1] flex gap-[120px] !py-[120px] md:flex-col md:items-center md:!py-[40px] md:!pb-[240px] lg:gap-[40px]">
-        <div className="w-full max-w-[250px] md:w-full lg:w-1/3 lg:max-w-none">
+      <div className="container relative z-[1] flex gap-[120px] !py-[120px] lg:gap-[40px] md:flex-col md:items-center md:!py-[40px] md:!pb-[240px]">
+        <div className="w-full max-w-[250px] lg:w-1/3 lg:max-w-none md:w-full">
           <h3 className="hosp-h2 mb-[40px] text-pine-green md:text-center">
             DS London Office
           </h3>
           <p className="hosp-p mb-[20px] text-pine-green md:text-center">
             20 Alcester Crescent, E59PX London, UK
           </p>
-          <p className="hosp-p text-pine-green md:text-center">
+          <a
+            href="tel:+447837513593"
+            className="hosp-p block !text-pine-green md:text-center"
+          >
             +44 7837 513593
-          </p>
-          <p className="hosp-p text-pine-green md:text-center">
+          </a>
+          <a
+            href="mailto:info@distributedservices.tech"
+            className="hosp-p block !text-pine-green md:text-center"
+          >
             info@distributedservices.tech
-          </p>
+          </a>
         </div>
-        <div className="w-full max-w-[250px] md:w-full lg:w-1/3 lg:max-w-none">
+        <div className="w-full max-w-[250px] lg:w-1/3 lg:max-w-none md:w-full">
           <h3 className="hosp-h2 mb-[40px] text-pine-green md:text-center">
             DS Dubai Office
           </h3>
           <p className="hosp-p mb-[20px] text-pine-green md:text-center">
             Dubai Silicon Oasis DDP Building A1, Dubai, UAE
           </p>
-          <p className="hosp-p text-pine-green md:text-center">
+          <a
+            href="tel:+971506340569"
+            className="hosp-p block !text-pine-green md:text-center"
+          >
             +971 50 634 0569
-          </p>
-          <p className="hosp-p text-pine-green md:text-center">
+          </a>
+          <a
+            href="mailto:info@distributedservices.tech"
+            className="hosp-p block !text-pine-green md:text-center"
+          >
             info@distributedservices.tech
-          </p>
+          </a>
         </div>
-        <div className="w-full max-w-[250px] md:w-full lg:w-1/3 lg:max-w-none">
+        <div className="w-full max-w-[250px] lg:w-1/3 lg:max-w-none md:w-full">
           <h3 className="hosp-h2 mb-[40px] text-pine-green md:text-center">
             Follow us
           </h3>
-          <div className="flex gap-[30px] md:justify-center">
-            <Image
-              src="/images/hospitality/facebook.svg"
-              alt="Facebook"
-              width={11}
-              height={22}
-            />
-            <Image
-              src="/images/hospitality/twitter.svg"
-              alt="Twitter"
-              width={27}
-              height={22}
-            />
-            <Image
-              src="/images/hospitality/instagram.svg"
-              alt="Instagram"
-              width={22}
-              height={22}
-            />
-            <Image
-              src="/images/hospitality/youtube.svg"
-              alt="Youtube"
-              width={31}
-              height={22}
-            />
+          <div className="flex items-center gap-[30px] md:justify-center">
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/distributedservices/"
+            >
+              <Image
+                src="/images/hospitality/instagram.svg"
+                alt="Instagram"
+                width={22}
+                height={22}
+              />
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/company/distributed-services/"
+            >
+              <Image
+                src="/images/hospitality/linkedin.svg"
+                alt="Linkedin"
+                width={24}
+                height={24}
+              />
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.tiktok.com/@distributedservices"
+            >
+              <Image
+                src="/images/hospitality/tiktok.svg"
+                alt="Tiktok"
+                width={24}
+                height={24}
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -69,7 +91,7 @@ export default function Footer() {
         alt="Footer image"
         width={567}
         height={381}
-        className="md: absolute bottom-0 right-0 h-[80%] w-auto max-w-none md:!h-auto 1xl:h-[40%]"
+        className="absolute bottom-0 right-0 h-[80%] w-auto max-w-none 1xl:h-[40%] md:!h-auto"
       />
     </footer>
   );
