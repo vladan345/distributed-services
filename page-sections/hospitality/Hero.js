@@ -5,7 +5,8 @@ import { useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const main = useRef(null);
@@ -16,6 +17,17 @@ export default function Hero() {
         width: 0,
         duration: 2,
         ease: "power2.inOut",
+      });
+
+      gsap.from(".cards", {
+        autoAlpha: 0,
+        duration: 0.7,
+        y: 50,
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: "#services",
+          start: "top 70%",
+        },
       });
     },
     { scope: main },
@@ -98,13 +110,15 @@ export default function Hero() {
         className="mx-auto my-[120px] flex h-[450px] max-w-[1690px] items-stretch justify-center gap-[40px] 2xl:gap-[20px] 1xl:h-auto 1xl:max-w-[640px] 1xl:flex-col 1xl:items-center md:my-[60px]"
       >
         {services.map((service, index) => (
-          <ServiceCard
-            id={index}
-            isActive={index == activeSlide}
-            key={index}
-            service={service}
-            setActiveSlide={setActiveSlide}
-          />
+          <div className="cards relative overflow-hidden rounded-[40px] bg-pine-green 1xl:h-full">
+            <ServiceCard
+              id={index}
+              isActive={index == activeSlide}
+              key={index}
+              service={service}
+              setActiveSlide={setActiveSlide}
+            />
+          </div>
         ))}
       </div>
     </section>
@@ -115,7 +129,7 @@ const ServiceCard = ({ service, isActive, id, setActiveSlide }) => {
   return (
     <div
       onClick={() => setActiveSlide(id)}
-      className={`flex flex-col justify-between rounded-[40px] bg-pine-green p-[20px] transition-all duration-500 1xl:h-full ${isActive ? "w-[450px] cursor-auto 1xl:max-h-[1000px] 1xl:w-full" : "w-[210px] cursor-pointer 1xl:max-h-[200px] 1xl:w-full"} relative overflow-hidden`}
+      className={` ${isActive ? "w-[450px] cursor-auto 1xl:max-h-[1000px] 1xl:w-full" : "w-[210px] cursor-pointer 1xl:max-h-[200px] 1xl:w-full"} flex h-full flex-col justify-between p-[20px] transition-all duration-500`}
     >
       <img
         src={`/images/hospitality/${service.icon}`}

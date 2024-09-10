@@ -38,7 +38,10 @@ export default function Slide1({ opacity, gsapRef, pointerEvents }) {
       }}
     >
       <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between md:h-auto md:flex-col md:gap-[50px]">
-        <div className="relative z-[1] max-w-[450px]">
+        <div
+          className="relative z-[1] max-w-[450px]"
+          style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
+        >
           <h2 className="hosp-h2 text-pine-green">Stress-Free Experience</h2>
           <p className="hosp-h3 my-[40px] text-pine-green">
             From A to Z, we manage website development, digital marketing, and

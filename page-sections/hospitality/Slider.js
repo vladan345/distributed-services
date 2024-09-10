@@ -16,47 +16,82 @@ export default function Slider() {
   const gsapRefSlide3 = useRef(null);
   const gsapRefSlide4 = useRef(null);
 
-  const [sliderRef, instanceRef] = useKeenSlider({
-    slides: 4,
-    slideChanged(slider) {
-      const newSlide = slider.track.details.rel;
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      slides: 4,
+      slideChanged(slider) {
+        const newSlide = slider.track.details.rel;
 
-      // Reset all animations first
-      [gsapRefSlide1, gsapRefSlide2, gsapRefSlide3, gsapRefSlide4].forEach(
-        (ref, idx) => {
-          if (ref.current && idx !== newSlide) {
-            ref.current.restart().pause(); // Reset and pause the timeline when slide is not active
-          }
-        },
-      );
+        // Reset all animations first
+        [gsapRefSlide1, gsapRefSlide2, gsapRefSlide3, gsapRefSlide4].forEach(
+          (ref, idx) => {
+            if (ref.current && idx !== newSlide) {
+              ref.current.restart().pause(); // Reset and pause the timeline when slide is not active
+            }
+          },
+        );
 
-      switch (slider.track.details.rel) {
-        case 0:
-          gsapRefSlide1.current?.play();
-          break;
-        case 1:
-          gsapRefSlide2.current?.play();
-          break;
-        case 2:
-          gsapRefSlide3.current?.play();
-          break;
-        case 3:
-          gsapRefSlide4.current?.play();
-          break;
-        default:
-          break;
-      }
+        switch (slider.track.details.rel) {
+          case 0:
+            gsapRefSlide1.current?.play();
+            break;
+          case 1:
+            gsapRefSlide2.current?.play();
+            break;
+          case 2:
+            gsapRefSlide3.current?.play();
+            break;
+          case 3:
+            gsapRefSlide4.current?.play();
+            break;
+          default:
+            break;
+        }
 
-      setCurrentSlide(slider.track.details.rel);
+        setCurrentSlide(slider.track.details.rel);
+      },
+      loop: true,
+      defaultAnimation: {
+        duration: 1000,
+      },
+      detailsChanged(s) {
+        const new_opacities = s.track.details.slides.map(
+          (slide) => slide.portion,
+        );
+        setOpacities(new_opacities);
+      },
     },
-    loop: true,
-    detailsChanged(s) {
-      const new_opacities = s.track.details.slides.map(
-        (slide) => slide.portion,
-      );
-      setOpacities(new_opacities);
-    },
-  });
+    [
+      (slider) => {
+        let timeout;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 4000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ],
+  );
   return (
     <>
       <div

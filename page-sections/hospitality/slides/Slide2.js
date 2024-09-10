@@ -42,7 +42,10 @@ export default function Slide2({ opacity, gsapRef, pointerEvents }) {
         className="leaf absolute right-0 top-[5%] origin-bottom-right 2xl:top-0 2xl:max-w-[600px] lg:top-[10%] lg:max-w-[400px] md:bottom-0 md:top-auto sm:bottom-[10%] sm:max-w-[300px]"
       />
       <div className="relative mx-auto flex h-full w-full max-w-[1480px] items-center justify-between lg:gap-[40px] md:flex-col md:gap-[130px]">
-        <div className="relative z-[1] max-w-[450px] lg:max-w-[400px]">
+        <div
+          className="relative z-[1] max-w-[450px] lg:max-w-[400px]"
+          style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
+        >
           <h2 className="hosp-h2 text-pine-green">
             Artful, Reservation-Boosting Websites
           </h2>

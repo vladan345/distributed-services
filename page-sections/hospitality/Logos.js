@@ -1,8 +1,34 @@
+"use client";
 import Image from "next/image";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Logos() {
+  const main = useRef(null);
+
+  useGSAP(
+    () => {
+      gsap.from(".logo", {
+        autoAlpha: 0,
+        duration: 0.7,
+        y: 50,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: ".trigger",
+          start: "top 70%",
+        },
+      });
+    },
+    { scope: main },
+  );
   return (
     <section
+      ref={main}
       id="clients"
       className="relative pb-[120px] pt-[120px] md:pb-[60px] md:pt-[60px]"
     >
@@ -15,7 +41,7 @@ export default function Logos() {
       <h2 className="hosp-h2 mb-[46px] text-center md:!text-[20px]">
         Trusted by other brands like yours
       </h2>
-      <div className="container">
+      <div className="trigger container">
         <div className="grid grid-cols-4 gap-x-[40px] md:grid-cols-2">
           {[...Array(8).keys()].map((index) => {
             return (
@@ -25,7 +51,7 @@ export default function Logos() {
                 alt="Restaurant logo"
                 width={310}
                 height={155}
-                className="md:place-self-center"
+                className="logo md:place-self-center"
               />
             );
           })}

@@ -44,7 +44,10 @@ export default function Slide4({ opacity, gsapRef, pointerEvents }) {
       ref={main}
     >
       <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between md:flex-col md:justify-start md:gap-[40px]">
-        <div className="max-w-[450px] lg:max-w-[400px]">
+        <div
+          className="max-w-[450px] lg:max-w-[400px]"
+          style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
+        >
           <h2 className="hosp-h2 text-pine-green">
             Transform Your Restaurant's Success
           </h2>

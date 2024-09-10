@@ -24,7 +24,10 @@ export default function Slide3({ opacity, gsapRef, pointerEvents }) {
       ref={main}
     >
       <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between gap-[40px] md:flex-col md:justify-start">
-        <div className="max-w-[450px] lg:max-w-[350px] md:max-w-[400px]">
+        <div
+          className="max-w-[450px] lg:max-w-[350px] md:max-w-[400px]"
+          style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
+        >
           <h2 className="hosp-h2 text-pine-green">Proven ROAS</h2>
           <p className="hosp-h3 my-[40px] text-pine-green">
             Achieve up to 20x return on Meta and Google Ads with our data-driven
