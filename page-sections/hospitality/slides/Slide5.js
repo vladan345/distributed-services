@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Slide4({ opacity, pointerEvents }) {
+export default function Slide5({ opacity, pointerEvents }) {
   return (
     <section
       className="fader__slide absolute top-0 h-full w-full px-[20px]"
@@ -14,13 +14,16 @@ export default function Slide4({ opacity, pointerEvents }) {
           className="max-w-[570px] lg:max-w-[400px]"
           style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
         >
-          <h2 className="hosp-h2 text-pine-green">Stop the Money Burn</h2>
+          <h2 className="hosp-h2 text-pine-green">From Kitchen to Clicks</h2>
           <p className="hosp-h3 mt-[40px] text-pine-green">
-            Restaurants with big marketing budgets often burn through cash on
-            paid ads with zero results. The truth is, without the right
-            strategy, even the biggest spend can lead to nothing but
-            frustration. With our experience and proven portfolio, we ensure
-            every ad dollar is working to bring customers through your doors.
+            We take care of everything - from building a stunning,
+            high-converting website to managing your entire digital marketing
+            strategy. Your website is the foundation of your online presence,
+            and without it, even the best dining experience goes unnoticed. We
+            create websites that not only capture your restaurant's unique vibe
+            but also drive bookings and revenue. Plus, we handle all your
+            marketing needs, so you can focus on delivering exceptional dining
+            experiences while we bring the customers to your door.
           </p>
         </div>
         <div

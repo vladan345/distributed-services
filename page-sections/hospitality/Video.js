@@ -11,10 +11,7 @@ export default function Video() {
     loop: false,
   });
   return (
-    <section>
-      <h2 className="hosp-h1 my-[120px] text-center md:my-[60px] md:px-[20px]">
-        Meta ads for the restaurants
-      </h2>
+    <section className="pt-[160px]">
       <video
         src="/images/hospitality/desktop.mp4"
         autoPlay

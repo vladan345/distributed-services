@@ -254,6 +254,27 @@ img.imageActive {
 .grecaptcha-badge {
   visibility: hidden;
 }
+
+/* Flip card styles */
+/* Vanilla CSS for flip card */
+.card {
+  perspective: 800px;
+}
+.card__content {
+  transform-style: preserve-3d;
+}
+.card:hover .card__content {
+  transform: rotateY(0.5turn);
+}
+
+.card__front,
+.card__back {
+  backface-visibility: hidden;
+}
+.card__back {
+  transform: rotateY(0.5turn);
+}
+
 @media (max-width: 1640px) {
   :root {
     --max-width: 1200px;

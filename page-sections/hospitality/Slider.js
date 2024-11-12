@@ -6,47 +6,17 @@ import Slide1 from "./slides/Slide1";
 import Slide2 from "./slides/Slide2";
 import Slide3 from "./slides/Slide3";
 import Slide4 from "./slides/Slide4";
+import Slide5 from "./slides/Slide5";
 
 export default function Slider() {
   const [opacities, setOpacities] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const gsapRefSlide1 = useRef(null);
-  const gsapRefSlide2 = useRef(null);
-  const gsapRefSlide3 = useRef(null);
-  const gsapRefSlide4 = useRef(null);
-
   const [sliderRef, instanceRef] = useKeenSlider(
     {
-      slides: 4,
+      slides: 5,
       slideChanged(slider) {
-        const newSlide = slider.track.details.rel;
-
         // Reset all animations first
-        [gsapRefSlide1, gsapRefSlide2, gsapRefSlide3, gsapRefSlide4].forEach(
-          (ref, idx) => {
-            if (ref.current && idx !== newSlide) {
-              ref.current.restart().pause(); // Reset and pause the timeline when slide is not active
-            }
-          },
-        );
-
-        switch (slider.track.details.rel) {
-          case 0:
-            gsapRefSlide1.current?.play();
-            break;
-          case 1:
-            gsapRefSlide2.current?.play();
-            break;
-          case 2:
-            gsapRefSlide3.current?.play();
-            break;
-          case 3:
-            gsapRefSlide4.current?.play();
-            break;
-          default:
-            break;
-        }
 
         setCurrentSlide(slider.track.details.rel);
       },
@@ -94,31 +64,24 @@ export default function Slider() {
   );
   return (
     <>
+      <div className="flex flex-col items-center gap-[32px]">
+        <h2 className="hosp-h1 text-center">Pain Points & Solution</h2>
+        <p className="hosp-h3 max-w-[840px] text-center">
+          Let us worry about bringing in more customers, while you focus on
+          doing what you do best Turning Every Dollar into Dining Guests -
+          4x-20x ROAS That Proves It Works!
+        </p>
+      </div>
       <div
         id="work"
         ref={sliderRef}
-        className="fader relative h-[1030px] overflow-hidden md:h-[940px]"
+        className="fader relative h-[700px] overflow-hidden md:h-[940px]"
       >
-        <Slide1
-          pointerEvents={currentSlide == 0}
-          opacity={opacities[0]}
-          gsapRef={gsapRefSlide1}
-        />
-        <Slide2
-          pointerEvents={currentSlide == 1}
-          opacity={opacities[1]}
-          gsapRef={gsapRefSlide2}
-        />
-        <Slide3
-          pointerEvents={currentSlide == 2}
-          opacity={opacities[2]}
-          gsapRef={gsapRefSlide3}
-        />
-        <Slide4
-          pointerEvents={currentSlide == 3}
-          opacity={opacities[3]}
-          gsapRef={gsapRefSlide4}
-        />
+        <Slide1 pointerEvents={currentSlide == 0} opacity={opacities[0]} />
+        <Slide2 pointerEvents={currentSlide == 1} opacity={opacities[1]} />
+        <Slide3 pointerEvents={currentSlide == 2} opacity={opacities[2]} />
+        <Slide4 pointerEvents={currentSlide == 3} opacity={opacities[3]} />
+        <Slide5 pointerEvents={currentSlide == 4} opacity={opacities[4]} />
         {instanceRef.current && (
           <div className="absolute bottom-[120px] left-1/2 flex -translate-x-1/2 gap-[12px] md:bottom-[60px]">
             {[

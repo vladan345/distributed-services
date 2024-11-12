@@ -5,10 +5,11 @@ import Hero from "@/page-sections/hospitality/Hero";
 import Who from "@/page-sections/hospitality/Who";
 import Slider from "@/page-sections/hospitality/Slider";
 import Logos from "@/page-sections/hospitality/Logos";
-import Banner from "@/page-sections/hospitality/Banner";
 import Booking from "@/page-sections/hospitality/Booking";
 import Video from "@/page-sections/hospitality/Video";
 import Footer from "@/page-sections/hospitality/Footer";
+import Services from "@/page-sections/hospitality/Services";
+import Cards from "@/page-sections/hospitality/Cards";
 
 export default function hospitality() {
   return (
@@ -56,10 +57,11 @@ export default function hospitality() {
           <Header />
           <Hero />
           <Who />
+          <Services />
           <Video />
           <Slider />
           <Logos />
-          <Banner />
+          <Cards />
           <Booking />
           <Footer />
         </ReactLenis>

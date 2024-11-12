@@ -45,7 +45,7 @@ export default function Footer() {
             info@distributedservices.tech
           </a>
         </div>
-        <div className="w-full max-w-[250px] lg:w-1/3 lg:max-w-none md:w-full">
+        <div className="w-full max-w-[150px] lg:w-1/3 lg:max-w-none md:w-full">
           <h3 className="hosp-h2 mb-[40px] text-pine-green md:text-center">
             Follow us
           </h3>
@@ -85,14 +85,18 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+        <a
+          href="https://www.google.com/partners/agency?id=4527503534"
+          target="_blank"
+        >
+          <Image
+            width={152}
+            height={145}
+            src="https://www.gstatic.com/partners/badge/images/2023/PartnerBadgeClickable.svg"
+            alt="google partner"
+          />
+        </a>
       </div>
-      <Image
-        src="/images/hospitality/leaf-footer.png"
-        alt="Footer image"
-        width={567}
-        height={381}
-        className="absolute bottom-0 right-0 h-[80%] w-auto max-w-none 1xl:h-[40%] md:!h-auto"
-      />
     </footer>
   );
 }
