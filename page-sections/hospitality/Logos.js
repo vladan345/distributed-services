@@ -51,7 +51,7 @@ export default function Logos() {
           })}
         </div>
       </div>
-      <div className="container !mt-[80px] grid min-h-[360px] grid-cols-3 gap-[40px]">
+      <div className="container !mt-[80px] grid min-h-[360px] grid-cols-3 gap-[40px] lg:grid-cols-1">
         <div className="flex flex-col items-center gap-[40px] bg-white px-[20px] py-[40px]">
           <Image
             src="/images/hospitality/xu.svg"

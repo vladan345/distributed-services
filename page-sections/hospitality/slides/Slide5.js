@@ -9,12 +9,14 @@ export default function Slide5({ opacity, pointerEvents }) {
         pointerEvents: pointerEvents ? "auto" : "none",
       }}
     >
-      <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between px-[25px] md:flex-col md:justify-start md:gap-[40px]">
+      <div className="mx-auto flex h-full w-full max-w-[1480px] items-center justify-between px-[25px] md:h-auto md:flex-col-reverse md:gap-[50px] md:px-[0]">
         <div
-          className="max-w-[570px] lg:max-w-[400px]"
+          className="max-w-[570px] lg:w-1/2 md:w-full"
           style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
         >
-          <h2 className="hosp-h2 text-pine-green">From Kitchen to Clicks</h2>
+          <h2 className="hosp-h2 text-pine-green md:text-[32px]">
+            From Kitchen to Clicks
+          </h2>
           <p className="hosp-h3 mt-[40px] text-pine-green">
             We take care of everything - from building a stunning,
             high-converting website to managing your entire digital marketing
@@ -27,7 +29,7 @@ export default function Slide5({ opacity, pointerEvents }) {
           </p>
         </div>
         <div
-          className="relative"
+          className="relative lg:w-1/2 md:w-auto"
           style={{ transform: `translateX(${(1 - opacity) * 50}px)` }}
         >
           <Image

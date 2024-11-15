@@ -21,10 +21,7 @@ export default function Hero() {
   );
 
   return (
-    <section
-      ref={main}
-      className="max-w-[1920px mx-auto mt-[90px] w-full md:mt-[70px]"
-    >
+    <section ref={main} className="mx-auto mt-[90px] w-full md:mt-[70px]">
       <div className="relative w-full overflow-hidden">
         <video
           src={`/images/hospitality/hero.mp4`}
@@ -40,10 +37,10 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className="hidden h-full w-full object-cover md:block"
+          className="hidden h-screen w-full object-cover md:block"
         ></video>
         <div className="absolute left-0 top-0 h-full w-full bg-[rgba(0,0,0,0.2)]"></div>
-        <div className="absolute left-1/2 top-1/2 flex w-full max-w-[1350px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-center text-white">
+        <div className="absolute left-1/2 top-1/2 flex w-full max-w-[1350px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center px-[20px] text-center text-white">
           <h1 className="hosp-h1 w-full text-center !font-bold">
             Unlock Consistent Revenue Growth with Proven Online Strategies.
           </h1>

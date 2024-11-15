@@ -31,7 +31,9 @@ export default function Who() {
   return (
     <section ref={main} id="about" className="bg-accent px-[20px] py-[80px]">
       <div className="trigger flex flex-col items-center">
-        <h2 className="hosp-h1 content mb-[60px]">Who are we?</h2>
+        <h2 className="hosp-h1 content mb-[60px] md:text-[46px] md:!font-light">
+          Who are we?
+        </h2>
         <p className="content hosp-p mb-[20px] max-w-[800px] text-center">
           Welcome to DS Hospitality, a passionate team of foodies and digital
           marketing experts. Born in the vibrant heart of London and now

@@ -286,6 +286,15 @@ img.imageActive {
   }
 }
 @media (max-width: 1240px) {
+  .hosp-h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+  .hosp-h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
   h1 {
     font-size: 90px;
     letter-spacing: -1.6px;
@@ -300,6 +309,15 @@ img.imageActive {
   }
 }
 @media (max-width: 800px) {
+  .hosp-h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .hosp-h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
   h1 {
     font-size: 48px;
     letter-spacing: -0.96px;
@@ -330,11 +348,5 @@ img.imageActive {
   }
   .projectParagraph {
     font-size: 20px;
-  }
-  .hosp-h1 {
-    font-size: 46px;
-    line-height: 1;
-    font-weight: 200;
-    font-family: inherit;
   }
 }

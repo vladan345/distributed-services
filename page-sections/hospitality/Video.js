@@ -11,7 +11,7 @@ export default function Video() {
     loop: false,
   });
   return (
-    <section className="pt-[160px]">
+    <section className="pt-[160px] md:pt-[60px]">
       <video
         src="/images/hospitality/desktop.mp4"
         autoPlay

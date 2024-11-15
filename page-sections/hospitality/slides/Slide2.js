@@ -8,12 +8,12 @@ export default function Slide2({ opacity, pointerEvents }) {
         pointerEvents: pointerEvents ? "auto" : "none",
       }}
     >
-      <div className="relative mx-auto flex h-full w-full max-w-[1480px] items-center justify-between px-[25px] lg:gap-[40px] md:flex-col md:gap-[130px]">
+      <div className="relative mx-auto flex h-full w-full max-w-[1480px] items-center justify-between gap-[60px] px-[25px] md:h-auto md:flex-col-reverse md:gap-[50px] md:px-[0]">
         <div
-          className="relative z-[1] max-w-[570px] lg:max-w-[400px]"
+          className="relative z-[1] max-w-[570px] lg:w-1/2 md:w-full"
           style={{ transform: `translateX(${(1 - opacity) * -50}px)` }}
         >
-          <h2 className="hosp-h2 text-pine-green">
+          <h2 className="hosp-h2 text-pine-green md:text-[32px]">
             Digital Marketing is a form of Art - And We're the Masters of
             Turning Clicks into Customers!
           </h2>
@@ -30,7 +30,7 @@ export default function Slide2({ opacity, pointerEvents }) {
           </p>
         </div>
         <div
-          className="relative"
+          className="relative lg:w-1/2 md:w-auto"
           style={{ transform: `translateX(${(1 - opacity) * 50}px)` }}
         >
           <Image

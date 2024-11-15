@@ -44,15 +44,15 @@ export default function Services() {
     },
   ];
   return (
-    <section className="lg:grid-rows-auto grid grid-cols-3 overflow-hidden 1xl:grid-cols-2 1xl:grid-rows-3 lg:grid-cols-1">
+    <section className="lg:grid-rows-auto grid grid-cols-3 overflow-hidden 1xl:grid-cols-2 1xl:grid-rows-3 lg:grid-cols-1 lg:grid-rows-6">
       {services.map((service, index) => (
-        <FlipCard key={index} service={service} />
+        <FlipCard key={index} service={service} index={index} />
       ))}
     </section>
   );
 }
 
-const FlipCard = ({ service }) => {
+const FlipCard = ({ service, index }) => {
   const videoRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -71,7 +71,7 @@ const FlipCard = ({ service }) => {
     >
       <video
         ref={videoRef}
-        src="/images/hospitality/hero.mp4"
+        src={`/images/hospitality/service${index + 1}.mp4`}
         loop
         muted
         playsInline

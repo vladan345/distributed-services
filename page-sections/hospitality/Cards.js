@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function Cards() {
   return (
     <section className="py-[140px]">
-      <h2 className="hosp-h1 mx-auto mb-[80px] max-w-[1120px] text-center">
+      <h2 className="hosp-h1 mb-[80px] text-center md:px-[20px] md:text-[46px] md:!font-light">
         Not just another marketing agency-we're the powerhouse behind your
         brand!
       </h2>
-      <div className="container grid grid-cols-3 gap-[40px]">
+      <div className="container grid grid-cols-3 gap-[40px] lg:grid-cols-1">
         <div className="flex flex-col items-center gap-[40px] bg-[#FFCDB766] p-[40px]">
           <Image
             src="/images/hospitality/1.svg"

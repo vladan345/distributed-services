@@ -64,9 +64,11 @@ export default function Slider() {
   );
   return (
     <>
-      <div className="flex flex-col items-center gap-[32px]">
-        <h2 className="hosp-h1 text-center">Pain Points & Solution</h2>
-        <p className="hosp-h3 max-w-[840px] text-center">
+      <div className="flex flex-col items-center gap-[32px] md:mb-[60px] md:gap-[20px]">
+        <h2 className="hosp-h1 text-center md:text-[46px] md:!font-light">
+          Pain Points & Solution
+        </h2>
+        <p className="hosp-h3 max-w-[840px] px-[20px] text-center">
           Let us worry about bringing in more customers, while you focus on
           doing what you do best Turning Every Dollar into Dining Guests -
           4x-20x ROAS That Proves It Works!
@@ -75,7 +77,7 @@ export default function Slider() {
       <div
         id="work"
         ref={sliderRef}
-        className="fader relative h-[700px] overflow-hidden md:h-[940px]"
+        className="fader relative h-[700px] overflow-hidden md:h-auto md:min-h-[1000px] md:pb-[120px]"
       >
         <Slide1 pointerEvents={currentSlide == 0} opacity={opacities[0]} />
         <Slide2 pointerEvents={currentSlide == 1} opacity={opacities[1]} />
@@ -83,7 +85,7 @@ export default function Slider() {
         <Slide4 pointerEvents={currentSlide == 3} opacity={opacities[3]} />
         <Slide5 pointerEvents={currentSlide == 4} opacity={opacities[4]} />
         {instanceRef.current && (
-          <div className="absolute bottom-[120px] left-1/2 flex -translate-x-1/2 gap-[12px] md:bottom-[60px]">
+          <div className="absolute bottom-[80px] left-1/2 flex -translate-x-1/2 gap-[12px] md:bottom-[60px]">
             {[
               ...Array(instanceRef.current.track.details.slides.length).keys(),
             ].map((idx) => {
